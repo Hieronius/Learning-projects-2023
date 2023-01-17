@@ -16,19 +16,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // change of the current image
-        // WHO         WHAT  =   VALUE
-        diceImageView1.image = UIImage(named: "dice6")
-        
-        // change of the current alfa of the image
-        diceImageView1.alpha = 0.5
-        
-        // change of the current image of the second dice
-        diceImageView2.image = UIImage(named: "dice2")
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         print("Button got tapped")
+        
+        // array of all possible dices
+        let arrayOfDices = [
+            UIImage(named: "dice1"),
+            UIImage(named: "dice2"),
+            UIImage(named: "dice3"),
+            UIImage(named: "dice4"),
+            UIImage(named: "dice5"),
+            UIImage(named: "dice6")
+        ]
+        
+        // made a random variation of the dices when you press the button "roll
+        diceImageView1.image = arrayOfDices[Int.random(in: 0...5)]
+        diceImageView2.image = arrayOfDices[Int.random(in: 0...arrayOfDices.count)]
     }
     
 }
