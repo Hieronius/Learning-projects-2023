@@ -38,6 +38,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2MF-W7-EaR"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="gJ9-Po-GQT">
                                 <rect key="frame" x="16" y="396" width="120" height="120"/>
@@ -49,6 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="diceImageView1" destination="gJ9-Po-GQT" id="g0I-aW-d06"/>
+                        <outlet property="diceImageView2" destination="2ST-y3-r6u" id="4eJ-Py-DTp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
