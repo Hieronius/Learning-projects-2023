@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         
         playSound()
         
+        // 1. We use DispatchQueue.main as main thread
+        // 2. Now we set deadline as now plus a one and half of the second
+        // 3. Execute mean the real action or method to run after this moment
+        // This is the same thread where the whole app running
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: changeBallAnswer)
         
     }
