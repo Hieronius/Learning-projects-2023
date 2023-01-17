@@ -13,6 +13,7 @@
 		DDEC62462976C7E000006D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEC62442976C7E000006D8E /* Main.storyboard */; };
 		DDEC62482976C7E400006D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEC62472976C7E400006D8E /* Assets.xcassets */; };
 		DDEC624B2976C7E400006D8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEC62492976C7E400006D8E /* LaunchScreen.storyboard */; };
+		DDEC62532976D0B200006D8E /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDEC62522976D0B200006D8E /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DDEC62472976C7E400006D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDEC624A2976C7E400006D8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDEC624C2976C7E400006D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDEC62522976D0B200006D8E /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = ../../../../../Downloads/MagicBallAngelaProject/sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DDEC62472976C7E400006D8E /* Assets.xcassets */,
 				DDEC62492976C7E400006D8E /* LaunchScreen.storyboard */,
 				DDEC624C2976C7E400006D8E /* Info.plist */,
+				DDEC62522976D0B200006D8E /* sound.mp3 */,
 			);
 			path = "Angela-MagicBallApp-Storyboard";
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			files = (
 				DDEC624B2976C7E400006D8E /* LaunchScreen.storyboard in Resources */,
 				DDEC62482976C7E400006D8E /* Assets.xcassets in Resources */,
+				DDEC62532976D0B200006D8E /* sound.mp3 in Resources */,
 				DDEC62462976C7E000006D8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
