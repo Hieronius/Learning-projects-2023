@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="sqV-rl-W99">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="sqV-rl-W99">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Iu8-YK-bC7">
                                 <rect key="frame" x="75" y="138" width="240" height="128"/>
@@ -49,6 +48,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sqV-rl-W99" secondAttribute="trailing" id="2JY-xa-YbL"/>
+                            <constraint firstItem="sqV-rl-W99" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F0A-nQ-Y9L"/>
+                            <constraint firstItem="sqV-rl-W99" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gPQ-aw-WGV"/>
+                            <constraint firstAttribute="bottom" secondItem="sqV-rl-W99" secondAttribute="bottom" id="zD5-Ex-2XE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="diceImageView1" destination="gJ9-Po-GQT" id="g0I-aW-d06"/>
