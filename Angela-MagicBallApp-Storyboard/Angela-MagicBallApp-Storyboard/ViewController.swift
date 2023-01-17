@@ -41,12 +41,13 @@ class ViewController: UIViewController {
     
     func playSound() {
         
-        guard let url = Bundle.main.url(forResource: "sound", withExtension: "mp3") else { return }
+        guard let path = Bundle.main.path(forResource: "sound", ofType: "mp3") else { return }
+        let url = URL(fileURLWithPath: path)
         
         do {
-            let player = try AVAudioPlayer(contentsOf: url)
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
             
-            player.play()
         } catch let error {
             print(error.localizedDescription)
         }
