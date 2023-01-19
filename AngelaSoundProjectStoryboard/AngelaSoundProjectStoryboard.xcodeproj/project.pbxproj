@@ -13,6 +13,13 @@
 		DDB9B31E2979203100BA5E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B31C2979203100BA5E1B /* Main.storyboard */; };
 		DDB9B3202979203600BA5E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B31F2979203600BA5E1B /* Assets.xcassets */; };
 		DDB9B3232979203600BA5E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B3212979203600BA5E1B /* LaunchScreen.storyboard */; };
+		DDB9B331297923F400BA5E1B /* soundE.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B32A297923F300BA5E1B /* soundE.wav */; };
+		DDB9B332297923F400BA5E1B /* soundB.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B32B297923F300BA5E1B /* soundB.wav */; };
+		DDB9B333297923F400BA5E1B /* soundF.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B32C297923F300BA5E1B /* soundF.wav */; };
+		DDB9B334297923F400BA5E1B /* soundC.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B32D297923F300BA5E1B /* soundC.wav */; };
+		DDB9B335297923F400BA5E1B /* soundD.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B32E297923F300BA5E1B /* soundD.wav */; };
+		DDB9B336297923F400BA5E1B /* soundA.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B32F297923F400BA5E1B /* soundA.wav */; };
+		DDB9B337297923F400BA5E1B /* soundG.wav in Resources */ = {isa = PBXBuildFile; fileRef = DDB9B330297923F400BA5E1B /* soundG.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		DDB9B31F2979203600BA5E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB9B3222979203600BA5E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB9B3242979203600BA5E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB9B32A297923F300BA5E1B /* soundE.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundE.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundE.wav; sourceTree = "<group>"; };
+		DDB9B32B297923F300BA5E1B /* soundB.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundB.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundB.wav; sourceTree = "<group>"; };
+		DDB9B32C297923F300BA5E1B /* soundF.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundF.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundF.wav; sourceTree = "<group>"; };
+		DDB9B32D297923F300BA5E1B /* soundC.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundC.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundC.wav; sourceTree = "<group>"; };
+		DDB9B32E297923F300BA5E1B /* soundD.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundD.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundD.wav; sourceTree = "<group>"; };
+		DDB9B32F297923F400BA5E1B /* soundA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundA.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundA.wav; sourceTree = "<group>"; };
+		DDB9B330297923F400BA5E1B /* soundG.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = soundG.wav; path = ../../../../../Downloads/Development/SoundProjectAngela/Sound/soundG.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,13 @@
 				DDB9B31F2979203600BA5E1B /* Assets.xcassets */,
 				DDB9B3212979203600BA5E1B /* LaunchScreen.storyboard */,
 				DDB9B3242979203600BA5E1B /* Info.plist */,
+				DDB9B32F297923F400BA5E1B /* soundA.wav */,
+				DDB9B32B297923F300BA5E1B /* soundB.wav */,
+				DDB9B32D297923F300BA5E1B /* soundC.wav */,
+				DDB9B32E297923F300BA5E1B /* soundD.wav */,
+				DDB9B32A297923F300BA5E1B /* soundE.wav */,
+				DDB9B32C297923F300BA5E1B /* soundF.wav */,
+				DDB9B330297923F400BA5E1B /* soundG.wav */,
 			);
 			path = AngelaSoundProjectStoryboard;
 			sourceTree = "<group>";
@@ -127,7 +148,14 @@
 			files = (
 				DDB9B3232979203600BA5E1B /* LaunchScreen.storyboard in Resources */,
 				DDB9B3202979203600BA5E1B /* Assets.xcassets in Resources */,
+				DDB9B333297923F400BA5E1B /* soundF.wav in Resources */,
+				DDB9B332297923F400BA5E1B /* soundB.wav in Resources */,
+				DDB9B334297923F400BA5E1B /* soundC.wav in Resources */,
 				DDB9B31E2979203100BA5E1B /* Main.storyboard in Resources */,
+				DDB9B335297923F400BA5E1B /* soundD.wav in Resources */,
+				DDB9B337297923F400BA5E1B /* soundG.wav in Resources */,
+				DDB9B336297923F400BA5E1B /* soundA.wav in Resources */,
+				DDB9B331297923F400BA5E1B /* soundE.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
