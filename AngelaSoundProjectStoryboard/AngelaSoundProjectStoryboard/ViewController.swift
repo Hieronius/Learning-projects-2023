@@ -37,10 +37,25 @@ class ViewController: UIViewController {
         // defined a name of the pressed button
         var whichButton = sender.titleLabel?.text ?? "name"
         
+        // first part of the challenge
+        // changing opacity of the button to the half
+        sender.alpha = 0.5
+        print("start")
+        
+        // second part of the challenge
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+            sender.alpha = 1
+            print("end")
+        })
+        
         print(whichButton)
+        print(sender.backgroundColor!)
         // current name of the button moves to the our function playSound()
         playSound(buttonName:whichButton)
     }
+    
+    
     
 }
 
