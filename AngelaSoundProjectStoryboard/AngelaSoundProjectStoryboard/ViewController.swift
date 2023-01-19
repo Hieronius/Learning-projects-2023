@@ -35,18 +35,19 @@ class ViewController: UIViewController {
     @IBAction func keyPressed(_ sender: UIButton) {
         
         // defined a name of the pressed button
-        var whichButton = sender.titleLabel?.text ?? "name"
+        let whichButton = sender.titleLabel?.text ?? "name"
         
         // first part of the challenge
         // changing opacity of the button to the half
         sender.alpha = 0.5
-        print("start")
         
         // second part of the challenge
-        
+        // defined a dispatch main thread for async function to get button back to it's previous condition.
+        // as we can see we might use "execute" as a closure without "in" and arguments.
+        // Trailing closure is also forbidden here
+        // brakets is the must after our closure to show that there is no input parameters
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
             sender.alpha = 1
-            print("end")
         })
         
         print(whichButton)
