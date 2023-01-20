@@ -15,5 +15,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func typeOfTheEgg(_ sender: UIButton) {
+        print(sender.titleLabel?.text!)
+    }
 }
 
