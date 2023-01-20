@@ -12,17 +12,15 @@ class ViewController: UIViewController {
     let softTime = 5
     let mediumTime = 7
     let hardTime = 12
+    
+    var hardness = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
-    @IBAction func typeOfTheEgg(_ sender: UIButton) {
-        
-        let hardness = sender.currentTitle!
-        
+    
+    func yolkCheck() {
         switch hardness {
         case "Soft":
             print("the time of cooking for soft yolk is \(softTime) minutes")
@@ -33,6 +31,14 @@ class ViewController: UIViewController {
         default:
             print("Unknown state")
         }
+    }
+
+
+    @IBAction func typeOfTheEgg(_ sender: UIButton) {
+        
+        hardness = sender.currentTitle!
+        
+        yolkCheck()
         
     }
 }
