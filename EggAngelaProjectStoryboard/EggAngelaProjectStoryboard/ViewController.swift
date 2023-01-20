@@ -9,9 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let softTime = 5
-    let mediumTime = 7
-    let hardTime = 12
+    let eggTimes = ["Soft": 5, "Medium": 7, "Hard": 12]
     
     var hardness = ""
 
@@ -23,11 +21,11 @@ class ViewController: UIViewController {
     func yolkCheck() {
         switch hardness {
         case "Soft":
-            print("the time of cooking for soft yolk is \(softTime) minutes")
+            print("the time of cooking for soft yolk is \((eggTimes["Soft"])!) minutes")
         case "Medium":
-            print("the time of cooking for medium yolk is \(mediumTime) minutes")
+            print("the time of cooking for medium yolk is \((eggTimes["Medium"])!) minutes")
         case "Hard":
-            print("the time of cooking for hard yolk is \(hardTime) minutes")
+            print("the time of cooking for hard yolk is \((eggTimes["Hard"])!) minutes")
         default:
             print("Unknown state")
         }
