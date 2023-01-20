@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let eggTimes = ["Soft": 5, "Medium": 7, "Hard": 12]
+    let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
     
     var hardness = ""
     
@@ -42,7 +42,8 @@ class ViewController: UIViewController {
     // objc method to update our timer
     @objc func updateCounter() {
         
-        
+        // here we wan't be sure that time won't go below 0 because there is no such a thing like a minus time
+        // so each second we wan't to subtract one second from the timer number
         if counter > 0 {
             print("\(counter) seconds to the end of the timer")
             counter -= 1
@@ -53,11 +54,11 @@ class ViewController: UIViewController {
     func yolkCheck() {
         switch hardness {
         case "Soft":
-            print("the time of cooking for soft yolk is \((eggTimes["Soft"])!) minutes")
+            print("the time of cooking for soft yolk is \((eggTimes["Soft"])!) seconds")
         case "Medium":
-            print("the time of cooking for medium yolk is \((eggTimes["Medium"])!) minutes")
+            print("the time of cooking for medium yolk is \((eggTimes["Medium"])!) seconds")
         case "Hard":
-            print("the time of cooking for hard yolk is \((eggTimes["Hard"])!) minutes")
+            print("the time of cooking for hard yolk is \((eggTimes["Hard"])!) seconds")
         default:
             print("Unknown state")
         }
@@ -69,11 +70,11 @@ class ViewController: UIViewController {
         // each new click of the button we won't reser our timer
         timer.invalidate()
         
-        // and set the counter number to default:
-        counter = 60
-        
         // here we wan't to check the name of the button that was pressed
         hardness = sender.currentTitle!
+        
+        // and set the counter number to default which equal to the time for cooking a specific type of the yolk:
+        counter = eggTimes[hardness]!
         
         // here we wan't to check the time needed for cooking a specific type of the egg.
         yolkCheck()
