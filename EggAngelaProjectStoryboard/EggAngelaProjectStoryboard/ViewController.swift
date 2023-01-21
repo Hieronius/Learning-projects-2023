@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     // func to set our progress bar
-    func setProgressBar() {
+    @objc func setProgressBar() {
         
         // Here will be my work in 21.01.23
         
@@ -57,8 +57,17 @@ class ViewController: UIViewController {
         // print current amount of points of 1%
         print(onePersentOfProgress)
         
+        // starting position for progress bar
+        progressBar.setProgress(0, animated: false)
         // current progress:
         progressBar.progress = 0.0
+        
+        // code for adding progress to the progress bar
+        if progressBar.progress != 1 {
+            self.progressBar.progress += 2/10
+        } else {
+            print("progress is done")
+        }
         
         // adding progress
         if counter > -1 {
