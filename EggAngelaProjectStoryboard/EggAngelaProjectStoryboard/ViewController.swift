@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     var progress = 0
     
     // How much % value has each of every second in specific timer
-    var onePersentOfProgressBar: Float = 0.0
+    var costOfOneSecondInPercentage: Float = 0.0
     
     // Total amount of the second for progressBar
     var totalCounter = 0
@@ -44,22 +44,25 @@ class ViewController: UIViewController {
     // our button to press
     @IBAction func typeOfTheEgg(_ sender: UIButton) {
         
-        // How much second will be set as 100 % in our progress bar:
-        totalCounter = counter
-        
-        // Calculation of 1 % for progressBar
-        onePersentOfProgressBar = Float(totalCounter) / Float(10.0)
         
         // each new click of the button we wan't reset our timer
         timer.invalidate()
         
         // each new click our progress bar should be reseted too
         progressBar.progress = 0.0
+        
         // here we wan't to check the name of the button that was pressed
         hardness = sender.currentTitle!
         
         // and set the counter number to default which equal to the time for cooking a specific type of the yolk:
         counter = eggTimes[hardness]!
+        
+        // How much second will be set as 100 % in our progress bar:
+        totalCounter = counter
+        
+        // Calculation of 1 % for progressBar
+        costOfOneSecondInPercentage = (Float(100) / Float(totalCounter)) / Float(100)
+        print("\(costOfOneSecondInPercentage) - 1 sec has a % value)")
         
         // here we wan't to check the time needed for cooking a specific type of the egg.
         yolkCheck()

@@ -26,29 +26,16 @@ extension ViewController {
     // method to set progressBar
      @objc func setProgressBar() {
         
+        // set a starting point for progressBar
         progressBar.setProgress(0, animated: false)
         // current progress:
         progressBar.progress = 0.0
         
-        //        // code for adding progress to the progress bar
-        //        if progressBar.progress != 1 {
-        //            self.progressBar.progress += 2/10
-        //        } else {
-        //            print("progress is done")
-        //        }
-        
-        //        // adding progress
-        //        if counter > -1 {
-        //            print("\(progressBar.progress) to end this timer")
-        //            progressBar.progress += 0.01
-        //        }
     }
     
     // objc method to update our timer
     @objc func updateCounter() {
         
-        
-        print("\(onePersentOfProgressBar) - 1% of timer cost)")
         // here we wan't be sure that time won't go below 0 because there is no such a thing like a minus time
         // so each second we wan't to subtract one second from the timer number
         if counter > 0 {
@@ -58,12 +45,14 @@ extension ViewController {
             // set label text as our current amount of second to end
             labelTitle.text = "\(counter)"
             
-            // adding progress
-                print("\(progressBar.progress) to end this timer")
-                progressBar.progress += Float(onePersentOfProgressBar)
+            
             
             // deduct one point from the timer
             counter -= 1
+            
+            // adding progress
+                print("\(progressBar.progress) is current progress of your cooking")
+            progressBar.progress += Float((costOfOneSecondInPercentage))
             
             // added special check if counter equal to zero or less let's print a message
             
