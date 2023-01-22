@@ -19,7 +19,7 @@ extension ViewController {
         // selector - specific function of method to run each interval
         // userInfo - i think something like documentary
         // repeats - one time or more we wan't to repeat our timer
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounterAndProgressBar), userInfo: nil, repeats: true)
         
     }
     
@@ -34,7 +34,7 @@ extension ViewController {
     }
     
     // objc method to update our timer
-    @objc func updateCounter() {
+    @objc func updateCounterAndProgressBar() {
         
         // here we wan't be sure that time won't go below 0 because there is no such a thing like a minus time
         // so each second we wan't to subtract one second from the timer number
@@ -42,13 +42,14 @@ extension ViewController {
             // print how much seconds left
             print("\(counter) seconds to the end of the timer")
             
-            // set label text as our current amount of second to end
-            labelTitle.text = "\(counter)"
             
             
             
             // deduct one point from the timer
             counter -= 1
+            
+            // set label text as our current amount of second to end
+            labelTitle.text = "\(counter)"
             
             // adding progress
                 print("\(progressBar.progress) is current progress of your cooking")
@@ -58,6 +59,7 @@ extension ViewController {
             
         } else {
             labelTitle.text = "Your egg is cooked"
+            playWarning()
         }
         
     }
@@ -74,6 +76,20 @@ extension ViewController {
         default:
             print("Unknown state")
         }
+    }
+    
+    // function which should play our warning when egg has been cooked
+    func playWarning() {
+        
+        // let's find a way to our warning sound file
+        let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3")
+        
+        // if we sure that in the selecter directory we will always have the file let's unwrap it:
+        audioPlayer = try! AVAudioPlayer(contentsOf: url!)
+        
+        // when sound is loaded to our audio player let's run it
+        audioPlayer.play()
+        
     }
     
 }

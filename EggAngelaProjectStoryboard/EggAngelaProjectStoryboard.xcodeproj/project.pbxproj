@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		DD7C4733297D699D0027B8A1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C4732297D699D0027B8A1 /* Functions.swift */; };
+		DD7C4735297D81860027B8A1 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD7C4734297D81860027B8A1 /* alarm.mp3 */; };
 		DDA9D6DC297A799E007157D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9D6DB297A799E007157D4 /* AppDelegate.swift */; };
 		DDA9D6DE297A799E007157D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9D6DD297A799E007157D4 /* SceneDelegate.swift */; };
 		DDA9D6E0297A799E007157D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9D6DF297A799E007157D4 /* ViewController.swift */; };
 		DDA9D6E3297A799E007157D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA9D6E1297A799E007157D4 /* Main.storyboard */; };
 		DDA9D6E5297A79A0007157D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA9D6E4297A79A0007157D4 /* Assets.xcassets */; };
 		DDA9D6E8297A79A0007157D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA9D6E6297A79A0007157D4 /* LaunchScreen.storyboard */; };
-		DDA9D6F0297A79BA007157D4 /* EggTimer_alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA9D6EF297A79BA007157D4 /* EggTimer_alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD7C4732297D699D0027B8A1 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		DD7C4734297D81860027B8A1 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = ../../../../../Downloads/Development/Other/EggProjectContent/alarm.mp3; sourceTree = "<group>"; };
 		DDA9D6D8297A799E007157D4 /* EggAngelaProjectStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggAngelaProjectStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA9D6DB297A799E007157D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA9D6DD297A799E007157D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		DDA9D6E4297A79A0007157D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA9D6E7297A79A0007157D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA9D6E9297A79A0007157D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDA9D6EF297A79BA007157D4 /* EggTimer_alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = EggTimer_alarm_sound.mp3; path = ../../../../../Downloads/EggProjectContent/EggTimer_alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				DDA9D6E4297A79A0007157D4 /* Assets.xcassets */,
 				DDA9D6E6297A79A0007157D4 /* LaunchScreen.storyboard */,
 				DDA9D6E9297A79A0007157D4 /* Info.plist */,
-				DDA9D6EF297A79BA007157D4 /* EggTimer_alarm_sound.mp3 */,
+				DD7C4734297D81860027B8A1 /* alarm.mp3 */,
 			);
 			path = EggAngelaProjectStoryboard;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7C4735297D81860027B8A1 /* alarm.mp3 in Resources */,
 				DDA9D6E8297A79A0007157D4 /* LaunchScreen.storyboard in Resources */,
 				DDA9D6E5297A79A0007157D4 /* Assets.xcassets in Resources */,
-				DDA9D6F0297A79BA007157D4 /* EggTimer_alarm_sound.mp3 in Resources */,
 				DDA9D6E3297A799E007157D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

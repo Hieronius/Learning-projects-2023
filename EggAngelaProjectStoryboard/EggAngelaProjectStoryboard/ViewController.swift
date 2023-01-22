@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -29,6 +30,9 @@ class ViewController: UIViewController {
     // here i should define an instance of the Timer class. One for all project
     var timer = Timer()
     
+    // our audioPlayer
+    var audioPlayer = AVAudioPlayer()
+    
     // current state of the progress bar
     var progress = 0
     
@@ -44,6 +48,8 @@ class ViewController: UIViewController {
     // our button to press
     @IBAction func typeOfTheEgg(_ sender: UIButton) {
         
+        // we wan't to erase current status of audio player each time when we press the button:
+        audioPlayer = AVAudioPlayer()
         
         // each new click of the button we wan't reset our timer
         timer.invalidate()
