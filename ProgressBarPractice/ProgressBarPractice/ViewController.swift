@@ -28,14 +28,22 @@ class ViewController: UIViewController {
         button.alpha = 0
     }
     
+    // this method will be active each one second of our running timer
     @objc func updateProgressView() {
+        
+        // we should be sure that our progress bar is not completed
         if progressBar.progress != 1 {
+            
+            // add 20% for each second of the timer
             self.progressBar.progress += 0.2
         } else {
+            
+            // make button visible and set it's alpha to 1 is our progress bar is done
             self.button.isHidden = false
             UIView.animate(withDuration: 0.4, animations: { () -> Void in
                 self.button.alpha = 1
             })
+            // plus set text of the label to:
             self.label.text = "Loading is done"
         }
     }
