@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,40 +15,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Идет загрузка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2O-IJ-Pyp">
-                                <rect key="frame" x="118" y="466" width="157" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0079572917890000008" green="0.47780483959999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.79506725069999995" green="0.94938737149999997" blue="0.98660188910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-di-MKc">
-                                <rect key="frame" x="160" y="523" width="73" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0079572917890000008" green="0.47780483959999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                    <color key="baseForegroundColor" red="0.79506725069999995" green="0.94938737149999997" blue="0.98660188910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lx3-8v-X0t">
-                                <rect key="frame" x="68" y="424" width="256" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-mc-y81">
+                                <rect key="frame" x="68" y="367" width="257" height="118"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lx3-8v-X0t">
+                                        <rect key="frame" x="0.0" y="0.0" width="257" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="HhA-Z5-wmw"/>
+                                        </constraints>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Идет загрузка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2O-IJ-Pyp">
+                                        <rect key="frame" x="71.333333333333343" y="34" width="114.33333333333334" height="20.333333333333329"/>
+                                        <color key="backgroundColor" red="0.0079572917890000008" green="0.47780483959999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.333333333333329" id="D1E-AV-PoF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.79506725069999995" green="0.94938737149999997" blue="0.98660188910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-di-MKc">
+                                        <rect key="frame" x="91.666666666666657" y="84.333333333333314" width="73.666666666666657" height="33.666666666666657"/>
+                                        <color key="backgroundColor" red="0.0079572917890000008" green="0.47780483959999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                            <color key="baseForegroundColor" red="0.79506725069999995" green="0.94938737149999997" blue="0.98660188910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ULx-di-MKc" firstAttribute="leading" secondItem="yy7-mc-y81" secondAttribute="leading" constant="91.666666666666657" id="0qM-zw-6qj"/>
+                                    <constraint firstItem="c2O-IJ-Pyp" firstAttribute="leading" secondItem="yy7-mc-y81" secondAttribute="leading" constant="71.333333333333329" id="O5n-Ag-MM3"/>
+                                    <constraint firstItem="lx3-8v-X0t" firstAttribute="leading" secondItem="yy7-mc-y81" secondAttribute="leadingMargin" id="zlM-nA-ANw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.58277767899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yy7-mc-y81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Mx-At-hxJ"/>
+                            <constraint firstItem="yy7-mc-y81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="308" id="9kt-gO-E8G"/>
+                            <constraint firstItem="yy7-mc-y81" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rly-B0-eDr"/>
+                            <constraint firstItem="yy7-mc-y81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="S60-Jt-htp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="ULx-di-MKc" id="GFp-gN-6TR"/>
+                        <outlet property="label" destination="c2O-IJ-Pyp" id="w2t-WY-BuT"/>
+                        <outlet property="progressBar" destination="lx3-8v-X0t" id="Ehj-Ck-yda"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="3.5211267605633805"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
