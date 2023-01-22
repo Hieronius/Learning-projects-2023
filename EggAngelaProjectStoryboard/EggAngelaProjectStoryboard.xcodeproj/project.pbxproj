@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD7C4733297D699D0027B8A1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C4732297D699D0027B8A1 /* Functions.swift */; };
 		DDA9D6DC297A799E007157D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9D6DB297A799E007157D4 /* AppDelegate.swift */; };
 		DDA9D6DE297A799E007157D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9D6DD297A799E007157D4 /* SceneDelegate.swift */; };
 		DDA9D6E0297A799E007157D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9D6DF297A799E007157D4 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD7C4732297D699D0027B8A1 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		DDA9D6D8297A799E007157D4 /* EggAngelaProjectStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggAngelaProjectStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA9D6DB297A799E007157D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA9D6DD297A799E007157D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				DDA9D6DB297A799E007157D4 /* AppDelegate.swift */,
 				DDA9D6DD297A799E007157D4 /* SceneDelegate.swift */,
 				DDA9D6DF297A799E007157D4 /* ViewController.swift */,
+				DD7C4732297D699D0027B8A1 /* Functions.swift */,
 				DDA9D6E1297A799E007157D4 /* Main.storyboard */,
 				DDA9D6E4297A79A0007157D4 /* Assets.xcassets */,
 				DDA9D6E6297A79A0007157D4 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				DDA9D6E0297A799E007157D4 /* ViewController.swift in Sources */,
 				DDA9D6DC297A799E007157D4 /* AppDelegate.swift in Sources */,
 				DDA9D6DE297A799E007157D4 /* SceneDelegate.swift in Sources */,
+				DD7C4733297D699D0027B8A1 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
