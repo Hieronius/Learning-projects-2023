@@ -79,6 +79,8 @@ class ViewController: UIViewController {
         // here we wan't to start our progress bar
         setProgressBar()
         
+        print("button has been pressed")
+        
     }
 }
 
