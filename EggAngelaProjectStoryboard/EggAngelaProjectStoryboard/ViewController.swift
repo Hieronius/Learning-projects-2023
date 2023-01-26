@@ -80,6 +80,7 @@ class ViewController: UIViewController {
         setProgressBar()
         
         print("button has been pressed")
+        print("test commit")
         
     }
 }
