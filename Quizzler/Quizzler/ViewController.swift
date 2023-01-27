@@ -36,23 +36,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        updateUI()
+        
     }
 
 
     // function for both our answers
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        if questionNumber == 3 {
-            questionNumber = 0
+        // detection of which button user will press:
+        let userAnswer = sender.currentTitle
+        
+        // detection of what answer is really true or false:
+        let actualAnswer = quiz[questionNumber][1]
+        
+        if userAnswer == actualAnswer {
+            print("right")
+        } else {
+            print("Wrong")
         }
-        updateUI()
+        
+        // open the next question of quiz array
         questionNumber += 1
+        // display this question on the view
+        updateUI()
        
     }
     
     // function to reload our questions
     func updateUI() {
-        question = quiz[questionNumber]
+        question = quiz[questionNumber][0]
         
         
     }
