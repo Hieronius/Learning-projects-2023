@@ -44,9 +44,13 @@ class ViewController: UIViewController {
     // current question number
     var questionNumber = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // let's activate progress bar
+        progressBar.setProgress(0, animated: true)
         
         updateUI()
         
@@ -55,6 +59,7 @@ class ViewController: UIViewController {
 
     // function for both our answers
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        
         
         // detection of which button user will press:
         let userAnswer = sender.currentTitle
@@ -84,8 +89,20 @@ class ViewController: UIViewController {
     
     // function to reload our questions
     func updateUI() {
+        
+        // read the question
         question = quiz[questionNumber].text
         
+        let valueOfSingleQuestionInProgressBar = Float(1) / Float(quiz.count)
+        
+        // update current status of progress bar
+        self.progressBar.progress += valueOfSingleQuestionInProgressBar
+        
+        // use of gcd to clean our buttons after 0,5 sec delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.trueButton.backgroundColor = UIColor.clear
+            self.falseButton.backgroundColor = UIColor.clear
+        })
         
     }
 }
