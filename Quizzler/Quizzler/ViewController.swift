@@ -23,16 +23,38 @@ class ViewController: UIViewController {
             questionLabel.text = "\(question)"
         }
     }
+    
+    let quiz = [
+        ["Four + Two is equal to Six", "True"],
+        ["Five - Three is greater than One", "True"],
+        ["Three + Eight is less than Ten", "False"]
+        ]
+    
+    var questionNumber = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        question = "Four + Two is equal to Six"
     }
 
 
     // function for both our answers
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        
+        if questionNumber == 3 {
+            questionNumber = 0
+        }
+        updateUI()
+        questionNumber += 1
+       
+    }
+    
+    // function to reload our questions
+    func updateUI() {
+        question = quiz[questionNumber]
+        
+        
     }
 }
 
