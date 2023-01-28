@@ -30,9 +30,17 @@ struct QuizBrain {
     var questionNumber = 0
     
     // method to check answer instead of view controller
-    func checkAnswer(userAnswer: String) {
-        // detection of what answer is really true or false:
-        let actualAnswer = quiz[questionNumber].answer
+    func checkAnswer(_ userAnswer: String) -> Bool {
+        
+        // stuped checkout of status of our answer:
+        // yes i wan't implement here guard but seems like it's not nesessary
+        if userAnswer == quiz[questionNumber].answer {
+            // User got it right
+            return true
+        } else {
+            // User got it wrong
+            return false
+        }
     }
     
 }

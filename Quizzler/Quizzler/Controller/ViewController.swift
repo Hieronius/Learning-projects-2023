@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     // Property of our logic center of the app
+    // So we can use this module here
     var quizBrain = QuizBrain()
     
     
@@ -46,24 +47,25 @@ class ViewController: UIViewController {
         
         
         // detection of which button user will press:
-        let userAnswer = sender.currentTitle
+        let userAnswer = sender.currentTitle!
         
-        quizBrain.checkAnswer()
+        // Let's check user answer with the right one
+        let isUserRightOrWrong = quizBrain.checkAnswer(userAnswer)
         
         // check user's answer and current right answer:
-        if userAnswer == actualAnswer {
+        if isUserRightOrWrong {
             sender.backgroundColor = UIColor.green
         } else {
             sender.backgroundColor = UIColor.red
         }
         
         // check if there is no element which out of range
-        if questionNumber + 1 < quiz.count {
+        if quizBrain.questionNumber + 1 < quizBrain.quiz.count {
             // if there is no problem let's push the next question
-            questionNumber += 1
+            quizBrain.questionNumber += 1
         } else {
             // in other way let's start from zero
-            questionNumber = 0
+            quizBrain.questionNumber = 0
         }
             // display this question on the view
             updateUI()
@@ -74,9 +76,9 @@ class ViewController: UIViewController {
     func updateUI() {
         
         // read the question
-        question = quiz[questionNumber].text
+        question = quizBrain.quiz[quizBrain.questionNumber].text
         
-        let valueOfSingleQuestionInProgressBar = Float(1) / Float(quiz.count)
+        let valueOfSingleQuestionInProgressBar = Float(1) / Float(quizBrain.quiz.count)
         
         // update current status of progress bar
         self.progressBar.progress += valueOfSingleQuestionInProgressBar
