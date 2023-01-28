@@ -29,14 +29,21 @@ struct QuizBrain {
     // current question number
     var questionNumber = 0
     
+    // current score of the user
+    var score = 0
+    
+    // set a variable for progress bar
+    var progressLevel: Float = 0
+    
     
     // method to check answer instead of view controller
-    func checkAnswer(_ userAnswer: String) -> Bool {
+    mutating func checkAnswer(_ userAnswer: String) -> Bool {
         
         // stuped checkout of status of our answer:
         // yes i wan't implement here guard but seems like it's not nesessary
         if userAnswer == quiz[questionNumber].answer {
             // User got it right
+            score += 1
             return true
         } else {
             // User got it wrong
@@ -64,6 +71,19 @@ struct QuizBrain {
         } else {
             // in other way let's start from zero
             questionNumber = 0
+            // and let's reset our score
+            score = 0
+            // set progress as zero
+            
         }
+    }
+    
+    // this func will present our score to View controller
+    func getScore() -> Int {
+        return score
+    }
+    
+    func getProgressBarReset() -> Float {
+        return progressLevel
     }
 }

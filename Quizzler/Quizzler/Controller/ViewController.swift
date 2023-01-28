@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var falseButton: UIButton!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     // text for our questionLabel
     var question = "" {
         didSet {
@@ -61,12 +63,19 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
+        
         // set a new question
         quizBrain.newQuestion()
         
+        
             // display this question on the view
             updateUI()
-       
+        
+        // special check for current progress
+        // If it's already done let's reset the progress bar value
+        if progressBar.progress == 1 {
+            progressBar.progress = quizBrain.getProgress()
+        }
     }
     
     // function to reload our questions
@@ -79,6 +88,9 @@ class ViewController: UIViewController {
         
         // update current status of progress bar
         self.progressBar.progress += quizBrain.getProgress()
+        
+        // update our score label
+        scoreLabel.text = "Score: \(quizBrain.getScore())"
         
         // use of gcd to clean our buttons after 0,5 sec delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
