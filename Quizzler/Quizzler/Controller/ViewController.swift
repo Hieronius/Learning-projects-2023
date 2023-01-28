@@ -50,9 +50,11 @@ class ViewController: UIViewController {
         let userAnswer = sender.currentTitle!
         
         // Let's check user answer with the right one
+        // Defined a result of this function as a constant
         let isUserRightOrWrong = quizBrain.checkAnswer(userAnswer)
         
         // check user's answer and current right answer:
+        // if return is True - color should be green, if False - color should be red
         if isUserRightOrWrong {
             sender.backgroundColor = UIColor.green
         } else {
@@ -60,6 +62,7 @@ class ViewController: UIViewController {
         }
         
         // check if there is no element which out of range
+        // Changed our properties to properties from QuizBrain file (quizBrain variable here in View controller)
         if quizBrain.questionNumber + 1 < quizBrain.quiz.count {
             // if there is no problem let's push the next question
             quizBrain.questionNumber += 1
@@ -73,15 +76,15 @@ class ViewController: UIViewController {
     }
     
     // function to reload our questions
+    // chenged to properties from quizBrain
     func updateUI() {
         
         // read the question
-        question = quizBrain.quiz[quizBrain.questionNumber].text
+        question = quizBrain.getQuestionText()
         
-        let valueOfSingleQuestionInProgressBar = Float(1) / Float(quizBrain.quiz.count)
         
         // update current status of progress bar
-        self.progressBar.progress += valueOfSingleQuestionInProgressBar
+        self.progressBar.progress += quizBrain.getProgress()
         
         // use of gcd to clean our buttons after 0,5 sec delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {

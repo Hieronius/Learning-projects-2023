@@ -29,6 +29,7 @@ struct QuizBrain {
     // current question number
     var questionNumber = 0
     
+    
     // method to check answer instead of view controller
     func checkAnswer(_ userAnswer: String) -> Bool {
         
@@ -43,4 +44,15 @@ struct QuizBrain {
         }
     }
     
+    // method to set a question for our app
+    func getQuestionText() -> String {
+        let question = quiz[questionNumber].text
+        return question
+    }
+    
+    // value of one single question for progress bar
+    func getProgress() -> Float {
+        let valueOfSingleQuestionInProgressBar = Float(1) / Float(quiz.count)
+        return valueOfSingleQuestionInProgressBar
+    }
 }
