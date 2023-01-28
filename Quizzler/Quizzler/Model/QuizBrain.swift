@@ -46,13 +46,24 @@ struct QuizBrain {
     
     // method to set a question for our app
     func getQuestionText() -> String {
-        let question = quiz[questionNumber].text
-        return question
+      quiz[questionNumber].text
+       
     }
     
     // value of one single question for progress bar
     func getProgress() -> Float {
-        let valueOfSingleQuestionInProgressBar = Float(1) / Float(quiz.count)
-        return valueOfSingleQuestionInProgressBar
+        Float(1) / Float(quiz.count)
+    }
+    
+    mutating func newQuestion() {
+        // check if there is no element which out of range
+        // Changed our properties to properties from QuizBrain file (quizBrain variable here in View controller)
+        if questionNumber + 1 < quiz.count {
+            // if there is no problem let's push the next question
+            questionNumber += 1
+        } else {
+            // in other way let's start from zero
+            questionNumber = 0
+        }
     }
 }

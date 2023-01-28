@@ -61,15 +61,9 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        // check if there is no element which out of range
-        // Changed our properties to properties from QuizBrain file (quizBrain variable here in View controller)
-        if quizBrain.questionNumber + 1 < quizBrain.quiz.count {
-            // if there is no problem let's push the next question
-            quizBrain.questionNumber += 1
-        } else {
-            // in other way let's start from zero
-            quizBrain.questionNumber = 0
-        }
+        // set a new question
+        quizBrain.newQuestion()
+        
             // display this question on the view
             updateUI()
        
