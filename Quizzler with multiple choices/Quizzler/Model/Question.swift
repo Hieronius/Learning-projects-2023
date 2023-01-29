@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Creation of struct of questions and asnwers
+// Creation of struct of questions, possible answers and correct answer
 struct Question {
     var text = ""
     var answer = [""]
@@ -15,9 +15,10 @@ struct Question {
     
     
     // very bad naming by Angela, not me
-    init(q: String, a: [String], c: String) {
-        text = q
-        answer = a
-        correctAnswer = c
+    // renamed all of it so readability should be better
+    init(text: String, answer: [String], correctAnswer: String) {
+        self.text = text
+        self.answer = answer
+        self.correctAnswer = correctAnswer
     }
 }

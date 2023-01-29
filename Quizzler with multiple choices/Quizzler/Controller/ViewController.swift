@@ -88,6 +88,12 @@ class ViewController: UIViewController {
         // read the question
         question = quizBrain.getQuestionText()
         
+        // let's set a multiple answer variations for our three buttons:
+        // get array of possible answers for current questions and take first/second/third of it accordingly
+        self.firstButton.titleLabel?.text = quizBrain.getPossibleAnswers()[0]
+        self.secondButton.titleLabel?.text = quizBrain.getPossibleAnswers()[1]
+        self.thirdButton.titleLabel?.text = quizBrain.getPossibleAnswers()[2]
+        
         
         // update current status of progress bar
         self.progressBar.progress += quizBrain.getProgress()
