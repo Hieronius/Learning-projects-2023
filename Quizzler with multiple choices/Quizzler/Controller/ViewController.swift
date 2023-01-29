@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIProgressView!
     
-    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var firstButton: UIButton!
     
-    @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    
+    @IBOutlet weak var thirdButton: UIButton!
     
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
     }
 
 
+    
     // function for both our answers
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
@@ -94,8 +97,9 @@ class ViewController: UIViewController {
         
         // use of gcd to clean our buttons after 0,5 sec delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.trueButton.backgroundColor = UIColor.clear
-            self.falseButton.backgroundColor = UIColor.clear
+            self.firstButton.backgroundColor = UIColor.clear
+            self.secondButton.backgroundColor = UIColor.clear
+            self.thirdButton.backgroundColor = UIColor.clear
         })
         
     }

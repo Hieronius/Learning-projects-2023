@@ -40,7 +40,7 @@ struct QuizBrain {
         
         // stuped checkout of status of our answer:
         // yes i wan't implement here guard but seems like it's not nesessary
-        if userAnswer == quiz[questionNumber].answer {
+        if userAnswer == quiz[questionNumber].correctAnswer {
             // User got it right
             score += 1
             return true

@@ -26,17 +26,31 @@
                                 <rect key="frame" x="16" y="47" width="358" height="763"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-93-BvD">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="66.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YY4-YR-76P">
-                                        <rect key="frame" x="0.0" y="76.666666666666657" width="358" height="486.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="60" width="358" height="413"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq7-dn-QIs">
+                                        <rect key="frame" x="0.0" y="483" width="358" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="lPB-Gn-mCd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="First" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="eQW-lj-6Qs" eventType="touchUpInside" id="oBu-h9-DG4"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gf-is-2EB">
                                         <rect key="frame" x="0.0" y="573" width="358" height="80"/>
                                         <constraints>
@@ -44,7 +58,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="True" backgroundImage="Rectangle">
+                                        <state key="normal" title="Second" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -58,7 +72,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="False" backgroundImage="Rectangle">
+                                        <state key="normal" title="Third" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -89,11 +103,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="falseButton" destination="wrS-w8-v0m" id="04t-FT-m8J"/>
+                        <outlet property="firstButton" destination="eq7-dn-QIs" id="hXf-rJ-IBG"/>
                         <outlet property="progressBar" destination="N9L-FF-J57" id="DBd-6y-Iyw"/>
                         <outlet property="questionLabel" destination="YY4-YR-76P" id="9RN-ei-2Jn"/>
                         <outlet property="scoreLabel" destination="OPB-93-BvD" id="oPZ-2V-boZ"/>
-                        <outlet property="trueButton" destination="5Gf-is-2EB" id="gwY-0h-il9"/>
+                        <outlet property="secondButton" destination="5Gf-is-2EB" id="dcJ-Bs-Aha"/>
+                        <outlet property="thirdButton" destination="wrS-w8-v0m" id="Oa9-v3-ZSZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfA-qd-yfk" sceneMemberID="firstResponder"/>
