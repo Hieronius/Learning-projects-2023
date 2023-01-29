@@ -52,19 +52,22 @@ struct QuizBrain {
     
     // method to set a question for our app
     func getQuestionText() -> String {
-      quiz[questionNumber].text
+        return quiz[questionNumber].text
        
     }
     
     // method to set a possible answers to buttons labels
     // it's return an array of strings instead of just a string
     func getPossibleAnswers() -> [String] {
-        quiz[questionNumber].answer
+        return quiz[questionNumber].answer
+        
     }
     
     // value of one single question for progress bar
     func getProgress() -> Float {
-        Float(1) / Float(quiz.count)
+        print(Float(quiz.count))
+        return Float(1) / Float(quiz.count)
+        
     }
     
     mutating func newQuestion() {
@@ -76,9 +79,11 @@ struct QuizBrain {
         } else {
             // in other way let's start from zero
             questionNumber = 0
+            print("Let's start again")
             // and let's reset our score
             score = 0
             // set progress as zero
+            progressLevel = 0
             
         }
     }

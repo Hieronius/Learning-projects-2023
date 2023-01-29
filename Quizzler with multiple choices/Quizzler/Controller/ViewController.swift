@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         // let's activate progress bar
         progressBar.setProgress(0, animated: true)
         
+        // set first question
         updateUI()
         
     }
@@ -66,37 +67,39 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
+        // special check for current progress
+        // If it's already done let's reset the progress bar value
+        if progressBar.progress == 1 {
+            progressBar.progress = quizBrain.getProgressBarReset()
+        }
         
         // set a new question
         quizBrain.newQuestion()
         
-        
-            // display this question on the view
-            updateUI()
-        
-        // special check for current progress
-        // If it's already done let's reset the progress bar value
-        if progressBar.progress == 1 {
-            progressBar.progress = quizBrain.getProgress()
-        }
+        // display this question on the view
+        updateUI()
     }
     
     // function to reload our questions
     // chenged to properties from quizBrain
     func updateUI() {
         
+        
         // read the question
-        question = quizBrain.getQuestionText()
+         question = quizBrain.getQuestionText()
+        
         
         // let's set a multiple answer variations for our three buttons:
         // get array of possible answers for current questions and take first/second/third of it accordingly
-        self.firstButton.titleLabel?.text = quizBrain.getPossibleAnswers()[0]
-        self.secondButton.titleLabel?.text = quizBrain.getPossibleAnswers()[1]
-        self.thirdButton.titleLabel?.text = quizBrain.getPossibleAnswers()[2]
+        self.firstButton.setTitle(quizBrain.getPossibleAnswers()[0], for: .normal)
+        self.secondButton.setTitle(quizBrain.getPossibleAnswers()[1], for: .normal)
+        self.thirdButton.setTitle(quizBrain.getPossibleAnswers()[2], for: .normal)
+        
         
         
         // update current status of progress bar
         self.progressBar.progress += quizBrain.getProgress()
+        
         
         // update our score label
         scoreLabel.text = "Score: \(quizBrain.getScore())"
