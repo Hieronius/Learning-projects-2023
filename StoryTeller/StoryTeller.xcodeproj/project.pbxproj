@@ -91,8 +91,8 @@
 		DDFDE21B2986B3FA000173AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DDFDE21C2987D22F000173AE /* StoryBrain.swift */,
 				DDFDE21E2987D697000173AE /* Story.swift */,
+				DDFDE21C2987D22F000173AE /* StoryBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
