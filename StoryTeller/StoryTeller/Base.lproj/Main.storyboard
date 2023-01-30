@@ -35,6 +35,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6HV-zA-Naq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-yj-IPj">
                                 <rect key="frame" x="16" y="598" width="358" height="96"/>
@@ -45,6 +48,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVZ-FE-oQC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

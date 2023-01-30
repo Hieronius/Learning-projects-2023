@@ -9,11 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    // list of our elements on storyboard:
     @IBOutlet weak var storyLabel: UILabel!
-    
     @IBOutlet weak var rightButton: UIButton!
-    
     @IBOutlet weak var leftButton: UIButton!
     
     override func viewDidLoad() {
@@ -21,6 +19,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    // action that happen when we press the buttons:
+    @IBAction func pressButtons(_ sender: Any) {
+    }
 }
 
