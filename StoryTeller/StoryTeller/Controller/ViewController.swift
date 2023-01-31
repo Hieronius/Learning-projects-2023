@@ -22,11 +22,17 @@ class ViewController: UIViewController {
     }
     
     // property of our Story struct on the View Controller so we can have access to it here
-    var story = Story()
+    var story = StoryBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // load first starting part of the story:
+        currentStory = story.stories[0].title
+        
+        // define our label as this story part:
+        storyLabel.text = currentStory
     }
 
     // action that happen when we press the buttons:
