@@ -44,17 +44,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // load first starting part of the story:
-        currentStory = story.stories[0].title
-        leftAnswer = story.stories[0].choice1
-        rightAnswer = story.stories[0].choice2
+        // set start question and possible answers:
+        updateUI()
         
-        // define our label as this story part:
-        storyLabel.text = currentStory
-        
-        // define possible answers:
-        leftButton.titleLabel?.text = leftAnswer
-        rightButton.titleLabel?.text = rightAnswer
     }
 
     // action that happen when we press the buttons:
@@ -64,14 +56,38 @@ class ViewController: UIViewController {
         // Need some instructions
         let userChoice = sender.titleLabel?.text!
         print(userChoice)
+        let userChoiceSecond = sender.currentTitle
+        print(userChoiceSecond)
         
         // now we should check choice with possible choices from Story array
-        let nextPart = story.checkAnswer(userChoice!)
+        story.checkAnswer(userChoice!)
         
-        // set new part of the story and buttons:
-        currentStory = story.getText()
-        leftAnswer = story.stories[nextPart].choice1
-        rightAnswer = story.stories[nextPart].choice2
+        
+        updateUI()
+        
+//        // set new part of the story and buttons:
+//        currentStory = story.getText()
+//        leftAnswer = story.stories[nextPart].choice1
+//        rightAnswer = story.stories[nextPart].choice2
+    }
+    
+    func updateUI() {
+        
+        print(story.textPartNumber)
+        
+        // load first starting part of the story:
+        currentStory = story.stories[story.textPartNumber].title
+        leftAnswer = story.stories[story.textPartNumber].choice1
+        rightAnswer = story.stories[story.textPartNumber].choice2
+        
+        // define our label as this story part:
+        storyLabel.text = currentStory
+        
+
+        // another attempt to define buttons
+        self.leftButton.setTitle(leftAnswer, for: .normal)
+        self.rightButton.setTitle(rightAnswer, for: .normal)
+        
     }
 }
 

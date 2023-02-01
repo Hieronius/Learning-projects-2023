@@ -38,8 +38,14 @@
                                                     <constraint firstAttribute="height" constant="90" id="Xso-hW-Ijc"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Right">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Right">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="25"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>

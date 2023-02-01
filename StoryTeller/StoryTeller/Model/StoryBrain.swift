@@ -10,6 +10,9 @@ import UIKit
 
 struct StoryBrain {
     
+    // Number of current part of the story
+    var textPartNumber = 0
+    
     var stories = [
         
         // Story. Part 0
@@ -67,9 +70,6 @@ struct StoryBrain {
         )
             ]
     
-    // Number of current part of the story
-    var textPartNumber = 0
-    
     // get next part of the story
     func getText() -> String {
         stories[textPartNumber].title
@@ -78,16 +78,16 @@ struct StoryBrain {
     // if user choose first choice let's return first destination
     // if uses choose second choice let's return second destination
     // we can add a condition that checkAnswer will change current story text chapter
-    mutating func checkAnswer(_ userChoice: String) -> Int {
+    mutating func checkAnswer(_ userChoice: String) {
         if userChoice == stories[textPartNumber].choice1 {
             self.textPartNumber = stories[textPartNumber].choice1Destination
             print(textPartNumber)
-            return textPartNumber
+            
             
         } else {
             self.textPartNumber = stories[textPartNumber].choice2Destination
             print(textPartNumber)
-            return textPartNumber
+            
         }
     }
     
