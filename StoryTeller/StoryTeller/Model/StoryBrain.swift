@@ -78,11 +78,16 @@ struct StoryBrain {
     // if user choose first choice let's return first destination
     // if uses choose second choice let's return second destination
     // we can add a condition that checkAnswer will change current story text chapter
-    mutating func checkAnswer(_ userChoice: String) {
+    mutating func checkAnswer(_ userChoice: String) -> Int {
         if userChoice == stories[textPartNumber].choice1 {
             self.textPartNumber = stories[textPartNumber].choice1Destination
+            print(textPartNumber)
+            return textPartNumber
+            
         } else {
             self.textPartNumber = stories[textPartNumber].choice2Destination
+            print(textPartNumber)
+            return textPartNumber
         }
     }
     

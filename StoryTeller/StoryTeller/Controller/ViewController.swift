@@ -62,12 +62,16 @@ class ViewController: UIViewController {
         
         // let's detect what choice user has made:
         // Need some instructions
-        let userChoice = sender.currentTitle!
+        let userChoice = sender.titleLabel?.text!
+        print(userChoice)
         
         // now we should check choice with possible choices from Story array
-        story.checkAnswer(userChoice)
+        let nextPart = story.checkAnswer(userChoice!)
         
+        // set new part of the story and buttons:
         currentStory = story.getText()
+        leftAnswer = story.stories[nextPart].choice1
+        rightAnswer = story.stories[nextPart].choice2
     }
 }
 
