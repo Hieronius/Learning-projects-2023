@@ -52,6 +52,13 @@ class ViewController: UIViewController {
     // action that happen when we press the buttons:
     @IBAction func pressButtons(_ sender: UIButton) {
         
+        // Some mechanism to animate our buttons:
+        sender.alpha = 0.5
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+            sender.alpha = 1
+        })
+        
         // let's detect what choice user has made:
         // Need some instructions
         let userChoice = sender.titleLabel?.text!
