@@ -59,17 +59,17 @@
                                             <action selector="HeightSliderTouched:" destination="h1X-xL-NZ6" eventType="valueChanged" id="a2C-Ui-zxn"/>
                                         </connections>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="259" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-0h-99W" userLabel="Weight Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="240" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-0h-99W" userLabel="Weight Stack View">
                                         <rect key="frame" x="0.0" y="611" width="358" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="746-Il-4qY">
-                                                <rect key="frame" x="0.0" y="0.0" width="53" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-ky-EYS">
-                                                <rect key="frame" x="312" y="0.0" width="46" height="21"/>
+                                                <rect key="frame" x="296" y="0.0" width="62" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -100,6 +100,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="CALCULATE">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="h1X-xL-NZ6" eventType="touchUpInside" id="mv4-9s-xht"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
