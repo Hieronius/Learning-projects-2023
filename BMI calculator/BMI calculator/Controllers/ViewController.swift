@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var HeightSlider: UISlider!
     @IBOutlet weak var WeightSlider: UISlider!
     
+    @IBOutlet weak var HeightValue: UILabel!
+    @IBOutlet weak var WeightValue: UILabel!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +25,11 @@ class ViewController: UIViewController {
 
     
     @IBAction func HeightSliderTouched(_ sender: UISlider) {
-        print("there is a sender.value - \(sender.value)")
+        HeightValue.text = "\(round(sender.value * 100) / 100)m"
     }
     
     @IBAction func WeightSliderTouched(_ sender: UISlider) {
-        print("there is a sender.value - \(sender.value)")
+        WeightValue.text = "\(Int(sender.value))kg"
     }
     
 }
