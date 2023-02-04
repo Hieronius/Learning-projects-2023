@@ -39,9 +39,15 @@ class ViewController: UIViewController {
     
     // formula for calculation
     @IBAction func calculatePressed(_ sender: UIButton) {
-        // Body Mass Ratio = Weight(kg) / Height(m) * Height(m)
+        // Body Mass Ratio = Weight(kg) / Height(m) * Height(m):
+        let bmi = Int(weight / (height * height))
+        print("BMI = \(bmi)")
         
-        print("BMI = \(Int(weight / (height * height)))")
+        // creation property of the second view controller to connect with:
+        let secondVC = SecondViewController()
+        
+        // move to the second view controller:
+        self.present(secondVC, animated: true, completion: nil)
     }
     
 }
