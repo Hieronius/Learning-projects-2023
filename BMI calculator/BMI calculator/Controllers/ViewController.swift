@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         
         // creation property of the second view controller to connect with:
         let secondVC = SecondViewController()
+        // definition of BMI variable from the second VC to BMI from first VC:
+        secondVC.bmiValue = String(bmi)
         
         // move to the second view controller:
         self.present(secondVC, animated: true, completion: nil)

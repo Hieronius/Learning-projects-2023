@@ -9,6 +9,9 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    // BMI property for second view controller:
+    var bmiValue = "0.0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,7 +20,7 @@ class SecondViewController: UIViewController {
         
         // create a new label:
         let label = UILabel()
-        label.text = "Hello"
+        label.text = bmiValue
         
         // location of our label:
         label.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
