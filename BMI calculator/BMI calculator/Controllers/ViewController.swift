@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var WeightSlider: UISlider!
     
     @IBOutlet weak var HeightValue: UILabel!
-
     @IBOutlet weak var WeightValue: UILabel!
     
     var height: Float = 0
@@ -25,20 +24,24 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
+    // set a height for calculation
     @IBAction func HeightSliderTouched(_ sender: UISlider) {
          height = round(sender.value * 100) / 100
          HeightValue.text = "\(height)m"
     }
     
+    // set a weight for calculation
     @IBAction func WeightSliderTouched(_ sender: UISlider) {
         
         weight = round(sender.value * 10) / 10
         WeightValue.text = "\(weight)kg"
     }
     
+    // formula for calculation
     @IBAction func calculatePressed(_ sender: UIButton) {
-        print(Int((height) * (weight)))
+        // Body Mass Ratio = Weight(kg) / Height(m) * Height(m)
+        
+        print("BMI = \(Int(weight / (height * height)))")
     }
     
 }
