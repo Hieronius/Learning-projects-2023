@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="331" y="-567"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="WdO-E4-2SY">
             <objects>
-                <viewController id="JOe-nX-xWF" sceneMemberID="viewController">
+                <viewController id="JOe-nX-xWF" customClass="SecondViewController" customModule="BMI_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="enU-uA-spD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
