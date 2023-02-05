@@ -125,25 +125,26 @@
                         <outlet property="HeightValue" destination="9cX-aj-jl6" id="YOC-IR-pQL"/>
                         <outlet property="WeightSlider" destination="LfZ-h9-Xe2" id="lXA-19-BwM"/>
                         <outlet property="WeightValue" destination="rfD-ky-EYS" id="z4h-OS-qHR"/>
+                        <segue destination="JOe-nX-xWF" kind="presentation" id="NgD-xd-ofi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRm-07-yzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="331" y="-567"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="WdO-E4-2SY">
             <objects>
-                <viewController id="JOe-nX-xWF" customClass="SecondViewController" customModule="BMI_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JOe-nX-xWF" customClass="ResultViewController" customModule="BMI_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="enU-uA-spD">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-fw-o5K">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-A1-vdG">
-                                <rect key="frame" x="16" y="761" width="358" height="49"/>
+                                <rect key="frame" x="16" y="738" width="358" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="BTp-NT-vts"/>
@@ -153,9 +154,12 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                     <color key="baseForegroundColor" red="0.51038146019999997" green="0.50552976130000005" blue="0.69744491580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculateButton:" destination="JOe-nX-xWF" eventType="touchUpInside" id="bln-77-RdM"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TBL-fK-Y3W">
-                                <rect key="frame" x="79" y="333.33333333333331" width="232" height="177.66666666666669"/>
+                                <rect key="frame" x="79" y="304.66666666666669" width="232" height="177.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJn-AN-bAU">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="42"/>
@@ -170,7 +174,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOME TEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0f-n4-05O">
-                                        <rect key="frame" x="62" y="153.66666666666669" width="108" height="24"/>
+                                        <rect key="frame" x="62" y="153.66666666666663" width="108" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -192,6 +196,10 @@
                             <constraint firstItem="b2D-A1-vdG" firstAttribute="leading" secondItem="Y5n-xv-kSk" secondAttribute="leading" constant="16" id="tdf-Mf-GZK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="I0f-n4-05O" id="Uqr-6y-bVW"/>
+                        <outlet property="bmiLabel" destination="e68-Jh-i8N" id="jjM-Ed-VCV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFp-5h-mZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
