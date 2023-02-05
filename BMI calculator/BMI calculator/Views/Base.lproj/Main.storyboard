@@ -125,7 +125,7 @@
                         <outlet property="HeightValue" destination="9cX-aj-jl6" id="YOC-IR-pQL"/>
                         <outlet property="WeightSlider" destination="LfZ-h9-Xe2" id="lXA-19-BwM"/>
                         <outlet property="WeightValue" destination="rfD-ky-EYS" id="z4h-OS-qHR"/>
-                        <segue destination="JOe-nX-xWF" kind="presentation" id="NgD-xd-ofi"/>
+                        <segue destination="JOe-nX-xWF" kind="presentation" identifier="goToResult" id="NgD-xd-ofi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRm-07-yzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
