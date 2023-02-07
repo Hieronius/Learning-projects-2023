@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         print(userChoice)
         let userChoiceSecond = sender.currentTitle
         print(userChoiceSecond)
+        print("User has made a choice")
         
         // now we should check choice with possible choices from Story array
         story.checkAnswer(userChoice!)
