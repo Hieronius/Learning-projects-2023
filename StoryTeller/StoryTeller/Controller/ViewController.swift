@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         let userChoiceSecond = sender.currentTitle
         print(userChoiceSecond)
         print("User has made a choice")
+        print("test commite")
         
         // now we should check choice with possible choices from Story array
         story.checkAnswer(userChoice!)
