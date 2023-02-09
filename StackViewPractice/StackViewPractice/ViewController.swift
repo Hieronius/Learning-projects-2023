@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         let label = UILabel()
         // define some text fo the label:
         label.text = "Hello World"
+        // set background color of the label:
+        label.backgroundColor = .systemBlue
         // put text in the label to the center orientation:
         label.textAlignment = .center
         // set font, size and type of the text:
@@ -49,6 +51,8 @@ class ViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [imageView, label])
         // set frame of the stack view equal to view bounds (not frame)
         stackView.frame = view.bounds
+        // set background color of the stackView:
+        stackView.backgroundColor = .yellow
         // vertical orientation
         stackView.axis = .vertical
         // how elements should be placed inside stack view:
