@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         print("test commite 11.02.23")
         print("test commite 12.02.23")
         print("test commite 13.02.23")
+        print("test commite 14.02.23")
         
         // now we should check choice with possible choices from Story array
         story.checkAnswer(userChoice!)
