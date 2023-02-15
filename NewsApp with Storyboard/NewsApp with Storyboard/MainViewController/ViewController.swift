@@ -11,7 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
+        let tabBarVC = storyboard.instantiateViewController(withIdentifier: "Tabbar")
+        self.navigationController?.pushViewController(tabBarVC, animated: false)
     }
 
 

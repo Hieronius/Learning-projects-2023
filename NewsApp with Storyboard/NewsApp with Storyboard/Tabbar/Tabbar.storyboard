@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Карта-->
         <scene sceneID="Xoj-5x-hXI">
             <objects>
                 <viewController id="6kO-25-OfG" sceneMemberID="viewController">
@@ -19,13 +19,13 @@
                         <viewLayoutGuide key="safeArea" id="B25-Yv-AVE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="PVJ-Ib-1Kw"/>
+                    <tabBarItem key="tabBarItem" title="Карта" image="icon" id="PVJ-Ib-1Kw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f96-J7-5Vj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2420" y="527"/>
+            <point key="canvasLocation" x="-1525" y="527"/>
         </scene>
-        <!--View Controller-->
+        <!--Новости-->
         <scene sceneID="fAz-Jd-72h">
             <objects>
                 <viewController id="ZsX-QR-S5H" sceneMemberID="viewController">
@@ -35,13 +35,13 @@
                         <viewLayoutGuide key="safeArea" id="A8B-Zb-ohc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="lx1-e4-cho"/>
+                    <tabBarItem key="tabBarItem" title="Новости" image="Vector-2" id="lx1-e4-cho"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jF-Yg-DYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1609" y="527"/>
+            <point key="canvasLocation" x="-2283" y="527"/>
         </scene>
-        <!--View Controller-->
+        <!--Избранное-->
         <scene sceneID="xYU-g9-g1o">
             <objects>
                 <viewController id="RI4-HE-n2b" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="gY0-8U-KAO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="erB-ca-3h8"/>
+                    <tabBarItem key="tabBarItem" title="Избранное" image="Vector-6" id="erB-ca-3h8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buF-r6-26g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +60,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="tdq-GE-P3Q">
             <objects>
-                <tabBarController id="oa4-H1-7kX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tabbar" id="oa4-H1-7kX" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lKc-K7-olj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="-1446" y="-266"/>
         </scene>
-        <!--View Controller-->
+        <!--Профиль-->
         <scene sceneID="3yQ-le-PHh">
             <objects>
                 <viewController id="wJl-fm-BR6" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="5W4-Mj-LRj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="C1i-Hj-WR0"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="icon-3" id="C1i-Hj-WR0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLS-8J-oGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,6 +95,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Vector-2" width="28" height="22"/>
+        <image name="Vector-6" width="28" height="24"/>
+        <image name="icon" width="30" height="30"/>
+        <image name="icon-3" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "arrow.triangle.turn.up.right.circle.fill.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "arrow.triangle.turn.up.right.circle.fill.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
