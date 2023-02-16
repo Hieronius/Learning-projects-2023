@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-763" y="527"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="tdq-GE-P3Q">
             <objects>
-                <tabBarController storyboardIdentifier="Tabbar" id="oa4-H1-7kX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tabbar" id="oa4-H1-7kX" customClass="TabbarController" customModule="NewsApp_with_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lKc-K7-olj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
