@@ -16,18 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-s7-Ghm">
-                                <rect key="frame" x="99.666666666666686" y="398" width="191" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-s7-Ghm">
+                                <rect key="frame" x="76.333333333333329" y="98" width="237.33333333333337" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-hQ-mep">
+                                <rect key="frame" x="120" y="659" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.99877184630000004" green="0.23148569460000001" blue="0.18647715449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="euX-8f-u35"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="TP2-s7-Ghm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RN1-hR-yJW"/>
-                            <constraint firstItem="TP2-s7-Ghm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lqM-3T-zPq"/>
+                            <constraint firstItem="TP2-s7-Ghm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9ol-Gy-TVX"/>
+                            <constraint firstItem="TP2-s7-Ghm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="Ipi-dP-Yz8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MaL-hQ-mep" secondAttribute="bottom" constant="101" id="pjH-aj-3zS"/>
+                            <constraint firstItem="MaL-hQ-mep" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xD7-XJ-9W1"/>
                         </constraints>
                     </view>
                 </viewController>
