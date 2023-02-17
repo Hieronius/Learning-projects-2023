@@ -55,6 +55,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WSs-pE-8id">
+                                <rect key="frame" x="16" y="344" width="343" height="34"/>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5XP-Oe-VlM"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -68,16 +74,20 @@
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="top" secondItem="deU-BL-clL" secondAttribute="bottom" constant="40" id="MiX-08-x6j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYs-Zs-X3h" secondAttribute="trailing" constant="16" id="Naq-kV-Bed"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vdz-AK-Bqc"/>
+                            <constraint firstAttribute="trailing" secondItem="WSs-pE-8id" secondAttribute="trailing" constant="16" id="WNm-Ln-qWH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deU-BL-clL" secondAttribute="trailing" constant="16" id="b3A-8p-6v0"/>
+                            <constraint firstItem="WSs-pE-8id" firstAttribute="top" secondItem="aYs-Zs-X3h" secondAttribute="bottom" constant="32" id="bfN-fG-8qQ"/>
                             <constraint firstItem="Dnl-wa-laj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dIy-je-nX6"/>
                             <constraint firstItem="Dnl-wa-laj" firstAttribute="top" secondItem="fAc-oE-WXG" secondAttribute="bottom" constant="16" id="f05-Fr-170"/>
                             <constraint firstItem="fAc-oE-WXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i50-OA-RC7"/>
                             <constraint firstItem="aYs-Zs-X3h" firstAttribute="top" secondItem="Dnl-wa-laj" secondAttribute="bottom" constant="32" id="jsC-Xu-q4U"/>
+                            <constraint firstItem="WSs-pE-8id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="sgN-B5-HxE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fAc-oE-WXG" secondAttribute="trailing" constant="16" id="wd7-Dv-yiA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="aYs-Zs-X3h" id="nOv-Bt-rcW"/>
+                        <outlet property="datePicker" destination="WSs-pE-8id" id="VoP-gL-tJc"/>
                         <outlet property="mainLabel" destination="fUZ-oY-T43" id="HeK-Md-Jks"/>
                         <outlet property="segmentControll" destination="deU-BL-clL" id="EpD-qG-faR"/>
                         <outlet property="slider" destination="fAc-oE-WXG" id="O5V-G0-T0S"/>
@@ -86,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80.152671755725194" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-80.799999999999997" y="3.1484257871064472"/>
         </scene>
     </scenes>
     <resources>

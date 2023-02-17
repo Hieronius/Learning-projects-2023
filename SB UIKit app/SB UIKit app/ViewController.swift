@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
-    
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         slider.thumbTintColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
         
         mainLabel.text = String(slider.value)
+        
+        textField.keyboardType = .numberPad
         
         button.layer.cornerRadius = 10
         button.setTitle("Готово", for: .normal)
@@ -66,6 +68,10 @@ class ViewController: UIViewController {
         guard let text = textField.text, !text.isEmpty else { return }
         mainLabel.text = text
         
+    }
+     
+    @IBAction func datePickerAction(_ sender: Any) {
+     let dateFormatter = DateFormatter()
     }
     
 }
