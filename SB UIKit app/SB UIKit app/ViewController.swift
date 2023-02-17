@@ -35,6 +35,9 @@ class ViewController: UIViewController {
         slider.thumbTintColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
         
         mainLabel.text = String(slider.value)
+        
+        button.layer.cornerRadius = 10
+        button.setTitle("Готово", for: .normal)
     }
 
     @IBAction func segmentControlAction(_ sender: Any) {
@@ -56,6 +59,13 @@ class ViewController: UIViewController {
     
     @IBAction func sliderAction(_ sender: Any) {
         mainLabel.text = String(Int(slider.value))
+    }
+    
+    
+    @IBAction func buttonAction(_ sender: Any) {
+        guard let text = textField.text, !text.isEmpty else { return }
+        mainLabel.text = text
+        
     }
     
 }
