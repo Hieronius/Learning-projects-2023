@@ -26,6 +26,9 @@
                                     <action selector="segmentControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="XvO-hw-ywV"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-oE-WXG">
+                                <rect key="frame" x="14" y="149.5" width="347" height="31"/>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUZ-oY-T43">
                                 <rect key="frame" x="16" y="113" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,9 +42,12 @@
                             <constraint firstItem="deU-BL-clL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="29K-TQ-Bgg"/>
                             <constraint firstItem="deU-BL-clL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ff4-gc-npM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fUZ-oY-T43" secondAttribute="trailing" constant="16" id="I24-IU-DzQ"/>
+                            <constraint firstItem="fAc-oE-WXG" firstAttribute="top" secondItem="fUZ-oY-T43" secondAttribute="bottom" constant="16" id="MZq-h5-jJQ"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="top" secondItem="deU-BL-clL" secondAttribute="bottom" constant="40" id="MiX-08-x6j"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vdz-AK-Bqc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deU-BL-clL" secondAttribute="trailing" constant="16" id="b3A-8p-6v0"/>
+                            <constraint firstItem="fAc-oE-WXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i50-OA-RC7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fAc-oE-WXG" secondAttribute="trailing" constant="16" id="wd7-Dv-yiA"/>
                         </constraints>
                     </view>
                     <connections>
