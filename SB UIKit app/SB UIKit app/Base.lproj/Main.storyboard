@@ -53,6 +53,7 @@
                     <connections>
                         <outlet property="mainLabel" destination="fUZ-oY-T43" id="HeK-Md-Jks"/>
                         <outlet property="segmentControll" destination="deU-BL-clL" id="EpD-qG-faR"/>
+                        <outlet property="slider" destination="fAc-oE-WXG" id="O5V-G0-T0S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,9 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var segmentControll: UISegmentedControl!
-    
-    
     @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +23,11 @@ class ViewController: UIViewController {
         mainLabel.font = mainLabel.font.withSize(30)
         mainLabel.textAlignment = .center
         mainLabel.numberOfLines = 0
+        
+        slider.value = 1
+        slider.minimumValue = 1
+        slider.maximumValue = 100
+        slider.minimumTrackTintColor = .yellow
     }
 
     @IBAction func segmentControlAction(_ sender: Any) {
