@@ -22,42 +22,65 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenColorSlider: UISlider!
     @IBOutlet weak var blueColorSlider: UISlider!
     
+    var redColorCurrentValue: Float = 0.0
+    var greenColorCurrentValue: Float = 0.0
+    var blueColorCurrentValue: Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        redColorSlider.value = 1
+        redColorSlider.value = 0.1
         redColorSlider.minimumValue = 0
-        redColorSlider.maximumValue = 255
+        redColorSlider.maximumValue = 1.0
         
-        greenColorSlider.value = 1
+        greenColorSlider.value = 0.1
         greenColorSlider.minimumValue = 0
-        greenColorSlider.maximumValue = 255
+        greenColorSlider.maximumValue = 1.0
         
-        blueColorSlider.value = 1
+        blueColorSlider.value = 0.1
         blueColorSlider.minimumValue = 0
-        blueColorSlider.maximumValue = 255
+        blueColorSlider.maximumValue = 1.0
         
-//        slider.value = 1
-//        slider.minimumValue = 1
-//        slider.maximumValue = 100
-//        slider.minimumTrackTintColor = .yellow
-//        slider.maximumTrackTintColor = .blue
-//        slider.thumbTintColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
+        redLabelColor.text = "1.00"
+        greenLabelColor.text = "1.00"
+        blueLabelColor.text = "1.00"
+        
+//        colorImageView.backgroundColor = UIColor(red: CGFloat(redColorCurrentValue), green: CGFloat(greenColorCurrentValue), blue: CGFloat(blueColorCurrentValue), alpha: 1)
+        
+    }
+    
+    func changeImageViewBackgroundColor() {
+        
+        colorImageView.backgroundColor = UIColor(red: CGFloat(redColorCurrentValue), green: CGFloat(greenColorCurrentValue), blue: CGFloat(blueColorCurrentValue), alpha: 1)
     }
     
     
     @IBAction func redColorSliderTouched(_ sender: Any) {
-        redLabelColor.text = String(Int(redColorSlider.value))
+        let value = (round(100 * (redColorSlider.value)) / 100)
+        redLabelColor.text = String(value)
+        redColorCurrentValue = value
+        
+        changeImageViewBackgroundColor()
+        
     }
     
     @IBAction func greenColorSliderTouched(_ sender: Any) {
-        greenLabelColor.text = String(Int(greenColorSlider.value))
+        let value = (round(100 * (greenColorSlider.value)) / 100)
+        greenLabelColor.text = String(value)
+        greenColorCurrentValue = value
+        
+        changeImageViewBackgroundColor()
     }
     
     @IBAction func blueColorSliderTouched(_ sender: Any) {
-        blueLabelColor.text = String(Int(blueColorSlider.value))
+        let value = (round(100 * (blueColorSlider.value)) / 100 )
+        blueLabelColor.text = String(value)
+        blueColorCurrentValue = value
+        
+        changeImageViewBackgroundColor()
     }
+    
     
 }
 
