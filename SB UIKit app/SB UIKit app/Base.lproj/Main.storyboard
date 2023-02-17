@@ -61,20 +61,37 @@
                                     <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5XP-Oe-VlM"/>
                                 </connections>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FW2-84-Yze">
+                                <rect key="frame" x="310" y="410" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toogleElements:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ct5-Wp-AeZ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Включить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECr-er-uu7">
+                                <rect key="frame" x="16" y="410" width="77.5" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="deU-BL-clL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="29K-TQ-Bgg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dnl-wa-laj" secondAttribute="trailing" constant="16" id="7E2-ch-xRt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FW2-84-Yze" secondAttribute="trailing" constant="16" id="A0P-wP-JlD"/>
+                            <constraint firstItem="ECr-er-uu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AS7-6q-R6O"/>
                             <constraint firstItem="deU-BL-clL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ff4-gc-npM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fUZ-oY-T43" secondAttribute="trailing" constant="16" id="I24-IU-DzQ"/>
                             <constraint firstItem="aYs-Zs-X3h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="J0r-OE-nyd"/>
                             <constraint firstItem="fAc-oE-WXG" firstAttribute="top" secondItem="fUZ-oY-T43" secondAttribute="bottom" constant="16" id="MZq-h5-jJQ"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="top" secondItem="deU-BL-clL" secondAttribute="bottom" constant="40" id="MiX-08-x6j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYs-Zs-X3h" secondAttribute="trailing" constant="16" id="Naq-kV-Bed"/>
+                            <constraint firstItem="ECr-er-uu7" firstAttribute="top" secondItem="WSs-pE-8id" secondAttribute="bottom" constant="32" id="ObJ-DR-xva"/>
+                            <constraint firstItem="FW2-84-Yze" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ECr-er-uu7" secondAttribute="trailing" constant="16" id="R8X-bN-rEu"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vdz-AK-Bqc"/>
                             <constraint firstAttribute="trailing" secondItem="WSs-pE-8id" secondAttribute="trailing" constant="16" id="WNm-Ln-qWH"/>
+                            <constraint firstItem="FW2-84-Yze" firstAttribute="top" secondItem="WSs-pE-8id" secondAttribute="bottom" constant="32" id="Z3y-hK-z3l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deU-BL-clL" secondAttribute="trailing" constant="16" id="b3A-8p-6v0"/>
                             <constraint firstItem="WSs-pE-8id" firstAttribute="top" secondItem="aYs-Zs-X3h" secondAttribute="bottom" constant="32" id="bfN-fG-8qQ"/>
                             <constraint firstItem="Dnl-wa-laj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dIy-je-nX6"/>
@@ -83,6 +100,7 @@
                             <constraint firstItem="aYs-Zs-X3h" firstAttribute="top" secondItem="Dnl-wa-laj" secondAttribute="bottom" constant="32" id="jsC-Xu-q4U"/>
                             <constraint firstItem="WSs-pE-8id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="sgN-B5-HxE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fAc-oE-WXG" secondAttribute="trailing" constant="16" id="wd7-Dv-yiA"/>
+                            <constraint firstItem="ECr-er-uu7" firstAttribute="centerY" secondItem="FW2-84-Yze" secondAttribute="centerY" id="xph-Oh-IlR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -91,6 +109,7 @@
                         <outlet property="mainLabel" destination="fUZ-oY-T43" id="HeK-Md-Jks"/>
                         <outlet property="segmentControll" destination="deU-BL-clL" id="EpD-qG-faR"/>
                         <outlet property="slider" destination="fAc-oE-WXG" id="O5V-G0-T0S"/>
+                        <outlet property="switcher" destination="FW2-84-Yze" id="LDR-Xm-Xpb"/>
                         <outlet property="textField" destination="Dnl-wa-laj" id="oUc-Ep-cWu"/>
                     </connections>
                 </viewController>

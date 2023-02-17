@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var switcher: UISwitch!
+    
+    var elements = [UIView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,8 @@ class ViewController: UIViewController {
         
         button.layer.cornerRadius = 10
         button.setTitle("Готово", for: .normal)
+        
+        elements.append(contentsOf: [segmentControll, mainLabel, slider, textField, button, datePicker])
     }
 
     @IBAction func segmentControlAction(_ sender: Any) {
@@ -72,6 +77,18 @@ class ViewController: UIViewController {
      
     @IBAction func datePickerAction(_ sender: Any) {
      let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        
+        mainLabel.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    
+    @IBAction func toogleElements(_ sender: Any) {
+        
+        
+        for element in elements {
+            element.isHidden = !switcher.isOn
+        }
     }
     
 }
