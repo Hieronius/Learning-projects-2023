@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentControll: UISegmentedControl!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var button: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,10 @@ class ViewController: UIViewController {
         slider.minimumValue = 1
         slider.maximumValue = 100
         slider.minimumTrackTintColor = .yellow
+        slider.maximumTrackTintColor = .blue
+        slider.thumbTintColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
+        
+        mainLabel.text = String(slider.value)
     }
 
     @IBAction func segmentControlAction(_ sender: Any) {
@@ -44,6 +51,11 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    
+    @IBAction func sliderAction(_ sender: Any) {
+        mainLabel.text = String(Int(slider.value))
     }
     
 }

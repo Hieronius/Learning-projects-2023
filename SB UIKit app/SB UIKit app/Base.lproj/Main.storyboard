@@ -28,7 +28,24 @@
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-oE-WXG">
                                 <rect key="frame" x="14" y="149.5" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="gmP-Ci-1sp"/>
+                                </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dnl-wa-laj">
+                                <rect key="frame" x="16" y="195.5" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYs-Zs-X3h">
+                                <rect key="frame" x="16" y="261.5" width="343" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ll4-df-8ua"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUZ-oY-T43">
                                 <rect key="frame" x="16" y="113" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,20 +57,28 @@
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="deU-BL-clL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="29K-TQ-Bgg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dnl-wa-laj" secondAttribute="trailing" constant="16" id="7E2-ch-xRt"/>
                             <constraint firstItem="deU-BL-clL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ff4-gc-npM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fUZ-oY-T43" secondAttribute="trailing" constant="16" id="I24-IU-DzQ"/>
+                            <constraint firstItem="aYs-Zs-X3h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="J0r-OE-nyd"/>
                             <constraint firstItem="fAc-oE-WXG" firstAttribute="top" secondItem="fUZ-oY-T43" secondAttribute="bottom" constant="16" id="MZq-h5-jJQ"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="top" secondItem="deU-BL-clL" secondAttribute="bottom" constant="40" id="MiX-08-x6j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYs-Zs-X3h" secondAttribute="trailing" constant="16" id="Naq-kV-Bed"/>
                             <constraint firstItem="fUZ-oY-T43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vdz-AK-Bqc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deU-BL-clL" secondAttribute="trailing" constant="16" id="b3A-8p-6v0"/>
+                            <constraint firstItem="Dnl-wa-laj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dIy-je-nX6"/>
+                            <constraint firstItem="Dnl-wa-laj" firstAttribute="top" secondItem="fAc-oE-WXG" secondAttribute="bottom" constant="16" id="f05-Fr-170"/>
                             <constraint firstItem="fAc-oE-WXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i50-OA-RC7"/>
+                            <constraint firstItem="aYs-Zs-X3h" firstAttribute="top" secondItem="Dnl-wa-laj" secondAttribute="bottom" constant="32" id="jsC-Xu-q4U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fAc-oE-WXG" secondAttribute="trailing" constant="16" id="wd7-Dv-yiA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="aYs-Zs-X3h" id="nOv-Bt-rcW"/>
                         <outlet property="mainLabel" destination="fUZ-oY-T43" id="HeK-Md-Jks"/>
                         <outlet property="segmentControll" destination="deU-BL-clL" id="EpD-qG-faR"/>
                         <outlet property="slider" destination="fAc-oE-WXG" id="O5V-G0-T0S"/>
+                        <outlet property="textField" destination="Dnl-wa-laj" id="oUc-Ep-cWu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
