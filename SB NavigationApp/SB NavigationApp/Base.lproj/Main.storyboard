@@ -15,29 +15,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03B-a0-ary">
+                                <rect key="frame" x="151" y="316" width="73" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Segue"/>
+                                <connections>
+                                    <action selector="useSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mc1-Wc-JDk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="eUv-gG-k31"/>
                     <connections>
-                        <segue destination="wlK-uY-OuM" kind="show" id="oZ2-mQ-xM3"/>
+                        <segue destination="wlK-uY-OuM" kind="show" identifier="showDetail" id="VDw-QO-bIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="768.79999999999995" y="3.1484257871064472"/>
         </scene>
-        <!--View Controller-->
+        <!--User info-->
         <scene sceneID="Gf5-Fn-ydb">
             <objects>
-                <viewController id="wlK-uY-OuM" sceneMemberID="viewController">
+                <viewController id="wlK-uY-OuM" customClass="DetailViewController" customModule="SB_NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HvH-vQ-VET">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-cQ-UUc">
+                                <rect key="frame" x="152" y="76" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rot-RM-HiD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V3n-cQ-UUc" firstAttribute="top" secondItem="rot-RM-HiD" secondAttribute="top" constant="32" id="78j-pG-ini"/>
+                            <constraint firstItem="V3n-cQ-UUc" firstAttribute="centerX" secondItem="HvH-vQ-VET" secondAttribute="centerX" id="oHT-Ya-ZXd"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cPz-O8-DiW"/>
+                    <navigationItem key="navigationItem" title="User info" id="cPz-O8-DiW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Of-sQ-1oW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
