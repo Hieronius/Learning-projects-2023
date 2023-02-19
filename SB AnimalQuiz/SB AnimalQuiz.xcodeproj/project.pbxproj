@@ -56,15 +56,55 @@
 		DDFB357229A25FFC00362719 /* SB AnimalQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				DDFB357329A25FFC00362719 /* AppDelegate.swift */,
-				DDFB357529A25FFC00362719 /* SceneDelegate.swift */,
-				DDFB357729A25FFC00362719 /* ViewController.swift */,
-				DDFB357929A25FFC00362719 /* Main.storyboard */,
-				DDFB357C29A2600100362719 /* Assets.xcassets */,
-				DDFB357E29A2600100362719 /* LaunchScreen.storyboard */,
+				DDFB358C29A263BE00362719 /* Resources */,
+				DDFB358A29A263A900362719 /* Models */,
+				DDFB358929A2637200362719 /* ViewControllers */,
+				DDFB358829A2632E00362719 /* Supporting files */,
+				DDFB358729A261F200362719 /* Storyboards */,
 				DDFB358129A2600100362719 /* Info.plist */,
 			);
 			path = "SB AnimalQuiz";
+			sourceTree = "<group>";
+		};
+		DDFB358729A261F200362719 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DDFB357929A25FFC00362719 /* Main.storyboard */,
+				DDFB357E29A2600100362719 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DDFB358829A2632E00362719 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				DDFB357329A25FFC00362719 /* AppDelegate.swift */,
+				DDFB357529A25FFC00362719 /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		DDFB358929A2637200362719 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDFB357729A25FFC00362719 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DDFB358A29A263A900362719 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDFB358C29A263BE00362719 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDFB357C29A2600100362719 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
