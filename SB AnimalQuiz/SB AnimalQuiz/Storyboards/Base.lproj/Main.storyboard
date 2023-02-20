@@ -96,22 +96,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-Kd-RLx">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-Kd-RLx" userLabel="SliderStackView">
                                 <rect key="frame" x="16" y="265" width="343" height="137"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="haF-mg-diY">
                                         <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-Ww-yeM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-Ww-yeM" userLabel="SubLabelsStackView">
                                         <rect key="frame" x="0.0" y="56" width="343" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ненавижу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evd-Oe-0yg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ненавижу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evd-Oe-0yg">
                                                 <rect key="frame" x="0.0" y="0.0" width="213" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Обожаю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNh-1r-5Kn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обожаю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNh-1r-5Kn">
                                                 <rect key="frame" x="276" y="0.0" width="67" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -132,6 +132,12 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3OL-dJ-AoD">
                                 <rect key="frame" x="0.0" y="96" width="375" height="4"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую пищу вы предпочитаете?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAS-fg-mfn">
+                                <rect key="frame" x="16" y="108" width="294.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Iz-uaS" userLabel="ButtonsStack">
                                 <rect key="frame" x="150" y="222.5" width="75" height="222"/>
                                 <subviews>
@@ -247,6 +253,8 @@
                             <constraint firstItem="3OL-dJ-AoD" firstAttribute="trailing" secondItem="TU9-aq-lIK" secondAttribute="trailing" id="Kid-Xq-Isv"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="M9A-M2-VlS"/>
                             <constraint firstItem="3OL-dJ-AoD" firstAttribute="top" secondItem="TU9-aq-lIK" secondAttribute="top" id="Mbh-Md-uS0"/>
+                            <constraint firstItem="PAS-fg-mfn" firstAttribute="top" secondItem="3OL-dJ-AoD" secondAttribute="bottom" constant="8" id="baL-P7-IxH"/>
+                            <constraint firstItem="PAS-fg-mfn" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="d4t-jL-HIQ"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="eNa-5M-elL"/>
                             <constraint firstItem="TU9-aq-lIK" firstAttribute="trailing" secondItem="Vve-2c-wqK" secondAttribute="trailing" constant="16" id="mZ4-8b-aEm"/>
                             <constraint firstItem="HEz-jV-1jg" firstAttribute="top" secondItem="Vve-2c-wqK" secondAttribute="bottom" constant="32" id="tXK-Ka-d8Z"/>
@@ -255,8 +263,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="fgf-Iz-uaS"/>
-                                <exclude reference="Vve-2c-wqK"/>
                                 <exclude reference="HEz-jV-1jg"/>
                             </mask>
                         </variation>
