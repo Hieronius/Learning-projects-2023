@@ -129,6 +129,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3OL-dJ-AoD">
+                                <rect key="frame" x="0.0" y="96" width="375" height="4"/>
+                            </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Iz-uaS" userLabel="ButtonsStack">
                                 <rect key="frame" x="150" y="222.5" width="75" height="222"/>
                                 <subviews>
@@ -237,10 +240,13 @@
                         <constraints>
                             <constraint firstItem="0sQ-Kd-RLx" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="3gU-ay-xax"/>
                             <constraint firstItem="fgf-Iz-uaS" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="ALl-FX-dum"/>
+                            <constraint firstItem="3OL-dJ-AoD" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" id="DMr-3t-jcI"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="DYB-NK-6Ur"/>
                             <constraint firstItem="0sQ-Kd-RLx" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="Dnx-Ab-czV"/>
                             <constraint firstItem="HEz-jV-1jg" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="GGJ-Nh-6dc"/>
+                            <constraint firstItem="3OL-dJ-AoD" firstAttribute="trailing" secondItem="TU9-aq-lIK" secondAttribute="trailing" id="Kid-Xq-Isv"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="M9A-M2-VlS"/>
+                            <constraint firstItem="3OL-dJ-AoD" firstAttribute="top" secondItem="TU9-aq-lIK" secondAttribute="top" id="Mbh-Md-uS0"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="eNa-5M-elL"/>
                             <constraint firstItem="TU9-aq-lIK" firstAttribute="trailing" secondItem="Vve-2c-wqK" secondAttribute="trailing" constant="16" id="mZ4-8b-aEm"/>
                             <constraint firstItem="HEz-jV-1jg" firstAttribute="top" secondItem="Vve-2c-wqK" secondAttribute="bottom" constant="32" id="tXK-Ka-d8Z"/>
@@ -273,8 +279,32 @@
                     <view key="view" contentMode="scaleToFill" id="CNC-nB-tEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ood-za-UCo">
+                                <rect key="frame" x="16" y="263" width="343" height="141"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐶!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogb-cj-F3V">
+                                        <rect key="frame" x="67.5" y="0.0" width="208.5" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bd-M1-Cmv">
+                                        <rect key="frame" x="17.5" y="80" width="308.5" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sxP-nO-XGO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ood-za-UCo" firstAttribute="leading" secondItem="sxP-nO-XGO" secondAttribute="leading" constant="16" id="LA7-Jd-IAP"/>
+                            <constraint firstAttribute="trailing" secondItem="Ood-za-UCo" secondAttribute="trailing" constant="16" id="mvd-fV-Wt5"/>
+                            <constraint firstItem="Ood-za-UCo" firstAttribute="centerY" secondItem="CNC-nB-tEL" secondAttribute="centerY" id="yRs-uW-q7u"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="NPx-S4-M1v">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="yDE-8y-rWW"/>
@@ -282,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1D-2o-7Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2564" y="-2"/>
+            <point key="canvasLocation" x="2564" y="-2.2488755622188905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DYx-5Z-7i1">
