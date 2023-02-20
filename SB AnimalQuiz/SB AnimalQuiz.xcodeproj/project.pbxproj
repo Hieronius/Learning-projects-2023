@@ -13,6 +13,7 @@
 		DDFB357B29A25FFC00362719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFB357929A25FFC00362719 /* Main.storyboard */; };
 		DDFB357D29A2600100362719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFB357C29A2600100362719 /* Assets.xcassets */; };
 		DDFB358029A2600100362719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFB357E29A2600100362719 /* LaunchScreen.storyboard */; };
+		DDFB358E29A3AFC500362719 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB358D29A3AFC500362719 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DDFB357C29A2600100362719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDFB357F29A2600100362719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDFB358129A2600100362719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDFB358D29A3AFC500362719 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,6 @@
 				DDFB358929A2637200362719 /* ViewControllers */,
 				DDFB358829A2632E00362719 /* Supporting files */,
 				DDFB358729A261F200362719 /* Storyboards */,
-				DDFB358129A2600100362719 /* Info.plist */,
 			);
 			path = "SB AnimalQuiz";
 			sourceTree = "<group>";
@@ -78,6 +79,7 @@
 		DDFB358829A2632E00362719 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				DDFB358129A2600100362719 /* Info.plist */,
 				DDFB357329A25FFC00362719 /* AppDelegate.swift */,
 				DDFB357529A25FFC00362719 /* SceneDelegate.swift */,
 			);
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFB357729A25FFC00362719 /* ViewController.swift */,
+				DDFB358D29A3AFC500362719 /* QuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				DDFB357829A25FFC00362719 /* ViewController.swift in Sources */,
 				DDFB357429A25FFC00362719 /* AppDelegate.swift in Sources */,
+				DDFB358E29A3AFC500362719 /* QuestionViewController.swift in Sources */,
 				DDFB357629A25FFC00362719 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7YW3V66545;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SB AnimalQuiz/Info.plist";
+				INFOPLIST_FILE = "SB AnimalQuiz/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7YW3V66545;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SB AnimalQuiz/Info.plist";
+				INFOPLIST_FILE = "SB AnimalQuiz/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
