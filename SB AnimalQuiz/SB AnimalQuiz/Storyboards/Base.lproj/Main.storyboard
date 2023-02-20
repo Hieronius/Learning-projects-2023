@@ -96,6 +96,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-Kd-RLx">
+                                <rect key="frame" x="16" y="265" width="343" height="137"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="haF-mg-diY">
+                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-Ww-yeM">
+                                        <rect key="frame" x="0.0" y="56" width="343" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ненавижу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evd-Oe-0yg">
+                                                <rect key="frame" x="0.0" y="0.0" width="213" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Обожаю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNh-1r-5Kn">
+                                                <rect key="frame" x="276" y="0.0" width="67" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGR-Ts-5on">
+                                        <rect key="frame" x="0.0" y="102.5" width="343" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <segue destination="7dw-On-RO2" kind="show" id="vV6-A6-EBr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Iz-uaS" userLabel="ButtonsStack">
                                 <rect key="frame" x="150" y="222.5" width="75" height="222"/>
                                 <subviews>
@@ -183,26 +216,42 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEz-jV-1jg">
-                                <rect key="frame" x="139" y="460.5" width="97.5" height="34.5"/>
+                                <rect key="frame" x="131" y="460.5" width="113.5" height="37"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Ответить">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7dw-On-RO2" kind="show" id="Z65-BC-ca1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TU9-aq-lIK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0sQ-Kd-RLx" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="3gU-ay-xax"/>
                             <constraint firstItem="fgf-Iz-uaS" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="ALl-FX-dum"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="DYB-NK-6Ur"/>
+                            <constraint firstItem="0sQ-Kd-RLx" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="Dnx-Ab-czV"/>
                             <constraint firstItem="HEz-jV-1jg" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="GGJ-Nh-6dc"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="M9A-M2-VlS"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="eNa-5M-elL"/>
                             <constraint firstItem="TU9-aq-lIK" firstAttribute="trailing" secondItem="Vve-2c-wqK" secondAttribute="trailing" constant="16" id="mZ4-8b-aEm"/>
                             <constraint firstItem="HEz-jV-1jg" firstAttribute="top" secondItem="Vve-2c-wqK" secondAttribute="bottom" constant="32" id="tXK-Ka-d8Z"/>
+                            <constraint firstItem="TU9-aq-lIK" firstAttribute="trailing" secondItem="0sQ-Kd-RLx" secondAttribute="trailing" constant="16" id="voF-rL-ykc"/>
                             <constraint firstItem="fgf-Iz-uaS" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="wUe-y6-I9Z"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fgf-Iz-uaS"/>
+                                <exclude reference="Vve-2c-wqK"/>
+                                <exclude reference="HEz-jV-1jg"/>
                             </mask>
                         </variation>
                     </view>
@@ -254,6 +303,9 @@
             <point key="canvasLocation" x="733.60000000000002" y="-2.2488755622188905"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eKu-l5-Gco"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
