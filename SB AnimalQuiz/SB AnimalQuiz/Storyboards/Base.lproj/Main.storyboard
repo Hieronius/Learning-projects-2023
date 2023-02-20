@@ -88,23 +88,55 @@
             </objects>
             <point key="canvasLocation" x="-130" y="-2"/>
         </scene>
-        <!--Вопрос №1-->
+        <!--Вопрос №-->
         <scene sceneID="iJH-JD-ObO">
             <objects>
                 <viewController id="Qm3-SO-k6z" customClass="QuestionViewController" customModule="SB_AnimalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eck-WT-SbE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Iz-uaS">
+                                <rect key="frame" x="150" y="222" width="75" height="222"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3q-qd-CmR">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-Ve-84M">
+                                        <rect key="frame" x="0.0" y="62.5" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-GM-pb6">
+                                        <rect key="frame" x="0.0" y="125" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="030-Pb-Lgp">
+                                        <rect key="frame" x="0.0" y="187.5" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TU9-aq-lIK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №1" id="JkL-Zd-xHe"/>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="JkL-Zd-xHe">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="vWD-Qd-WjC"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="7dw-On-RO2" kind="show" identifier="showResult" id="eKu-l5-Gco"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ek-Ii-Hac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1672.8" y="-2.2488755622188905"/>
         </scene>
-        <!--View Controller-->
+        <!--Результаты-->
         <scene sceneID="kau-u8-Dhp">
             <objects>
                 <viewController id="7dw-On-RO2" sceneMemberID="viewController">
@@ -114,6 +146,9 @@
                         <viewLayoutGuide key="safeArea" id="sxP-nO-XGO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Результаты" id="NPx-S4-M1v">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="yDE-8y-rWW"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1D-2o-7Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
