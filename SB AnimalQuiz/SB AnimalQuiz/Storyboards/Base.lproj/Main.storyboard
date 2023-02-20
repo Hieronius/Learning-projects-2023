@@ -96,7 +96,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Iz-uaS">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-Iz-uaS" userLabel="ButtonsStack">
                                 <rect key="frame" x="150" y="222.5" width="75" height="222"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3q-qd-CmR">
@@ -121,7 +121,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-2c-wqK">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-2c-wqK" userLabel="SwitchStack">
                                 <rect key="frame" x="16" y="238.5" width="343" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="195" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-tG-kXy">
@@ -182,15 +182,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEz-jV-1jg">
+                                <rect key="frame" x="139" y="460.5" width="97.5" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TU9-aq-lIK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fgf-Iz-uaS" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="ALl-FX-dum"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="DYB-NK-6Ur"/>
+                            <constraint firstItem="HEz-jV-1jg" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="GGJ-Nh-6dc"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="centerY" secondItem="eck-WT-SbE" secondAttribute="centerY" id="M9A-M2-VlS"/>
                             <constraint firstItem="Vve-2c-wqK" firstAttribute="leading" secondItem="TU9-aq-lIK" secondAttribute="leading" constant="16" id="eNa-5M-elL"/>
                             <constraint firstItem="TU9-aq-lIK" firstAttribute="trailing" secondItem="Vve-2c-wqK" secondAttribute="trailing" constant="16" id="mZ4-8b-aEm"/>
+                            <constraint firstItem="HEz-jV-1jg" firstAttribute="top" secondItem="Vve-2c-wqK" secondAttribute="bottom" constant="32" id="tXK-Ka-d8Z"/>
                             <constraint firstItem="fgf-Iz-uaS" firstAttribute="centerX" secondItem="eck-WT-SbE" secondAttribute="centerX" id="wUe-y6-I9Z"/>
                         </constraints>
                         <variation key="default">
