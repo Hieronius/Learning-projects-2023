@@ -39,7 +39,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXY-CR-Snr"/>
-                                    <segue destination="4Ug-qo-ufJ" kind="show" id="iG6-Ww-SqU"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t5l-2m-Wgs" userLabel="Password Reset Stack">
@@ -98,6 +97,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="fqD-pF-Rvz" id="Crx-Ir-j1t"/>
                         <outlet property="passwordTextField" destination="qab-QL-nXJ" id="5NV-eo-ko6"/>
+                        <segue destination="4Ug-qo-ufJ" kind="show" identifier="LogInSegue" id="yAU-TM-reF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="1202" y="804"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="3l0-uM-WtD">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="4Ug-qo-ufJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" modalPresentationStyle="fullScreen" id="4Ug-qo-ufJ" customClass="TabBarViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hcD-Lw-hjx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XlN-xG-0a3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDF96AE429A5274B006B7AC1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF96AE329A5274B006B7AC1 /* TabBarViewController.swift */; };
 		DDFB35A229A4F14000362719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB35A129A4F14000362719 /* AppDelegate.swift */; };
 		DDFB35A429A4F14100362719 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB35A329A4F14000362719 /* SceneDelegate.swift */; };
 		DDFB35A629A4F14100362719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB35A529A4F14100362719 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDF96AE329A5274B006B7AC1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DDFB359E29A4F14000362719 /* SB Authorisation App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SB Authorisation App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFB35A129A4F14000362719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFB35A329A4F14000362719 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				DDFB35A529A4F14100362719 /* ViewController.swift */,
 				DDFB35BA29A5211900362719 /* StartViewController.swift */,
 				DDFB35BC29A5214800362719 /* ProfileViewController.swift */,
+				DDF96AE329A5274B006B7AC1 /* TabBarViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				DDFB35BB29A5211900362719 /* StartViewController.swift in Sources */,
 				DDFB35BD29A5214800362719 /* ProfileViewController.swift in Sources */,
 				DDFB35A229A4F14000362719 /* AppDelegate.swift in Sources */,
+				DDF96AE429A5274B006B7AC1 /* TabBarViewController.swift in Sources */,
 				DDFB35BF29A523B100362719 /* UserInfoData.swift in Sources */,
 				DDFB35A429A4F14100362719 /* SceneDelegate.swift in Sources */,
 			);
