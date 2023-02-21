@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="-100" y="3.1484257871064472"/>
         </scene>
-        <!--View Controller-->
+        <!--Start-->
         <scene sceneID="MaI-ot-stX">
             <objects>
-                <viewController id="Jui-e7-bir" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Jui-e7-bir" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSP-UH-wjW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                             <constraint firstItem="6AQ-Ig-TBF" firstAttribute="centerX" secondItem="jSP-UH-wjW" secondAttribute="centerX" id="nnh-zU-Oxm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="person.circle" catalog="system" id="gLf-na-nL6"/>
+                    <tabBarItem key="tabBarItem" title="Start" image="person.circle" catalog="system" selectedImage="person.circle" id="gLf-na-nL6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7W-zI-ilu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,7 +150,7 @@
             <objects>
                 <viewController id="oqv-7e-Y4a" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvn-Ck-eec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG2-cB-c5d">
@@ -166,7 +166,7 @@
                         <viewLayoutGuide key="safeArea" id="L0Y-mB-dGb"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile Name" selectedImage="book" catalog="system" id="xC0-Tl-o75"/>
+                    <tabBarItem key="tabBarItem" title="Profile Name" image="book" catalog="system" selectedImage="book" id="xC0-Tl-o75"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dY1-19-me1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -176,12 +176,12 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3l0-uM-WtD">
             <objects>
-                <tabBarController id="4Ug-qo-ufJ" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="4Ug-qo-ufJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hcD-Lw-hjx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XlN-xG-0a3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="oqv-7e-Y4a" kind="relationship" relationship="viewControllers" id="Upt-Cs-jtv"/>

@@ -13,6 +13,8 @@
 		DDFB35A929A4F14100362719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFB35A729A4F14100362719 /* Main.storyboard */; };
 		DDFB35AB29A4F14700362719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFB35AA29A4F14700362719 /* Assets.xcassets */; };
 		DDFB35AE29A4F14700362719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFB35AC29A4F14700362719 /* LaunchScreen.storyboard */; };
+		DDFB35BB29A5211900362719 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB35BA29A5211900362719 /* StartViewController.swift */; };
+		DDFB35BD29A5214800362719 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFB35BC29A5214800362719 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DDFB35AA29A4F14700362719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDFB35AD29A4F14700362719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDFB35AF29A4F14700362719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDFB35BA29A5211900362719 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		DDFB35BC29A5214800362719 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				DDFB35A529A4F14100362719 /* ViewController.swift */,
+				DDFB35BA29A5211900362719 /* StartViewController.swift */,
+				DDFB35BC29A5214800362719 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDFB35A629A4F14100362719 /* ViewController.swift in Sources */,
+				DDFB35BB29A5211900362719 /* StartViewController.swift in Sources */,
+				DDFB35BD29A5214800362719 /* ProfileViewController.swift in Sources */,
 				DDFB35A229A4F14000362719 /* AppDelegate.swift in Sources */,
 				DDFB35A429A4F14100362719 /* SceneDelegate.swift in Sources */,
 			);
