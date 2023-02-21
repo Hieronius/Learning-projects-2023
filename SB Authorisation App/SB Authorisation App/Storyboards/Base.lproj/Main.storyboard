@@ -90,8 +90,95 @@
             </objects>
             <point key="canvasLocation" x="-100" y="3.1484257871064472"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="MaI-ot-stX">
+            <objects>
+                <viewController id="Jui-e7-bir" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jSP-UH-wjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-QH-fNT">
+                                <rect key="frame" x="86.5" y="200" width="202" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46o-wp-AWU">
+                                <rect key="frame" x="155" y="284" width="65" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AQ-Ig-TBF">
+                                <rect key="frame" x="142" y="481" width="91" height="37"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Log out">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qfc-AR-mtA"/>
+                        <color key="backgroundColor" red="0.81719368699999995" green="0.5281469822" blue="0.56863749029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="46o-wp-AWU" firstAttribute="centerX" secondItem="jSP-UH-wjW" secondAttribute="centerX" id="9ha-oL-bKC"/>
+                            <constraint firstItem="Qfc-AR-mtA" firstAttribute="bottom" secondItem="6AQ-Ig-TBF" secondAttribute="bottom" constant="100" id="UUA-Oo-V4g"/>
+                            <constraint firstItem="GWc-QH-fNT" firstAttribute="top" secondItem="Qfc-AR-mtA" secondAttribute="top" constant="200" id="csS-8p-R9k"/>
+                            <constraint firstItem="46o-wp-AWU" firstAttribute="top" secondItem="GWc-QH-fNT" secondAttribute="bottom" constant="48" id="dvK-pF-RCC"/>
+                            <constraint firstItem="GWc-QH-fNT" firstAttribute="centerX" secondItem="jSP-UH-wjW" secondAttribute="centerX" id="i4u-Tc-anz"/>
+                            <constraint firstItem="6AQ-Ig-TBF" firstAttribute="centerX" secondItem="jSP-UH-wjW" secondAttribute="centerX" id="nnh-zU-Oxm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="person.circle" catalog="system" id="gLf-na-nL6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k7W-zI-ilu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="804"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="K8K-8R-zMm">
+            <objects>
+                <viewController id="oqv-7e-Y4a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rvn-Ck-eec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L0Y-mB-dGb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="xC0-Tl-o75"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY1-19-me1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="804"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3l0-uM-WtD">
+            <objects>
+                <tabBarController id="4Ug-qo-ufJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XlN-xG-0a3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oqv-7e-Y4a" kind="relationship" relationship="viewControllers" id="Upt-Cs-jtv"/>
+                        <segue destination="Jui-e7-bir" kind="relationship" relationship="viewControllers" id="Bgn-vI-Vv8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCm-CX-dzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="3"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
