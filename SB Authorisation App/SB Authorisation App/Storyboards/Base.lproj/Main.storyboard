@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,10 +94,13 @@
                             <constraint firstItem="t5l-2m-Wgs" firstAttribute="top" secondItem="Zws-fL-OqW" secondAttribute="bottom" constant="16" id="tQK-8e-a1L"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vBx-Hx-b1A"/>
                     <connections>
                         <outlet property="loginTextField" destination="fqD-pF-Rvz" id="Crx-Ir-j1t"/>
                         <outlet property="passwordTextField" destination="qab-QL-nXJ" id="5NV-eo-ko6"/>
                         <segue destination="4Ug-qo-ufJ" kind="show" identifier="LogInSegue" id="yAU-TM-reF"/>
+                        <segue destination="ObQ-p5-FsR" kind="show" identifier="ForgotLoginSegue" id="Kx1-0f-yjO"/>
+                        <segue destination="fGz-17-iQf" kind="show" identifier="ForgotPasswordSegue" id="1sm-cH-GbM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -156,18 +159,77 @@
                     <tabBarItem key="tabBarItem" title="Start" image="person.circle" catalog="system" selectedImage="person.circle" id="gLf-na-nL6"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="GWc-QH-fNT" id="dc0-B8-1Ki"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogOutSegue" id="F6m-pU-9bs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7W-zI-ilu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="804"/>
+            <point key="canvasLocation" x="1409" y="836"/>
+        </scene>
+        <!--Forgot Login View Controller-->
+        <scene sceneID="RPD-z0-gOB">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ObQ-p5-FsR" customClass="ForgotLoginViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tgi-vW-0WW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login@yandex.ru" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Kv-7h-boq">
+                                <rect key="frame" x="16" y="316.5" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please write your Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOO-NH-aKE">
+                                <rect key="frame" x="100" y="279.5" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f1-zm-Occ">
+                                <rect key="frame" x="153.5" y="366.5" width="68.5" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Send">
+                                            <attributes>
+                                                <font key="NSFont" size="19" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendEmailButtonPressed:" destination="ObQ-p5-FsR" eventType="touchUpInside" id="EGq-Ba-n75"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Das-g8-SkM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Kv-7h-boq" firstAttribute="top" secondItem="EOO-NH-aKE" secondAttribute="bottom" constant="16" id="Azx-ik-yZe"/>
+                            <constraint firstItem="Das-g8-SkM" firstAttribute="trailing" secondItem="2Kv-7h-boq" secondAttribute="trailing" constant="16" id="TUs-fm-Y8V"/>
+                            <constraint firstItem="5f1-zm-Occ" firstAttribute="centerX" secondItem="Tgi-vW-0WW" secondAttribute="centerX" id="V3M-5i-U97"/>
+                            <constraint firstItem="5f1-zm-Occ" firstAttribute="top" secondItem="2Kv-7h-boq" secondAttribute="bottom" constant="16" id="fxP-e1-gEL"/>
+                            <constraint firstItem="2Kv-7h-boq" firstAttribute="leading" secondItem="Das-g8-SkM" secondAttribute="leading" constant="16" id="isc-ca-ujK"/>
+                            <constraint firstItem="EOO-NH-aKE" firstAttribute="centerX" secondItem="Tgi-vW-0WW" secondAttribute="centerX" id="jHp-0G-CSX"/>
+                            <constraint firstItem="2Kv-7h-boq" firstAttribute="centerY" secondItem="Tgi-vW-0WW" secondAttribute="centerY" id="znf-P8-nV2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dVb-KG-0N8"/>
+                    <connections>
+                        <outlet property="sendMainTextField" destination="2Kv-7h-boq" id="lLD-v5-EDT"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gotLoginSegue" id="Dwn-Q3-8zJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSj-iV-vg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="813"/>
         </scene>
         <!--Profile Name-->
         <scene sceneID="K8K-8R-zMm">
             <objects>
                 <viewController id="oqv-7e-Y4a" customClass="ProfileViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvn-Ck-eec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG2-cB-c5d">
@@ -198,14 +260,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile Name" image="book" catalog="system" selectedImage="book" id="xC0-Tl-o75"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="profileNameLabel" destination="9GJ-Bv-JMX" id="vdV-1Y-U65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dY1-19-me1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="804"/>
+            <point key="canvasLocation" x="594" y="813"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="3l0-uM-WtD">
@@ -226,7 +287,60 @@
             </objects>
             <point key="canvasLocation" x="697" y="3"/>
         </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="vaS-i8-0DI">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="fGz-17-iQf" customClass="ForgotPasswordViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uMr-0a-1bg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GB9-DX-4eB">
+                                <rect key="frame" x="16" y="316.5" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-gg-6Hi">
+                                <rect key="frame" x="155.5" y="366.5" width="64" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                                <connections>
+                                    <action selector="sendPasswordButtonPressed:" destination="fGz-17-iQf" eventType="touchUpInside" id="mUm-qv-ljm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please write your login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i17-YY-t84">
+                                <rect key="frame" x="102" y="279.5" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HBK-YG-UvN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GB9-DX-4eB" firstAttribute="top" secondItem="i17-YY-t84" secondAttribute="bottom" constant="16" id="0Xw-cA-Rrg"/>
+                            <constraint firstItem="i17-YY-t84" firstAttribute="centerX" secondItem="uMr-0a-1bg" secondAttribute="centerX" id="2CH-Uz-iCf"/>
+                            <constraint firstItem="GB9-DX-4eB" firstAttribute="centerY" secondItem="uMr-0a-1bg" secondAttribute="centerY" id="Y3b-Xz-Vsd"/>
+                            <constraint firstItem="GB9-DX-4eB" firstAttribute="leading" secondItem="HBK-YG-UvN" secondAttribute="leading" constant="16" id="Z6t-9J-TBa"/>
+                            <constraint firstItem="8Ay-gg-6Hi" firstAttribute="centerX" secondItem="uMr-0a-1bg" secondAttribute="centerX" id="bTE-Us-Pmy"/>
+                            <constraint firstItem="HBK-YG-UvN" firstAttribute="trailing" secondItem="GB9-DX-4eB" secondAttribute="trailing" constant="16" id="by0-qS-jSH"/>
+                            <constraint firstItem="8Ay-gg-6Hi" firstAttribute="top" secondItem="GB9-DX-4eB" secondAttribute="bottom" constant="16" id="tir-cd-EoI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8LP-qG-Ou9"/>
+                    <connections>
+                        <outlet property="sendLoginTextField" destination="GB9-DX-4eB" id="RQw-o6-Mxl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gotPasswordSegue" id="nl0-Be-eDF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGQ-U3-pdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="813"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nl0-Be-eDF"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>

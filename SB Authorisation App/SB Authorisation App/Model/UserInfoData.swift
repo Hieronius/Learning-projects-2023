@@ -10,5 +10,6 @@ import UIKit
 struct UserInfoData {
     let login = "User"
     let password = "Password"
+    let email = "user12@yandex.ru"
 }
 

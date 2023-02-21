@@ -18,5 +18,6 @@ class ProfileViewController: UIViewController {
     
     
     @IBAction func moreInfoButtonPressed(_ sender: Any) {
+        
     }
 }

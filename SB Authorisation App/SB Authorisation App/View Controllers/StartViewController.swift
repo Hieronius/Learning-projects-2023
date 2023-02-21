@@ -19,5 +19,6 @@ class StartViewController: UIViewController {
     
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "LogOutSegue", sender: sender)
     }
 }
