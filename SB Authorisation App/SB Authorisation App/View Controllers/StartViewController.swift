@@ -9,8 +9,15 @@ import UIKit
 
 class StartViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // text some code here
+    }
+    
+    
+    @IBAction func logOutButtonPressed(_ sender: Any) {
     }
 }

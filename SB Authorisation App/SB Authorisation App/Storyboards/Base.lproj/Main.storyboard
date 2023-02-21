@@ -38,6 +38,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXY-CR-Snr"/>
                                     <segue destination="4Ug-qo-ufJ" kind="show" id="iG6-Ww-SqU"/>
                                 </connections>
                             </button>
@@ -56,6 +57,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotUserNamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9W-Yk-M4p"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gar-nS-GvP">
                                         <rect key="frame" x="176.5" y="0.0" width="166.5" height="28"/>
@@ -70,6 +74,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oD-6P-loP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -88,6 +95,10 @@
                             <constraint firstItem="t5l-2m-Wgs" firstAttribute="top" secondItem="Zws-fL-OqW" secondAttribute="bottom" constant="16" id="tQK-8e-a1L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="fqD-pF-Rvz" id="Crx-Ir-j1t"/>
+                        <outlet property="passwordTextField" destination="qab-QL-nXJ" id="5NV-eo-ko6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +107,7 @@
         <!--Start-->
         <scene sceneID="MaI-ot-stX">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Jui-e7-bir" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Jui-e7-bir" customClass="StartViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSP-UH-wjW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,6 +137,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="Jui-e7-bir" eventType="touchUpInside" id="8xO-jP-Qt7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qfc-AR-mtA"/>
@@ -140,6 +154,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Start" image="person.circle" catalog="system" selectedImage="person.circle" id="gLf-na-nL6"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="GWc-QH-fNT" id="dc0-B8-1Ki"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7W-zI-ilu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +165,7 @@
         <!--Profile Name-->
         <scene sceneID="K8K-8R-zMm">
             <objects>
-                <viewController id="oqv-7e-Y4a" sceneMemberID="viewController">
+                <viewController id="oqv-7e-Y4a" customClass="ProfileViewController" customModule="SB_Authorisation_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvn-Ck-eec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,13 +178,30 @@
                                 <buttonConfiguration key="configuration" style="plain" title="More Info">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="moreInfoButtonPressed:" destination="oqv-7e-Y4a" eventType="touchUpInside" id="8Ud-01-dXa"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-Bv-JMX">
+                                <rect key="frame" x="16" y="16" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L0Y-mB-dGb"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="9GJ-Bv-JMX" firstAttribute="leading" secondItem="L0Y-mB-dGb" secondAttribute="leading" constant="16" id="RgF-2i-gbF"/>
+                            <constraint firstItem="L0Y-mB-dGb" firstAttribute="trailing" secondItem="9GJ-Bv-JMX" secondAttribute="trailing" constant="16" id="jES-lp-mLt"/>
+                            <constraint firstItem="9GJ-Bv-JMX" firstAttribute="top" secondItem="L0Y-mB-dGb" secondAttribute="top" constant="16" id="ox4-AS-wZq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile Name" image="book" catalog="system" selectedImage="book" id="xC0-Tl-o75"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="profileNameLabel" destination="9GJ-Bv-JMX" id="vdV-1Y-U65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dY1-19-me1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
