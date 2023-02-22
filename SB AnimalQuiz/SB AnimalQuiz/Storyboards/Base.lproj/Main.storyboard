@@ -345,10 +345,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="NPx-S4-M1v">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="yDE-8y-rWW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="yDE-8y-rWW">
+                            <connections>
+                                <segue destination="1uC-mb-TWQ" kind="unwind" unwindAction="unwindFor:" id="tWA-VV-jcf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1D-2o-7Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1uC-mb-TWQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2564" y="-2.2488755622188905"/>
         </scene>
