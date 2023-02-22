@@ -56,6 +56,8 @@ class QuestionViewController: UIViewController {
         guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
+        
+        newQuestion()
     }
     
     @IBAction func multipleAnswersPressed() {
