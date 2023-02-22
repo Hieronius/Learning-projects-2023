@@ -125,7 +125,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
                                             <action selector="rangedAnswerButtonPressed" destination="Qm3-SO-k6z" eventType="touchUpInside" id="xb8-be-Lqe"/>
-                                            <segue destination="7dw-On-RO2" kind="show" id="vV6-A6-EBr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -251,7 +250,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="multipleAnswersPressed" destination="Qm3-SO-k6z" eventType="touchUpInside" id="euE-wY-8so"/>
-                                    <segue destination="7dw-On-RO2" kind="show" id="Z65-BC-ca1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -301,6 +299,10 @@
                         <outletCollection property="multipleLabels" destination="PAf-YB-eyj" collectionClass="NSMutableArray" id="Vck-L1-DHY"/>
                         <outletCollection property="rangedLabels" destination="Evd-Oe-0yg" collectionClass="NSMutableArray" id="fcn-UV-f2r"/>
                         <outletCollection property="rangedLabels" destination="kNh-1r-5Kn" collectionClass="NSMutableArray" id="R0B-Gm-BKw"/>
+                        <outletCollection property="multipleSwitches" destination="yAc-R5-AnY" collectionClass="NSMutableArray" id="Qzt-K7-fnJ"/>
+                        <outletCollection property="multipleSwitches" destination="9D2-KQ-fzz" collectionClass="NSMutableArray" id="ImS-g3-cOb"/>
+                        <outletCollection property="multipleSwitches" destination="ZC1-xB-X6Z" collectionClass="NSMutableArray" id="GI4-pR-lgM"/>
+                        <outletCollection property="multipleSwitches" destination="rbO-ZK-vkQ" collectionClass="NSMutableArray" id="5Gw-9f-D6j"/>
                         <segue destination="7dw-On-RO2" kind="show" identifier="showResult" id="eKu-l5-Gco"/>
                     </connections>
                 </viewController>
@@ -369,9 +371,6 @@
             <point key="canvasLocation" x="733.60000000000002" y="-2.2488755622188905"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eKu-l5-Gco"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

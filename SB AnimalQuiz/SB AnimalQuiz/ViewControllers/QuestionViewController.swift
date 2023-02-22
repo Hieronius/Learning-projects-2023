@@ -11,7 +11,12 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var rangedSlider: UISlider!
+    @IBOutlet weak var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.value = answerCount
+        }
+    }
     
     
     @IBOutlet weak var singleStackView: UIStackView!
@@ -23,6 +28,10 @@ class QuestionViewController: UIViewController {
     @IBOutlet var multipleLabels: [UILabel]!
     
     @IBOutlet var rangedLabels: [UILabel]!
+    
+    
+    
+    @IBOutlet var multipleSwitches: [UISwitch]!
     
     
     
@@ -50,9 +59,20 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func multipleAnswersPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answerChosen.append(answer)
+            }
+        }
+        
+        newQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
+        let index = Int(rangedSlider.value)
+        answerChosen.append(currentAnswers[index])
+        
+        newQuestion()
     }
     
 }
