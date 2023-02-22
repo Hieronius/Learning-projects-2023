@@ -24,6 +24,8 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet var rangedLabels: [UILabel]!
     
+    
+    
     private let questions = Question.getQuestions()
     private var questionIndex = 0
     private var answerChosen: [Answer] = []
@@ -38,6 +40,19 @@ class QuestionViewController: UIViewController {
         updateUI()
         
         // some code here
+    }
+    
+    
+    @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
+        guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = currentAnswers[currentIndex]
+        answerChosen.append(currentAnswer)
+    }
+    
+    @IBAction func multipleAnswersPressed() {
+    }
+    
+    @IBAction func rangedAnswerButtonPressed() {
     }
     
 }
@@ -70,9 +85,9 @@ extension QuestionViewController {
         case .single:
             showSingleStackView(with: currentAnswers)
         case .multiple:
-            break
+            showMultipleStackView(with: currentAnswers)
         case .range:
-            break
+            showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -97,6 +112,17 @@ extension QuestionViewController {
         
         rangedLabels.first?.text = answers.first?.text
         rangedLabels.last?.text = answers.last?.text
+    }
+    
+    private func newQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        
+        performSegue(withIdentifier: "showSegue", sender: nil)
     }
     
 }

@@ -124,6 +124,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="Qm3-SO-k6z" eventType="touchUpInside" id="xb8-be-Lqe"/>
                                             <segue destination="7dw-On-RO2" kind="show" id="vV6-A6-EBr"/>
                                         </connections>
                                     </button>
@@ -145,21 +146,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Qm3-SO-k6z" eventType="touchUpInside" id="mmR-NM-3WT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-Ve-84M">
                                         <rect key="frame" x="0.0" y="62.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Qm3-SO-k6z" eventType="touchUpInside" id="UbN-Zo-Rs9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-GM-pb6">
                                         <rect key="frame" x="0.0" y="125" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Qm3-SO-k6z" eventType="touchUpInside" id="Auq-o8-jqo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="030-Pb-Lgp">
                                         <rect key="frame" x="0.0" y="187.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="Qm3-SO-k6z" eventType="touchUpInside" id="9nh-Za-Klx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -237,6 +250,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="multipleAnswersPressed" destination="Qm3-SO-k6z" eventType="touchUpInside" id="euE-wY-8so"/>
                                     <segue destination="7dw-On-RO2" kind="show" id="Z65-BC-ca1"/>
                                 </connections>
                             </button>
