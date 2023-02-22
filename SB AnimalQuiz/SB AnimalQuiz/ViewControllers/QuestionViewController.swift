@@ -100,6 +100,7 @@ extension QuestionViewController {
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         
         // show current StackView
+        showCurrentStackView(for: currentQuestion.type)
     }
     
     private func showCurrentStackView(for type: ResponseType) {
