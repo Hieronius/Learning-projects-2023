@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="4623.1999999999998" y="-993.55322338830592"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--evrvevr-->
         <scene sceneID="C9J-6c-WiI">
             <objects>
                 <tabBarController id="WeB-LM-VMn" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vL0-Zf-tB4"/>
+                    <navigationItem key="navigationItem" title="evrvevr" leftItemsSupplementBackButton="YES" id="vL0-Zf-tB4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pLp-5D-VMX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -190,8 +190,61 @@
                     <view key="view" contentMode="scaleToFill" id="yAt-DL-dnl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="l2l-33-bLu">
+                                <rect key="frame" x="137.5" y="117" width="100" height="100"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XMB-HJ-D04">
+                                <rect key="frame" x="25" y="247" width="300" height="104"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Иван" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUo-Y3-qIf">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                        <color key="backgroundColor" red="0.89806234839999999" green="0.90977978709999996" blue="0.95088928939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="kwJ-my-BKb"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.2353656888" green="0.23525053260000001" blue="0.26397114989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name@mail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBc-TJ-ytC">
+                                        <rect key="frame" x="0.0" y="60" width="300" height="44"/>
+                                        <color key="backgroundColor" red="0.89806234839999999" green="0.90977978709999996" blue="0.95088928939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="OYn-WS-nfL"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.24711942670000001" green="0.24702182410000001" blue="0.27165040369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPq-hx-UjG">
+                                <rect key="frame" x="149.5" y="519" width="76" height="34"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Выйти">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Nk4-NB-P6x"/>
                         <color key="backgroundColor" red="0.92156863209999995" green="0.92156857250000002" blue="0.92156857250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XMB-HJ-D04" firstAttribute="top" secondItem="l2l-33-bLu" secondAttribute="bottom" constant="30" id="1vl-eD-YSy"/>
+                            <constraint firstItem="XMB-HJ-D04" firstAttribute="leading" secondItem="Nk4-NB-P6x" secondAttribute="leading" constant="25" id="Uxa-t5-HHs"/>
+                            <constraint firstAttribute="bottom" secondItem="KPq-hx-UjG" secondAttribute="bottom" constant="114" id="eGs-uZ-Xlz"/>
+                            <constraint firstItem="l2l-33-bLu" firstAttribute="top" secondItem="Nk4-NB-P6x" secondAttribute="top" constant="21" id="ffy-Ny-02g"/>
+                            <constraint firstItem="KPq-hx-UjG" firstAttribute="centerX" secondItem="yAt-DL-dnl" secondAttribute="centerX" id="juS-nZ-On8"/>
+                            <constraint firstItem="l2l-33-bLu" firstAttribute="centerX" secondItem="yAt-DL-dnl" secondAttribute="centerX" id="rMu-FJ-ryh"/>
+                            <constraint firstItem="Nk4-NB-P6x" firstAttribute="trailing" secondItem="XMB-HJ-D04" secondAttribute="trailing" constant="50" id="wEe-fZ-kW7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="nue-QS-JWX"/>
                 </viewController>
@@ -242,6 +295,7 @@
         <!--Избранное-->
         <scene sceneID="6NV-ER-sMe">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqq-M4-HAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NR7-KP-WFr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Избранное" image="Vector-6" id="IS2-x8-jnk"/>
                     <toolbarItems/>
@@ -250,11 +304,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W7k-Ho-IT8">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="FcK-57-udj" kind="relationship" relationship="rootViewController" id="qea-xq-9cV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kqq-M4-HAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2824.8000000000002" y="348.57571214392806"/>
         </scene>
@@ -283,8 +339,12 @@
         <image name="Vector-6" width="28" height="24"/>
         <image name="icon" width="30" height="30"/>
         <image name="icon-3" width="30" height="30"/>
+        <image name="image 1" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
