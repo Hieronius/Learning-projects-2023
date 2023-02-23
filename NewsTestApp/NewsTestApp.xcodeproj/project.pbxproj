@@ -56,15 +56,47 @@
 		DD82224C29A79AD900E830C1 /* NewsTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				DD82224D29A79AD900E830C1 /* AppDelegate.swift */,
-				DD82224F29A79AD900E830C1 /* SceneDelegate.swift */,
-				DD82225129A79AD900E830C1 /* ViewController.swift */,
-				DD82225329A79AD900E830C1 /* Main.storyboard */,
-				DD82225629A79AE000E830C1 /* Assets.xcassets */,
-				DD82225829A79AE000E830C1 /* LaunchScreen.storyboard */,
-				DD82225B29A79AE000E830C1 /* Info.plist */,
+				DD82226329A79C8A00E830C1 /* View Controllers */,
+				DD82226229A79C7E00E830C1 /* Storyboards */,
+				DD82226129A79C7400E830C1 /* Resources */,
+				DD82226429A79C9A00E830C1 /* Supporting files */,
 			);
 			path = NewsTestApp;
+			sourceTree = "<group>";
+		};
+		DD82226129A79C7400E830C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD82225629A79AE000E830C1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DD82226229A79C7E00E830C1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DD82225329A79AD900E830C1 /* Main.storyboard */,
+				DD82225829A79AE000E830C1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DD82226329A79C8A00E830C1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD82225129A79AD900E830C1 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DD82226429A79C9A00E830C1 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				DD82224D29A79AD900E830C1 /* AppDelegate.swift */,
+				DD82224F29A79AD900E830C1 /* SceneDelegate.swift */,
+				DD82225B29A79AE000E830C1 /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +321,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7YW3V66545;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewsTestApp/Info.plist;
+				INFOPLIST_FILE = "NewsTestApp/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +335,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = HieroniusTeam.NewsTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +353,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7YW3V66545;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewsTestApp/Info.plist;
+				INFOPLIST_FILE = "NewsTestApp/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = HieroniusTeam.NewsTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
