@@ -280,7 +280,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="JkL-Zd-xHe">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="vWD-Qd-WjC"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iNO-UM-E4a"/>
                     </navigationItem>
                     <connections>
                         <outlet property="multipleStackVIew" destination="Vve-2c-wqK" id="4pC-wF-sHw"/>
