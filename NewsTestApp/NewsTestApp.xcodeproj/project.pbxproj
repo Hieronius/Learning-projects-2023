@@ -56,6 +56,7 @@
 		DD82224C29A79AD900E830C1 /* NewsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				DD82226529A79F5000E830C1 /* Model */,
 				DD82226329A79C8A00E830C1 /* View Controllers */,
 				DD82226229A79C7E00E830C1 /* Storyboards */,
 				DD82226129A79C7400E830C1 /* Resources */,
@@ -97,6 +98,13 @@
 				DD82225B29A79AE000E830C1 /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		DD82226529A79F5000E830C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
