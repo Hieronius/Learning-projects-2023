@@ -10,18 +10,17 @@ import UIKit
 class AuthorisationViewController: UIViewController {
     
     
-    @IBOutlet weak var testTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
         
-        testTextField.layer.cornerRadius = 15.0
-        testTextField.layer.borderWidth = 1.0
-        testTextField.layer.borderColor = UIColor.gray.cgColor
     }
 
     
+    
+    // Optional - plz delete before publication
     @IBAction func RegistrationButton(_ sender: Any) {
         performSegue(withIdentifier: "ShowRegistration", sender: sender)
     }
@@ -35,6 +34,8 @@ class AuthorisationViewController: UIViewController {
         
        
     }
+    
+    // end of the test zone
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         
