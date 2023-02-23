@@ -20,7 +20,6 @@
 		DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */; };
 		DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */; };
 		DD82227329A7ADC400E830C1 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227229A7ADC400E830C1 /* ArticleViewController.swift */; };
-		DD82227529A7B82800E830C1 /* TestBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD82227429A7B82800E830C1 /* TestBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DD82227229A7ADC400E830C1 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		DD82227429A7B82800E830C1 /* TestBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 			children = (
 				DD82225329A79AD900E830C1 /* Main.storyboard */,
 				DD82225829A79AE000E830C1 /* LaunchScreen.storyboard */,
-				DD82227429A7B82800E830C1 /* TestBoard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 				DD82225A29A79AE000E830C1 /* LaunchScreen.storyboard in Resources */,
 				DD82225729A79AE000E830C1 /* Assets.xcassets in Resources */,
 				DD82225529A79AD900E830C1 /* Main.storyboard in Resources */,
-				DD82227529A7B82800E830C1 /* TestBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

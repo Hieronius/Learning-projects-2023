@@ -8,10 +8,17 @@
 import UIKit
 
 class AuthorisationViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var testTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        testTextField.layer.cornerRadius = 15.0
+        testTextField.layer.borderWidth = 1.0
+        testTextField.layer.borderColor = UIColor.gray.cgColor
     }
 
     
@@ -25,6 +32,12 @@ class AuthorisationViewController: UIViewController {
     
     @IBAction func TabBarButton(_ sender: Any) {
         performSegue(withIdentifier: "TabBarSegue", sender: sender)
+        
+       
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        
     }
     
     
