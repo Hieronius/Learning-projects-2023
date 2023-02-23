@@ -14,6 +14,11 @@
 		DD82225729A79AE000E830C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD82225629A79AE000E830C1 /* Assets.xcassets */; };
 		DD82225A29A79AE000E830C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD82225829A79AE000E830C1 /* LaunchScreen.storyboard */; };
 		DD82226729A7A12900E830C1 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226629A7A12800E830C1 /* RegistrationViewController.swift */; };
+		DD82226929A7A83500E830C1 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226829A7A83500E830C1 /* ResetViewController.swift */; };
+		DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226A29A7AB7200E830C1 /* FeedViewController.swift */; };
+		DD82226D29A7ABCE00E830C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226C29A7ABCE00E830C1 /* MapViewController.swift */; };
+		DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */; };
+		DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		DD82225929A79AE000E830C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD82225B29A79AE000E830C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD82226629A7A12800E830C1 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		DD82226829A7A83500E830C1 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		DD82226A29A7AB7200E830C1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DD82226C29A7ABCE00E830C1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,11 @@
 			children = (
 				DD82225129A79AD900E830C1 /* AuthorisationViewController.swift */,
 				DD82226629A7A12800E830C1 /* RegistrationViewController.swift */,
+				DD82226829A7A83500E830C1 /* ResetViewController.swift */,
+				DD82226A29A7AB7200E830C1 /* FeedViewController.swift */,
+				DD82226C29A7ABCE00E830C1 /* MapViewController.swift */,
+				DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */,
+				DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +200,11 @@
 				DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */,
 				DD82226729A7A12900E830C1 /* RegistrationViewController.swift in Sources */,
 				DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */,
+				DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */,
+				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,
+				DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */,
+				DD82226929A7A83500E830C1 /* ResetViewController.swift in Sources */,
+				DD82226D29A7ABCE00E830C1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
