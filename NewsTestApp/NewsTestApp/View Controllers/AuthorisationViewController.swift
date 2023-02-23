@@ -14,6 +14,20 @@ class AuthorisationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    
+    @IBAction func RegistrationButton(_ sender: Any) {
+        performSegue(withIdentifier: "ShowRegistration", sender: sender)
+    }
+    
+    @IBAction func ResetButton(_ sender: Any) {
+        performSegue(withIdentifier: "showReset", sender: sender)
+    }
+    
+    @IBAction func TabBarButton(_ sender: Any) {
+        performSegue(withIdentifier: "TabBarSegue", sender: sender)
+    }
+    
+    
+    
 }
 
