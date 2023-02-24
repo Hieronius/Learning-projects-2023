@@ -42,7 +42,11 @@ class ResetViewController: UIViewController {
             present(ac, animated: true)
             
         } else {
-            performSegue(withIdentifier: "ResetToTabBarSegue", sender: sender)
+            
+            let ac = UIAlertController(title: "Успешно", message: "Инструкция по сбросу пароля придет Вам на почту", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            resetEmailTextField.text = ""
         }
         
         

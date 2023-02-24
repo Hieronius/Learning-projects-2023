@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="44" id="hkq-3h-UF5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHw-aE-smf">
                                 <rect key="frame" x="87.5" y="264" width="200" height="42"/>
@@ -214,7 +214,7 @@
         <!--Регистрация-->
         <scene sceneID="T01-sg-Qp3">
             <objects>
-                <viewController id="Tla-Gz-Jhh" customClass="RegistrationViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Регистрация" modalPresentationStyle="fullScreen" id="Tla-Gz-Jhh" customClass="RegistrationViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yTz-DI-SXm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                                             <constraint firstAttribute="height" constant="44" id="exn-Su-dIn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -337,7 +337,6 @@
                     <connections>
                         <outlet property="resetEmailTextField" destination="kih-F1-NrJ" id="oyf-Xm-1hx"/>
                         <outlet property="resetPasswordButton" destination="OUs-YA-FmA" id="2Ix-4Q-F0u"/>
-                        <segue destination="WeB-LM-VMn" kind="showDetail" identifier="ResetToTabBarSegue" id="U1g-sA-laZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Az1-yY-EWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -522,7 +521,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U1g-sA-laZ"/>
+        <segue reference="FZd-nQ-uJF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>
