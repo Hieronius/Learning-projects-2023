@@ -262,6 +262,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Вход"/>
                                 <connections>
+                                    <action selector="logInButtonPressed:" destination="Tla-Gz-Jhh" eventType="touchUpInside" id="bx4-a8-zyS"/>
                                     <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUj-9p-fQ1"/>
                                 </connections>
                             </button>
@@ -277,6 +278,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Регистрация" largeTitleDisplayMode="never" id="6nc-Hc-eqt"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="3OM-VX-BEc" id="JsC-sR-VAj"/>
+                        <outlet property="logInButton" destination="yuB-Km-rg2" id="vir-BB-EVG"/>
+                        <outlet property="nameTextField" destination="ctj-nC-5kK" id="90I-sl-bOC"/>
+                        <outlet property="passwordTextField" destination="jdl-7c-qpa" id="JAG-3F-Hin"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifD-10-HP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
