@@ -16,11 +16,36 @@ class ResetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // some code here
+        resetEmailTextField.layer.cornerRadius = 20
+        resetEmailTextField.layer.borderWidth = 0.5
+        resetEmailTextField.layer.borderColor = UIColor.white.cgColor
+        resetEmailTextField.layer.masksToBounds = true
+        
+        resetPasswordButton.layer.cornerRadius = 20
+        
+        
         
     }
     
     @IBAction func resetPasswordButtonPressed(_ sender: Any) {
+        
+        if resetEmailTextField.text?.isEmpty == true {
+        
+            let ac = UIAlertController(title: "Ошибка", message: "Заполните пустые поля", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            
+        } else if isValidEmail(resetEmailTextField.text!) == false {
+            
+            let ac = UIAlertController(title: "Ошибка", message: "Проверьте правильность ввода почты", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            
+        } else {
+            performSegue(withIdentifier: "ResetToTabBarSegue", sender: sender)
+        }
+        
+        
     }
     
 }

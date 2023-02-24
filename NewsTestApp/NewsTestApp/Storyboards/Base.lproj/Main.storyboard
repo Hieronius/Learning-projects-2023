@@ -337,6 +337,7 @@
                     <connections>
                         <outlet property="resetEmailTextField" destination="kih-F1-NrJ" id="oyf-Xm-1hx"/>
                         <outlet property="resetPasswordButton" destination="OUs-YA-FmA" id="2Ix-4Q-F0u"/>
+                        <segue destination="WeB-LM-VMn" kind="showDetail" identifier="ResetToTabBarSegue" id="U1g-sA-laZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Az1-yY-EWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -521,7 +522,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FZd-nQ-uJF"/>
+        <segue reference="U1g-sA-laZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>
