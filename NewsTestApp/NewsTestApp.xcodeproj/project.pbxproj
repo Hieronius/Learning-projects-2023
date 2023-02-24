@@ -20,6 +20,7 @@
 		DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */; };
 		DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */; };
 		DD82227329A7ADC400E830C1 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227229A7ADC400E830C1 /* ArticleViewController.swift */; };
+		DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DD82227229A7ADC400E830C1 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		DD82224C29A79AD900E830C1 /* NewsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				DDF5AD6D29A90CE500FA48F9 /* Extensions */,
 				DD82226529A79F5000E830C1 /* Model */,
 				DD82226329A79C8A00E830C1 /* View Controllers */,
 				DD82226229A79C7E00E830C1 /* Storyboards */,
@@ -126,6 +129,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DDF5AD6D29A90CE500FA48F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD82225229A79AD900E830C1 /* AuthorisationViewController.swift in Sources */,
+				DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */,
 				DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */,
 				DD82226729A7A12900E830C1 /* RegistrationViewController.swift in Sources */,
 				DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */,

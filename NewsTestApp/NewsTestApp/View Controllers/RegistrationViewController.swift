@@ -46,16 +46,20 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func logInButtonPressed(_ sender: Any) {
         
-           if isTextFieldsIsEmpty {
+        if isTextFieldsIsEmpty {
         
             let ac = UIAlertController(title: "Ошибка", message: "Заполните пустые поля", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Ok", style: .default))
             present(ac, animated: true)
             
+        } else if isValidEmail(emailTextField.text!) == false {
+            
+            let ac = UIAlertController(title: "Ошибка", message: "Проверьте правильность ввода почты", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            
         } else {
-            
             performSegue(withIdentifier: "RegistrationToTabBarSegue", sender: sender)
-            
         }
         
     }
