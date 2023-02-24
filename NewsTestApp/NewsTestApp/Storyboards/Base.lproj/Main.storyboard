@@ -263,7 +263,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Вход"/>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="Tla-Gz-Jhh" eventType="touchUpInside" id="bx4-a8-zyS"/>
-                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUj-9p-fQ1"/>
+                                    <segue destination="OaW-z1-lax" kind="unwind" unwindAction="unwindFor:" id="cAD-qu-BUh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -286,6 +286,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifD-10-HP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="OaW-z1-lax" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="386" y="779"/>
         </scene>
@@ -296,8 +297,25 @@
                     <view key="view" contentMode="scaleToFill" id="5I9-0a-b6C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kih-F1-NrJ">
+                                <rect key="frame" x="37" y="74" width="300" height="44"/>
+                                <color key="backgroundColor" red="0.94510060549999997" green="0.95685106519999996" blue="0.98975259069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LRq-Eg-RIf"/>
+                                    <constraint firstAttribute="height" constant="44" id="NQ1-kI-Xft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sQy-W9-mU7"/>
                         <color key="backgroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kih-F1-NrJ" firstAttribute="leading" secondItem="sQy-W9-mU7" secondAttribute="leading" constant="37" id="OMj-9x-Fem"/>
+                            <constraint firstItem="sQy-W9-mU7" firstAttribute="trailing" secondItem="kih-F1-NrJ" secondAttribute="trailing" constant="38" id="Yhg-9a-NTV"/>
+                            <constraint firstItem="kih-F1-NrJ" firstAttribute="top" secondItem="sQy-W9-mU7" secondAttribute="top" constant="30" id="iqI-Cg-cwe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Сброс пароля" largeTitleDisplayMode="never" id="GuC-RL-dH3"/>
                 </viewController>

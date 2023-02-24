@@ -38,8 +38,15 @@ class RegistrationViewController: UIViewController {
         
     }
     
+    // Let's solve the problem with Unwind Segue later
     @IBAction func logInButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "TabBarSegue", sender: sender)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+            let vc = AuthorisationViewController()
+            vc.performSegue(withIdentifier: "TabBarSegue", sender: nil)
+        })
+        
+        
     }
     
 }
