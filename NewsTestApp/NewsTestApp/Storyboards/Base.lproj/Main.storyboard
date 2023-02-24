@@ -140,7 +140,7 @@
         <!--Карта-->
         <scene sceneID="KDs-3c-jS6">
             <objects>
-                <viewController id="Hlr-mf-hAC" customClass="MapViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Hlr-mf-hAC" customClass="MapViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1oK-cf-OTz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,7 +263,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Вход"/>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="Tla-Gz-Jhh" eventType="touchUpInside" id="bx4-a8-zyS"/>
-                                    <segue destination="OaW-z1-lax" kind="unwind" unwindAction="unwindFor:" id="cAD-qu-BUh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,12 +282,12 @@
                         <outlet property="logInButton" destination="yuB-Km-rg2" id="vir-BB-EVG"/>
                         <outlet property="nameTextField" destination="ctj-nC-5kK" id="90I-sl-bOC"/>
                         <outlet property="passwordTextField" destination="jdl-7c-qpa" id="JAG-3F-Hin"/>
+                        <segue destination="WeB-LM-VMn" kind="showDetail" identifier="RegistrationToTabBarSegue" id="FZd-nQ-uJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifD-10-HP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="OaW-z1-lax" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="386" y="779"/>
+            <point key="canvasLocation" x="401" y="779"/>
         </scene>
         <!--Сброс пароля-->
         <scene sceneID="SO8-BG-3ZS">
@@ -318,10 +317,13 @@
                                 <color key="tintColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Сбросить пароль"/>
+                                <connections>
+                                    <action selector="resetPasswordButtonPressed:" destination="Eeg-iX-796" eventType="touchUpInside" id="AcH-l4-nPc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sQy-W9-mU7"/>
-                        <color key="backgroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sQy-W9-mU7" firstAttribute="trailing" secondItem="OUs-YA-FmA" secondAttribute="trailing" constant="87" id="FxT-m7-Uhv"/>
                             <constraint firstItem="OUs-YA-FmA" firstAttribute="top" secondItem="kih-F1-NrJ" secondAttribute="bottom" constant="20" id="K6E-NO-Bz1"/>
@@ -332,6 +334,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Сброс пароля" largeTitleDisplayMode="never" id="GuC-RL-dH3"/>
+                    <connections>
+                        <outlet property="resetEmailTextField" destination="kih-F1-NrJ" id="oyf-Xm-1hx"/>
+                        <outlet property="resetPasswordButton" destination="OUs-YA-FmA" id="2Ix-4Q-F0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Az1-yY-EWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -514,6 +520,9 @@
             <point key="canvasLocation" x="2824.8000000000002" y="1022.3388305847077"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FZd-nQ-uJF"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>
         <image name="Vector-6" width="28" height="24"/>

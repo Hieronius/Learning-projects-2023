@@ -15,6 +15,12 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     
+    var isTextFieldsIsEmpty: Bool {
+        nameTextField.text?.isEmpty == true ||
+        emailTextField.text?.isEmpty == true ||
+        passwordTextField.text?.isEmpty == true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +44,19 @@ class RegistrationViewController: UIViewController {
         
     }
     
-    // Let's solve the problem with Unwind Segue later
     @IBAction func logInButtonPressed(_ sender: Any) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            let vc = AuthorisationViewController()
-            vc.performSegue(withIdentifier: "TabBarSegue", sender: nil)
-        })
+           if isTextFieldsIsEmpty {
         
+            let ac = UIAlertController(title: "Ошибка", message: "Заполните пустые поля", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            
+        } else {
+            
+            performSegue(withIdentifier: "RegistrationToTabBarSegue", sender: sender)
+            
+        }
         
     }
-    
 }
