@@ -8,8 +8,7 @@
 import UIKit
 
 class AuthorisationViewController: UIViewController {
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +16,6 @@ class AuthorisationViewController: UIViewController {
     
         
     }
-
     
     
     // Optional - plz delete before publication
