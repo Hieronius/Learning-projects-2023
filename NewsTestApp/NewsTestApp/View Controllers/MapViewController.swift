@@ -19,14 +19,14 @@ class MapViewController: UIViewController {
     
     let nevaTowerPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: nevaTower.longtitude, longitude: nevaTower.latitude)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: nevaTower.latitude, longitude: nevaTower.longtitude)
         return annotation
         
     }()
     
     let eyeTowerPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: eyeTower.longtitude, longitude: eyeTower.latitude)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: eyeTower.latitude, longitude: eyeTower.longtitude)
         return annotation
         
     }()
@@ -34,21 +34,21 @@ class MapViewController: UIViewController {
     
     let eyeTowerSecondPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: eyeTowerSecond.longtitude, longitude: eyeTowerSecond.latitude)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: eyeTowerSecond.latitude, longitude: eyeTowerSecond.longtitude)
         return annotation
         
     }()
     
     let towerUnderWaterPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: towerUnderWater.longtitude, longitude: towerUnderWater.latitude)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: towerUnderWater.latitude, longitude: towerUnderWater.longtitude)
         return annotation
         
     }()
     
     let eurasiaPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: eurasia.longtitude, longitude: eurasia.latitude)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: eurasia.latitude, longitude: eurasia.longtitude)
         return annotation
         
     }()

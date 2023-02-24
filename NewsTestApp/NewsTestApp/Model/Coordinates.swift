@@ -12,8 +12,14 @@ struct Coordinates {
     let longtitude: Double
 }
 
-let towerUnderWater = Coordinates(latitude: 37.536791, longtitude: 55.746854)
-let eyeTowerSecond = Coordinates(latitude: 37.536018, longtitude: 55.750457)
-let nevaTower = Coordinates(latitude: 37.533724, longtitude: 55.751133)
-let eurasia = Coordinates(latitude: 37.535466, longtitude: 55.748914)
-let eyeTower = Coordinates(latitude: 37.534406, longtitude: 55.750028)
+//let towerUnderWater = Coordinates(latitude: 37.536791, longtitude: 55.746854)
+//let eyeTowerSecond = Coordinates(latitude: 37.536018, longtitude: 55.750457)
+//let nevaTower = Coordinates(latitude: 37.533724, longtitude: 55.751133)
+//let eurasia = Coordinates(latitude: 37.535466, longtitude: 55.748914)
+//let eyeTower = Coordinates(latitude: 37.534406, longtitude: 55.750028)
+
+let towerUnderWater = Coordinates(latitude: 55.746854, longtitude: 37.536791)
+let eyeTowerSecond = Coordinates(latitude: 55.750457, longtitude: 37.536018)
+let nevaTower = Coordinates(latitude: 55.751133, longtitude: 37.533724)
+let eurasia = Coordinates(latitude: 55.748914, longtitude: 37.535466)
+let eyeTower = Coordinates(latitude: 55.750028, longtitude: 37.534406)
