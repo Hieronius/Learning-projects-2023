@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     
     let mapView: MKMapView = {
@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
     let nevaTowerPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: nevaTower.latitude, longitude: nevaTower.longtitude)
+        
         return annotation
         
     }()
@@ -71,6 +72,10 @@ class MapViewController: UIViewController {
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
         mapView.addAnnotations(pointsArray)
+        mapView.delegate = self
+        
+        // let's think about adding Region so camera can zoom immediately
+        // mapView.setRegion(CLLocationCoordinate2D(latitude: nevaTower.latitude, longitude: nevaTower.longtitude) animated: true)
         
     }
 }

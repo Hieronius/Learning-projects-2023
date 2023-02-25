@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD78E07029AA141A0055E656 /* MapViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD78E06E29A9303E0055E656 /* Coordinates.swift */,
+			);
+			path = MapViewModel;
+			sourceTree = "<group>";
+		};
 		DD82224129A79AD900E830C1 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +137,7 @@
 		DD82226529A79F5000E830C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DD78E06E29A9303E0055E656 /* Coordinates.swift */,
+				DD78E07029AA141A0055E656 /* MapViewModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
