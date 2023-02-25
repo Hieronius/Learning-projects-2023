@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         posts.append(Post.shared.getPost())
         posts.append(Post.shared.getPost())
         posts.append(Post.shared.getPost())
@@ -38,9 +39,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // cell.likeButton.image(for: UIControl.State.)
         cell.likeButton.imageView?.image = posts[indexPath.row].likeImage
         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+        cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
         cell.dateLabel.text = posts[indexPath.row].date
         cell.articleLabel.text = posts[indexPath.row].label
         cell.articleText.text = posts[indexPath.row].text
+        
+        cell.layer.cornerRadius = 20
         
         return cell
         
