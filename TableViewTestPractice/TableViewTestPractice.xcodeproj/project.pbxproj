@@ -62,13 +62,13 @@
 			children = (
 				DD78E08529AA45DA0055E656 /* AppDelegate.swift */,
 				DD78E08729AA45DA0055E656 /* SceneDelegate.swift */,
-				DD78E08B29AA45DA0055E656 /* Main.storyboard */,
-				DD78E08E29AA45E00055E656 /* Assets.xcassets */,
 				DD78E09029AA45E00055E656 /* LaunchScreen.storyboard */,
+				DD78E08B29AA45DA0055E656 /* Main.storyboard */,
 				DD78E09D29AA4C3D0055E656 /* ApiManager.swift */,
 				DD78E09B29AA4C240055E656 /* TableViewCell.swift */,
 				DD78E08929AA45DA0055E656 /* ViewController.swift */,
 				DD78E09329AA45E00055E656 /* Info.plist */,
+				DD78E08E29AA45E00055E656 /* Assets.xcassets */,
 			);
 			path = TableViewTestPractice;
 			sourceTree = "<group>";

@@ -34,7 +34,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.bigImageView.image = posts[indexPath.row].mainImage
-        cell.smallImageView.image = posts[indexPath.row].smallImage
+        // cell.likeButton.image = posts[indexPath.row].likeImage
+        // cell.likeButton.image(for: UIControl.State.)
+        cell.likeButton.imageView?.image = posts[indexPath.row].likeImage
+        cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         cell.dateLabel.text = posts[indexPath.row].date
         cell.articleLabel.text = posts[indexPath.row].label
         cell.articleText.text = posts[indexPath.row].text

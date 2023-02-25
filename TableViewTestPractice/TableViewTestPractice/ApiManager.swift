@@ -12,10 +12,10 @@ class Post {
     static let shared = Post()
     
     let date = "14 февраля"
-    let label = "Название статьи"
-    let text = "Текст статьи"
-    let mainImage = UIImage(named: "bigImage")
-    let smallImage = UIImage(named: "smallImage")
+    let label = "Lorem ipsum dolor sit"
+    let text = "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+    let mainImage = UIImage(named: "Image")
+    let likeImage = UIImage(named: "like")
     
     func getPost() -> Post {
         let post = Post()

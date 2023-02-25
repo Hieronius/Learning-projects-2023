@@ -14,6 +14,5 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var articleLabel: UILabel!
     @IBOutlet weak var articleText: UILabel!
-    @IBOutlet weak var smallImageView: UIImageView!
-    
+    @IBOutlet weak var likeButton: UIButton!
 }
