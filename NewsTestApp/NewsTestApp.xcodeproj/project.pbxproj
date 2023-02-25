@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DD78E06F29A9303E0055E656 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E06E29A9303E0055E656 /* Coordinates.swift */; };
+		DD78E07329AA2D6A0055E656 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */; };
+		DD78E07629AA2D950055E656 /* FeedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E07529AA2D950055E656 /* FeedAPIManager.swift */; };
 		DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82224D29A79AD900E830C1 /* AppDelegate.swift */; };
 		DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82224F29A79AD900E830C1 /* SceneDelegate.swift */; };
 		DD82225229A79AD900E830C1 /* AuthorisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82225129A79AD900E830C1 /* AuthorisationViewController.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		DD78E06E29A9303E0055E656 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		DD78E07529AA2D950055E656 /* FeedAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPIManager.swift; sourceTree = "<group>"; };
 		DD82224A29A79AD900E830C1 /* NewsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD82224D29A79AD900E830C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD82224F29A79AD900E830C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,23 @@
 				DD78E06E29A9303E0055E656 /* Coordinates.swift */,
 			);
 			path = MapViewModel;
+			sourceTree = "<group>";
+		};
+		DD78E07129AA2D3C0055E656 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DD82226A29A7AB7200E830C1 /* FeedViewController.swift */,
+				DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		DD78E07429AA2D790055E656 /* FeedViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD78E07529AA2D950055E656 /* FeedAPIManager.swift */,
+			);
+			path = FeedViewModel;
 			sourceTree = "<group>";
 		};
 		DD82224129A79AD900E830C1 = {
@@ -112,10 +133,10 @@
 		DD82226329A79C8A00E830C1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD78E07129AA2D3C0055E656 /* Feed */,
 				DD82225129A79AD900E830C1 /* AuthorisationViewController.swift */,
 				DD82226629A7A12800E830C1 /* RegistrationViewController.swift */,
 				DD82226829A7A83500E830C1 /* ResetViewController.swift */,
-				DD82226A29A7AB7200E830C1 /* FeedViewController.swift */,
 				DD82226C29A7ABCE00E830C1 /* MapViewController.swift */,
 				DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */,
 				DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */,
@@ -137,6 +158,7 @@
 		DD82226529A79F5000E830C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD78E07429AA2D790055E656 /* FeedViewModel */,
 				DD78E07029AA141A0055E656 /* MapViewModel */,
 			);
 			path = Model;
@@ -225,7 +247,9 @@
 				DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */,
 				DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */,
 				DD78E06F29A9303E0055E656 /* Coordinates.swift in Sources */,
+				DD78E07629AA2D950055E656 /* FeedAPIManager.swift in Sources */,
 				DD82226729A7A12900E830C1 /* RegistrationViewController.swift in Sources */,
+				DD78E07329AA2D6A0055E656 /* FeedTableViewCell.swift in Sources */,
 				DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */,
 				DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */,
 				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,
