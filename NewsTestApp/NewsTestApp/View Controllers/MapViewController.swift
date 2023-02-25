@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
@@ -77,5 +78,25 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // let's think about adding Region so camera can zoom immediately
         // mapView.setRegion(CLLocationCoordinate2D(latitude: nevaTower.latitude, longitude: nevaTower.longtitude) animated: true)
         
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        annotationView?.image = UIImage(named: "Vector-8")
+        
+        return annotationView
     }
 }
