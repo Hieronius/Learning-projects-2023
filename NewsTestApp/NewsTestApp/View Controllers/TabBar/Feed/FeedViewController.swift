@@ -9,6 +9,9 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    @IBOutlet weak var table: UITableView!
+    
     var posts = [Post]()
 
     override func viewDidLoad() {
@@ -20,6 +23,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         posts.append(Post.shared.getPost())
         posts.append(Post.shared.getPost())
         posts.append(Post.shared.getPost())
+        
+        DispatchQueue.main.async {
+            self.table.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

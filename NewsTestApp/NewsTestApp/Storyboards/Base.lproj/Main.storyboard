@@ -246,6 +246,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="ibZ-De-ihP"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="KJs-gV-nwa" id="fb4-Di-LeV"/>
                         <segue destination="QL0-vj-m5s" kind="show" identifier="showArticle" id="bfP-YN-n7v"/>
                     </connections>
                 </viewController>
@@ -561,7 +562,7 @@
         <scene sceneID="6NV-ER-sMe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NR7-KP-WFr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Избранное" image="Vector-6" id="IS2-x8-jnk"/>
+                    <tabBarItem key="tabBarItem" title="Избранное" image="emptyLike" id="IS2-x8-jnk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qhb-n0-xVr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -604,7 +605,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>
-        <image name="Vector-6" width="28" height="24"/>
+        <image name="emptyLike" width="28" height="24"/>
         <image name="icon" width="30" height="30"/>
         <image name="icon-3" width="30" height="30"/>
         <image name="image 1" width="100" height="100"/>
