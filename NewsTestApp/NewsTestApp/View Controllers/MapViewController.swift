@@ -75,8 +75,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotations(pointsArray)
         mapView.delegate = self
         
-        // let's think about adding Region so camera can zoom immediately
-        // mapView.setRegion(CLLocationCoordinate2D(latitude: nevaTower.latitude, longitude: nevaTower.longtitude) animated: true)
+        
+        mapView.setRegion(MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: eurasia.latitude,
+                longitude: eurasia.longtitude) ,
+            span: MKCoordinateSpan(
+                latitudeDelta: 0.01,
+                longitudeDelta: 0.01
+            )
+        ),
+        animated: false)
         
     }
     
