@@ -165,7 +165,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="223" id="0WU-I7-Yda">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="223" id="0WU-I7-Yda" customClass="FeedTableViewCell" customModule="NewsTestApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="223"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0WU-I7-Yda" id="DJ8-Pq-Ebi">
@@ -218,6 +218,13 @@
                                                 <constraint firstItem="DOm-bD-lHy" firstAttribute="leading" secondItem="DJ8-Pq-Ebi" secondAttribute="leading" constant="10" id="dbS-yX-JaG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleLabel" destination="Zuy-QQ-QLV" id="YF7-BI-kEP"/>
+                                            <outlet property="articleTextLabel" destination="wjT-0c-Gje" id="Uge-Kj-nhO"/>
+                                            <outlet property="dateLabel" destination="jei-Sm-T1K" id="dyM-LA-GeW"/>
+                                            <outlet property="likeImageView" destination="8RJ-cR-pd5" id="eww-Ja-w4k"/>
+                                            <outlet property="mainImageView" destination="pK5-Pp-EGi" id="Rep-BI-ShA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
