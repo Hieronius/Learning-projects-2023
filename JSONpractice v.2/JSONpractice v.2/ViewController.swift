@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         
         // call our API manager with singleton
         APIManager.shared.getWeather()
+        // if status code equal to 200 it's mean we got the data correctly
     }
     
     // MARK: - Private properties
