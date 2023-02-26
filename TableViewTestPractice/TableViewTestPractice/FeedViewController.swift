@@ -26,21 +26,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         DispatchQueue.main.async {
             self.table.reloadData()
         }
+    
         
-        APICaller.shared.getTopStories { result in
-            switch result {
-            case .success(let response):
-                break
-            case .failure(let error):
-                print(error)
-            }
-        }
+        
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         posts.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
         cell.bigImageView.image = posts[indexPath.row].mainImage
@@ -50,12 +45,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.dateLabel.text = posts[indexPath.row].date
         cell.articleLabel.text = posts[indexPath.row].label
         cell.articleText.text = posts[indexPath.row].text
-        
+
         cell.layer.cornerRadius = 20
-        
+
         return cell
-        
-        
+
+
     }
 
 
