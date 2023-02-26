@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
         cell.bigImageView.image = posts[indexPath.row].mainImage
         // cell.likeButton.image = posts[indexPath.row].likeImage
         // cell.likeButton.image(for: UIControl.State.)

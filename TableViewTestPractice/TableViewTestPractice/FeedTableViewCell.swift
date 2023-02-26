@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class FeedTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var bigImageView: UIImageView!
