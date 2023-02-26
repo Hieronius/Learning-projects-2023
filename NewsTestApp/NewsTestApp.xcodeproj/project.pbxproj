@@ -89,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				DD78E07129AA2D3C0055E656 /* Feed */,
-				DD82226C29A7ABCE00E830C1 /* MapViewController.swift */,
-				DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */,
-				DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */,
+				DD78E0A129AB6F3A0055E656 /* Map */,
+				DD78E0A229AB6F460055E656 /* Favourite */,
+				DD78E0A329AB6F550055E656 /* Profile */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -104,6 +104,30 @@
 				DD82226829A7A83500E830C1 /* ResetViewController.swift */,
 			);
 			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		DD78E0A129AB6F3A0055E656 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DD82226C29A7ABCE00E830C1 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		DD78E0A229AB6F460055E656 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		DD78E0A329AB6F550055E656 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		DD82224129A79AD900E830C1 = {
