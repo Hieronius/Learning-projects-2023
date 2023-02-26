@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        // call our API manager with singleton
+        APIManager.shared.getWeather()
     }
     
     // MARK: - Private properties
