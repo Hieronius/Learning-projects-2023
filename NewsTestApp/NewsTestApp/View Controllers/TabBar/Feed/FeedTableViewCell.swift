@@ -15,10 +15,5 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var articleText: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
-//    @IBOutlet weak var mainImageView: UIImageView!
-//    @IBOutlet weak var dateLabel: UILabel!
-//    @IBOutlet weak var articleLabel: UILabel!
-//    @IBOutlet weak var likeImageView: UIImageView!
-//    @IBOutlet weak var articleTextLabel: UILabel!
     
 }

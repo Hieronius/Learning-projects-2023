@@ -35,8 +35,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
         cell.bigImageView.image = posts[indexPath.row].mainImage
-        // cell.likeButton.image = posts[indexPath.row].likeImage
-        // cell.likeButton.image(for: UIControl.State.)
         cell.likeButton.imageView?.image = posts[indexPath.row].likeImage
         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
