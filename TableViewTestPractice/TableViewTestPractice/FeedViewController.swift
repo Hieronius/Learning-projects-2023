@@ -26,6 +26,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         DispatchQueue.main.async {
             self.table.reloadData()
         }
+        
+        APICaller.shared.getTopStories { result in
+            switch result {
+            case .success(let response):
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
