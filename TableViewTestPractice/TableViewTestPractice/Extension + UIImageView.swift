@@ -7,6 +7,7 @@
 
 import UIKit
 
+// UrlString file needed
 extension UIImageView {
     func load(url: URL) {
         // load images in background
@@ -23,6 +24,7 @@ extension UIImageView {
     }
 }
 
+// String file needed
 extension UIImageView {
     func loadImage(urlString: String) {
         guard let url = URL(string: urlString) else { return }
