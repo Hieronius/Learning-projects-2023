@@ -45,18 +45,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        posts.count
+        // articles.count
+        return articles.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-        cell.bigImageView.image = posts[indexPath.row].mainImage
-        cell.likeButton.imageView?.image = posts[indexPath.row].likeImage
+         // cell.bigImageView.image = UIImage(named: "\(articles[indexPath.row].urlToImage!)")
+         cell.bigImageView.image = UIImage(named: "Image")
+         // cell.bigImageView.image = UIImage(imageLiteralResourceName:  "\(articles[indexPath.row].urlToImage!)")
+        
+        cell.likeButton.imageView?.image = UIImage(named: "likeImage")
         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
-        cell.dateLabel.text = posts[indexPath.row].date
-        cell.articleLabel.text = posts[indexPath.row].label
-        cell.articleText.text = posts[indexPath.row].text
+        cell.dateLabel.text = articles[indexPath.row].publishedAt
+        cell.articleLabel.text = articles[indexPath.row].title
+        cell.articleText.text = articles[indexPath.row].description
 
         cell.layer.cornerRadius = 20
 

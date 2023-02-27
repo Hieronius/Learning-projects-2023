@@ -16,6 +16,7 @@
 		DD78E09C29AA4C240055E656 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E09B29AA4C240055E656 /* FeedTableViewCell.swift */; };
 		DD78E09E29AA4C3D0055E656 /* FeedApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E09D29AA4C3D0055E656 /* FeedApiManager.swift */; };
 		DDD1B87829ACE00400FEC5B2 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B87729ACE00400FEC5B2 /* FeedData.swift */; };
+		DDD1B87A29AD122200FEC5B2 /* Extension + UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B87929AD122200FEC5B2 /* Extension + UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DD78E09B29AA4C240055E656 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		DD78E09D29AA4C3D0055E656 /* FeedApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApiManager.swift; sourceTree = "<group>"; };
 		DDD1B87729ACE00400FEC5B2 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		DDD1B87929AD122200FEC5B2 /* Extension + UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DD78E08729AA45DA0055E656 /* SceneDelegate.swift */,
 				DD78E09029AA45E00055E656 /* LaunchScreen.storyboard */,
 				DD78E08B29AA45DA0055E656 /* Main.storyboard */,
+				DDD1B87929AD122200FEC5B2 /* Extension + UIImageView.swift */,
 				DD78E09D29AA4C3D0055E656 /* FeedApiManager.swift */,
 				DDD1B87729ACE00400FEC5B2 /* FeedData.swift */,
 				DD78E09B29AA4C240055E656 /* FeedTableViewCell.swift */,
@@ -152,6 +155,7 @@
 				DD78E09E29AA4C3D0055E656 /* FeedApiManager.swift in Sources */,
 				DDD1B87829ACE00400FEC5B2 /* FeedData.swift in Sources */,
 				DD78E08629AA45DA0055E656 /* AppDelegate.swift in Sources */,
+				DDD1B87A29AD122200FEC5B2 /* Extension + UIImageView.swift in Sources */,
 				DD78E08829AA45DA0055E656 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
