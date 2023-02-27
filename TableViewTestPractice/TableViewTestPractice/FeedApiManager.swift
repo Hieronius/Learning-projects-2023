@@ -22,12 +22,20 @@ class FeedAPIManager {
         // in this case we sure we have url adress and it's correct
         let url = URL(string: urlString)!
         // set request for machine and create it's entity
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
         // implement all process into the one task with type of response, data and possible errors:
         // one task can be defined for each of the tabs in internet browser
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             // we wan't just check is there a data or not
-            print(response)
+            guard let data else { return }
+            print(data.count)
+            // if there is a data let's use JSONDecoder (seems like singletoon too) and decode to what destination and from what source
+            if let feedData = try? JSONDecoder().decode(FeedData.self, from: data) {
+                print("Success decoding")
+            } else {
+                print("Fail")
+                print(error)
+            }
         }
         // our task is suspended and waiting for activation in our main view controller with viewDidLoad()
         task.resume()
