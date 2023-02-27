@@ -17,7 +17,11 @@ class APIManager {
     let urlString = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&past_days=10&hourly=temperature_2m,relativehumidity_2m,windspeed_10m"
     
     // function to get data from Api
-    func getWeather() {
+    // 2.1.1 After when we got data from previous steps we should define this function as escaping closure because we can't use it in our table view right now
+    // add - getWeather(comlition: @escaping ([Double]) -> Void)
+    // Double here becuase of the data type of the WeatherData.hourly.temperature2M
+    // So, probably i need different closures for any types of the data in my New's App
+    func getWeather(completion: @escaping ([Double]) -> Void) {
         // 1. assign current URL address of our API
         let url = URL(string: urlString)!
         
@@ -41,6 +45,10 @@ class APIManager {
                 // if we can see data on the screen after command print it's mean we already have access of this data in our table view cell
                 // may be just need to use another singleton from different file.
                 // I mean if we got this data In APIManager itself, so we should define a variable to get access to this data in ViewController or in file with TableViewCell where we should set this data to cell properties
+                completion(weatherData.hourly.temperature2M)
+                
+                
+                // just example of all possible data you can get here:
                 print(weatherData.hourly.temperature2M)
                 print(weatherData.hourly.relativehumidity2M)
                 print(weatherData.hourly.time)
