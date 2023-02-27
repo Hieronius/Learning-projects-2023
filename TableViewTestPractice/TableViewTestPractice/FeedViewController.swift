@@ -11,6 +11,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var table: UITableView!
     
+    let urlImage = URL(string: "https://images.app.goo.gl/aJQ56Y5fWRFXgFdm7")
+    let urlStringImage = "https://images.app.goo.gl/aJQ56Y5fWRFXgFdm7"
+    
     var posts = [Post]()
     // test array for parsed data from our API
     var articles = [Article]()
@@ -52,9 +55,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
          // cell.bigImageView.image = UIImage(named: "\(articles[indexPath.row].urlToImage!)")
-         cell.bigImageView.image = UIImage(named: "Image")
+         // cell.bigImageView.image = UIImage(named: "Image")
+        cell.bigImageView.loadImage(urlString: urlStringImage)
+        // cell.bigImageView.image = UIImageView.load(url: FeedViewController.urlImage)
          // cell.bigImageView.image = UIImage(imageLiteralResourceName:  "\(articles[indexPath.row].urlToImage!)")
-        
         cell.likeButton.imageView?.image = UIImage(named: "likeImage")
         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
