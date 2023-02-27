@@ -12,6 +12,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var table: UITableView!
     
     var posts = [Post]()
+    // test array for parsed data from our API
+    var articles = [Article]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        }
         
         // call our task to get data in JSON format from Free NEWs API
-        FeedAPIManager.shared.getNews()
+        FeedAPIManager.shared.getNews { [weak self] values in
+            DispatchQueue.main.async {
+                guard let self else { return }
+                self.articles = values
+                self.table.reloadData()
+            }
+        }
         // now we have raw data. Access is stable and working.
     
         
