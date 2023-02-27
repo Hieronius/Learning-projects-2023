@@ -17,15 +17,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
+//        posts.append(Post.shared.getPost())
+//        posts.append(Post.shared.getPost())
+//        posts.append(Post.shared.getPost())
+//        posts.append(Post.shared.getPost())
+//        posts.append(Post.shared.getPost())
+//
+//        DispatchQueue.main.async {
+//            self.table.reloadData()
+//        }
         
-        DispatchQueue.main.async {
-            self.table.reloadData()
-        }
+        // call our task to get data in JSON format from Free NEWs API
+        FeedAPIManager.shared.getNews()
+        // now we have raw data. Access is stable and working.
     
         
         
