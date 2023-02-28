@@ -26,11 +26,7 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet var singleButtons: [UIButton]!
     @IBOutlet var multipleLabels: [UILabel]!
-    
     @IBOutlet var rangedLabels: [UILabel]!
-    
-    
-    
     @IBOutlet var multipleSwitches: [UISwitch]!
     
     
@@ -135,6 +131,7 @@ extension QuestionViewController {
         
         rangedLabels.first?.text = answers.first?.text
         rangedLabels.last?.text = answers.last?.text
+        print("You are really dumb")
     }
     
     private func newQuestion() {

@@ -29,14 +29,14 @@ extension Question {
                 Answer(text: "Кукуруза", type: .turtle)
                 ]
         ),
-            Question(text: "Что вы любите делать?", type: .single, answer: [
+            Question(text: "Что вы любите делать?", type: .multiple, answer: [
                 Answer(text: "Плавать", type: .dog),
                 Answer(text: "Спать", type: .cat),
                 Answer(text: "Обниматься", type: .rabbit),
                 Answer(text: "Есть", type: .turtle)
             ]
         ),
-            Question(text: "Любите ли вы поездки на машине", type: .single, answer: [
+            Question(text: "Любите ли вы поездки на машине", type: .range, answer: [
                 Answer(text: "Обожаю", type: .dog),
                 Answer(text: "Обожаю", type: .cat),
                 Answer(text: "Ненавижу", type: .rabbit),
