@@ -11,26 +11,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var table: UITableView!
     
-    let urlImage = URL(string: "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI=")
     let urlStringImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
-    
-    var posts = [Post]()
+
     // test array for parsed data from our API
     var articles = [Article]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-//        posts.append(Post.shared.getPost())
-//        posts.append(Post.shared.getPost())
-//        posts.append(Post.shared.getPost())
-//        posts.append(Post.shared.getPost())
-//        posts.append(Post.shared.getPost())
-//
-//        DispatchQueue.main.async {
-//            self.table.reloadData()
-//        }
         
         // call our task to get data in JSON format from Free NEWs API
         FeedAPIManager.shared.getNews { [weak self] values in
