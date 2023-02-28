@@ -11,41 +11,53 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var table: UITableView!
     
-    var posts = [Post]()
-    
+    let urlStringImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
+
+    // test array for parsed data from our API
+    var articles = [Article]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        posts.append(Post.shared.getPost())
-        
-        DispatchQueue.main.async {
-            self.table.reloadData()
+        // call our task to get data in JSON format from Free NEWs API
+        FeedAPIManager.shared.getNews { [weak self] values in
+            DispatchQueue.main.async {
+                guard let self else { return }
+                self.articles = values
+                self.table.reloadData()
+            }
         }
+        // now we have raw data. Access is stable and working.
+    
+        
+        
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        posts.count
+        // articles.count
+        return articles.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-        cell.bigImageView.image = posts[indexPath.row].mainImage
-        cell.likeButton.imageView?.image = posts[indexPath.row].likeImage
+         
+        // there is need some default image for articles without propper image
+        // plus may be i should unwrap image with guard or if else
+        cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? urlStringImage)
+        
+        cell.likeButton.imageView?.image = UIImage(named: "likeImage")
         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
-        cell.dateLabel.text = posts[indexPath.row].date
-        cell.articleLabel.text = posts[indexPath.row].label
-        cell.articleText.text = posts[indexPath.row].text
-        
+        cell.dateLabel.text = articles[indexPath.row].publishedAt
+        cell.articleLabel.text = articles[indexPath.row].title
+        cell.articleText.text = articles[indexPath.row].description
+
         cell.layer.cornerRadius = 20
-        
+
         return cell
-        
-        
+
+
     }
 }
