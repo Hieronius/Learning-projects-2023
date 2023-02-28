@@ -583,7 +583,7 @@
         <!--Статья-->
         <scene sceneID="5oM-q6-ZTq">
             <objects>
-                <viewController id="GlJ-RN-gP9" customClass="ArticleViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GlJ-RN-gP9" customClass="DetailArticleViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvd-rI-1wH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
