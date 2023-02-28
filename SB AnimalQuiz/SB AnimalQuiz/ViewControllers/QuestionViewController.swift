@@ -29,12 +29,14 @@ class QuestionViewController: UIViewController {
     @IBOutlet var rangedLabels: [UILabel]!
     @IBOutlet var multipleSwitches: [UISwitch]!
     
+    var resultVC = ResultViewController()
+    var results: [Answer] = []
+    var counter = 0
     
-    
-    private let questions = Question.getQuestions()
-    private var questionIndex = 0
-    private var answerChosen: [Answer] = []
-    private var currentAnswers: [Answer] {
+    let questions = Question.getQuestions()
+    var questionIndex = 0
+    var answerChosen: [Answer] = []
+    var currentAnswers: [Answer] {
         questions[questionIndex].answer
     }
     
@@ -52,7 +54,11 @@ class QuestionViewController: UIViewController {
         guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
-        
+         // add our answer to results
+        results.append(currentAnswer)
+        print(results.count)
+
+        counter += 1
         newQuestion()
     }
     
@@ -60,20 +66,27 @@ class QuestionViewController: UIViewController {
         for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
             if multipleSwitch.isOn {
                 answerChosen.append(answer)
+                results.append(answer)
+                print(results.count)
             }
         }
-        
+        counter += 1
         newQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
         let index = Int(rangedSlider.value)
         answerChosen.append(currentAnswers[index])
+        results.append(currentAnswers[index])
+        print(results.count)
         
+        counter += 1
         newQuestion()
     }
     
+    
 }
+
 
 extension QuestionViewController {
     private func updateUI() {
@@ -131,13 +144,13 @@ extension QuestionViewController {
         
         rangedLabels.first?.text = answers.first?.text
         rangedLabels.last?.text = answers.last?.text
-        print("You are really dumb")
     }
     
     private func newQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {
+             resultVC.results = self.results
             updateUI()
             return
         }
