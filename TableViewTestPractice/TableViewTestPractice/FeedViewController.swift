@@ -60,6 +60,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = self.articles[indexPath.row]
+        let detailArticleViewController = DetailArticleViewController()
+        detailArticleViewController.article = article
+        performSegue(withIdentifier: "showDetail", sender: nil)
+    }
 
 
 }
