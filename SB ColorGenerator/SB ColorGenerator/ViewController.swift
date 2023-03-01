@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorImageView: UIImageView!
     
-    
     @IBOutlet weak var redLabelColor: UILabel!
     @IBOutlet weak var greenLabelColor: UILabel!
     @IBOutlet weak var blueLabelColor: UILabel!
@@ -21,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var redColorSlider: UISlider!
     @IBOutlet weak var greenColorSlider: UISlider!
     @IBOutlet weak var blueColorSlider: UISlider!
+    
+    
     
     var redColorCurrentValue: Float = 0.0
     var greenColorCurrentValue: Float = 0.0
@@ -81,6 +82,8 @@ class ViewController: UIViewController {
         changeImageViewBackgroundColor()
     }
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+    }
     
 }
 

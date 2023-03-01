@@ -87,6 +87,22 @@
                                     <action selector="blueColorSliderTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="NtL-jc-dRY"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfN-6T-fFe">
+                                <rect key="frame" x="147" y="698" width="96" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Done">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KZ-pP-fed"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0019939653580000002" green="0.29771709439999999" blue="0.61828583479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,6 +121,7 @@
                             <constraint firstItem="FjC-uf-Vrl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XP8-v1-2Yc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j3K-XD-mrO" secondAttribute="trailing" constant="16" id="Xky-rn-pAF"/>
                             <constraint firstItem="uGf-Yo-x57" firstAttribute="centerY" secondItem="aRa-RJ-GI6" secondAttribute="centerY" id="b5g-Ii-mYa"/>
+                            <constraint firstItem="FfN-6T-fFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNh-4A-kpH"/>
                             <constraint firstItem="nVk-04-bXv" firstAttribute="top" secondItem="aRa-RJ-GI6" secondAttribute="bottom" constant="32" id="ccv-v3-Ygc"/>
                             <constraint firstItem="Kzk-NO-aK0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dI0-Wr-Iqy"/>
                             <constraint firstItem="aRa-RJ-GI6" firstAttribute="top" secondItem="Kzk-NO-aK0" secondAttribute="bottom" constant="32" id="dM2-Ju-dNO"/>
@@ -114,6 +131,7 @@
                             <constraint firstItem="iYg-9H-XJk" firstAttribute="leading" secondItem="ixa-AX-fbN" secondAttribute="trailing" constant="16" id="fxw-e7-ydA"/>
                             <constraint firstItem="8o0-uH-ggw" firstAttribute="centerY" secondItem="j3K-XD-mrO" secondAttribute="centerY" id="gls-mD-MX9"/>
                             <constraint firstItem="ixa-AX-fbN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hmx-Xk-WRN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FfN-6T-fFe" secondAttribute="bottom" constant="63" id="iV7-lZ-rEx"/>
                             <constraint firstItem="Kzk-NO-aK0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="oZx-qA-P0J"/>
                             <constraint firstItem="aRa-RJ-GI6" firstAttribute="centerX" secondItem="nVk-04-bXv" secondAttribute="centerX" id="u3E-5y-zQn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nVk-04-bXv" secondAttribute="trailing" constant="16" id="ud5-EJ-01P"/>
@@ -136,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="3.1484257871064472"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="qxM-oX-chP">
             <objects>
-                <viewController id="0hb-QD-MmW" sceneMemberID="viewController">
+                <viewController id="0hb-QD-MmW" customClass="StartViewController" customModule="SB_ColorGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ygi-Fl-A0u">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,10 +167,13 @@
                     <navigationItem key="navigationItem" id="8Xc-SQ-lMO">
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="UFK-rk-RrJ">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="showDetail" id="KbN-0s-dhp"/>
+                                <action selector="startButtonPressed:" destination="0hb-QD-MmW" id="ZTS-3d-lks"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showGenerator" id="YWn-Dw-qyy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zG0-HZ-Z7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
