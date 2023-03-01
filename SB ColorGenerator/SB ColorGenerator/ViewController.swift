@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    weak var startViewDelegate: StartViewDelegate?
+    weak var startViewDelegate: StartViewControllerDelegate?
     
     var customImageColor: UIColor {
         UIColor(red: CGFloat(redColorCurrentValue), green: CGFloat(greenColorCurrentValue), blue: CGFloat(blueColorCurrentValue), alpha: 1)
@@ -95,10 +95,8 @@ class ViewController: UIViewController {
 //        let vc = StartViewController()
 //        vc.backGroundColor = .red
 //        print("startVC background color has changed")
-        startViewDelegate?.update(color: customImageColor)
-        print("customImageColor has changed")
-        dismiss(animated: true)
-        print(customImageColor)
+        self.startViewDelegate?.update(color: customImageColor)
+        self.dismiss(animated: true)
         
         
     }

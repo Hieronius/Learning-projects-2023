@@ -1,47 +1,41 @@
-//
-//  StartViewController.swift
-//  SB ColorGenerator
-//
-//  Created by Арсентий Халимовский on 28.02.2023.
-//
+
 
 import UIKit
 
-protocol StartViewDelegate: class {
+protocol StartViewControllerDelegate: AnyObject {
     func update(color: UIColor)
 }
 
 class StartViewController: UIViewController {
     
-    var backGroundColor: UIColor = .blue
+    var startBackGroundColor: UIColor = .white
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // view.backgroundColor = backGroundColor
-        setBackgroundColor()
         
+        // some code here
+        view?.backgroundColor = startBackGroundColor
         
     }
     
-    func setBackgroundColor() {
-        backGroundColor = .white
-        self.view.backgroundColor = backGroundColor
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGenerator" {
+            let generatorVC = segue.destination as? ViewController
+            generatorVC?.startViewDelegate = self
+        }
     }
     
-    @IBAction func startButtonPressed(_ sender: Any) {
-        
-        let vc = ViewController()
-        vc.startViewDelegate = self
+    
+    
+    
+    @IBAction func barButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "showGenerator", sender: sender)
-    
-        
     }
+    
 }
 
-extension StartViewController: StartViewDelegate {
+extension StartViewController: StartViewControllerDelegate {
     func update(color: UIColor) {
-        backGroundColor = color
+        view.backgroundColor = color
     }
-    
-    
 }
