@@ -172,7 +172,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showGenerator" id="YWn-Dw-qyy"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showGenerator" id="YWn-Dw-qyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zG0-HZ-Z7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

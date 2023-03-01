@@ -24,6 +24,7 @@ class StartViewController: UIViewController {
     }
     
     func setBackgroundColor() {
+        backGroundColor = .white
         self.view.backgroundColor = backGroundColor
     }
     
