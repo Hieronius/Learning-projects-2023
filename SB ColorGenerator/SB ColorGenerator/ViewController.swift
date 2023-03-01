@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    weak var startViewDelegate: StartViewDelegate?
+    
+    var customImageColor: UIColor {
+        UIColor(red: CGFloat(redColorCurrentValue), green: CGFloat(greenColorCurrentValue), blue: CGFloat(blueColorCurrentValue), alpha: 1)
+    }
+    
     
     @IBOutlet weak var colorImageView: UIImageView!
     
@@ -53,7 +59,9 @@ class ViewController: UIViewController {
     
     func changeImageViewBackgroundColor() {
         
-        colorImageView.backgroundColor = UIColor(red: CGFloat(redColorCurrentValue), green: CGFloat(greenColorCurrentValue), blue: CGFloat(blueColorCurrentValue), alpha: 1)
+//        colorImageView.backgroundColor = UIColor(red: CGFloat(redColorCurrentValue), green: CGFloat(greenColorCurrentValue), blue: CGFloat(blueColorCurrentValue), alpha: 1)
+        
+        colorImageView.backgroundColor = customImageColor
     }
     
     
@@ -83,6 +91,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        
+//        let vc = StartViewController()
+//        vc.backGroundColor = .red
+//        print("startVC background color has changed")
+        startViewDelegate?.update(color: customImageColor)
+        print("customImageColor has changed")
+        dismiss(animated: true)
+        print(customImageColor)
+        
+        
     }
     
 }

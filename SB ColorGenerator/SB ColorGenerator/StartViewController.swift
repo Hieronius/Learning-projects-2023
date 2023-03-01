@@ -7,22 +7,40 @@
 
 import UIKit
 
+protocol StartViewDelegate: class {
+    func update(color: UIColor)
+}
+
 class StartViewController: UIViewController {
     
-    
-    
-    var backgroundColor: UIColor?
+    var backGroundColor: UIColor = .blue
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        backgroundColor = view.backgroundColor
-        print(backgroundColor)
+        // view.backgroundColor = backGroundColor
+        setBackgroundColor()
         
+        
+    }
+    
+    func setBackgroundColor() {
+        self.view.backgroundColor = backGroundColor
     }
     
     @IBAction func startButtonPressed(_ sender: Any) {
         
+        let vc = ViewController()
+        vc.startViewDelegate = self
         performSegue(withIdentifier: "showGenerator", sender: sender)
+    
+        
     }
+}
+
+extension StartViewController: StartViewDelegate {
+    func update(color: UIColor) {
+        backGroundColor = color
+    }
+    
+    
 }
