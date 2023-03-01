@@ -10,17 +10,14 @@ import UIKit
 class SecondViewController: UIViewController {
     
     
-    @IBOutlet weak var setScoreTextField: UITextField!
+    @IBOutlet weak var moodTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // code here
     }
     
-    
-    @IBAction func doneButtonPressed(_ sender: Any) {
-        
-        dismiss(animated: true)
+    @IBAction func sendButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true)
     }
+    
 }
