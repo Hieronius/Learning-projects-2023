@@ -14,6 +14,7 @@
 		DD0FBC9529B09AE9003B19A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBC9429B09AE9003B19A7 /* Assets.xcassets */; };
 		DD0FBC9829B09AE9003B19A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0FBC9629B09AE9003B19A7 /* LaunchScreen.storyboard */; };
 		DD0FBCA029B0A334003B19A7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0FBC9F29B0A334003B19A7 /* Track.swift */; };
+		DD0FBCA229B0E0ED003B19A7 /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0FBCA129B0E0ED003B19A7 /* TrackDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DD0FBC9729B09AE9003B19A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD0FBC9929B09AE9003B19A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0FBC9F29B0A334003B19A7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		DD0FBCA129B0E0ED003B19A7 /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DD0FBC8F29B09AE3003B19A7 /* TrackViewController.swift */,
 				DD0FBC9F29B0A334003B19A7 /* Track.swift */,
 				DD0FBC9129B09AE3003B19A7 /* Main.storyboard */,
+				DD0FBCA129B0E0ED003B19A7 /* TrackDetailViewController.swift */,
 				DD0FBC9429B09AE9003B19A7 /* Assets.xcassets */,
 				DD0FBC9629B09AE9003B19A7 /* LaunchScreen.storyboard */,
 				DD0FBC9929B09AE9003B19A7 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0FBC9029B09AE3003B19A7 /* TrackViewController.swift in Sources */,
+				DD0FBCA229B0E0ED003B19A7 /* TrackDetailViewController.swift in Sources */,
 				DD0FBC8C29B09AE3003B19A7 /* AppDelegate.swift in Sources */,
 				DD0FBC8E29B09AE3003B19A7 /* SceneDelegate.swift in Sources */,
 				DD0FBCA029B0A334003B19A7 /* Track.swift in Sources */,

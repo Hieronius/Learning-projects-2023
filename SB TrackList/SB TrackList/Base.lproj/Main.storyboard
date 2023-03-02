@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="OPv-iC-S0c" kind="show" id="ca9-h8-pk5"/>
+                                    <segue destination="OPv-iC-S0c" kind="show" id="pJu-nm-0lD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,22 +56,25 @@
             </objects>
             <point key="canvasLocation" x="1780" y="-42.728635682158924"/>
         </scene>
-        <!--View Controller-->
+        <!--Track Detail View Controller-->
         <scene sceneID="L3g-k0-80A">
             <objects>
-                <viewController id="OPv-iC-S0c" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OLP-HC-R3Y">
+                <viewController id="OPv-iC-S0c" customClass="TrackDetailViewController" customModule="SB_TrackList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="OLP-HC-R3Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZMX-0a-HfH">
-                                <rect key="frame" x="67.5" y="248" width="240" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZMX-0a-HfH">
+                                <rect key="frame" x="67.5" y="152" width="240" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-zW-nAk">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-zW-nAk">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="LIt-WN-W9L"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvS-qj-u2I">
-                                        <rect key="frame" x="90.5" y="50" width="59" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvS-qj-u2I">
+                                        <rect key="frame" x="90.5" y="80" width="59" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +90,11 @@
                             <constraint firstItem="Bfy-qN-g0c" firstAttribute="bottom" secondItem="ZMX-0a-HfH" secondAttribute="bottom" constant="339" id="dkB-VK-dvh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GQf-01-7Jh"/>
+                    <navigationItem key="navigationItem" id="5Mr-wS-Gad"/>
+                    <connections>
+                        <outlet property="musicImageView" destination="Tok-zW-nAk" id="xP6-ph-eZS"/>
+                        <outlet property="musicTitle" destination="XvS-qj-u2I" id="8Hq-SJ-LC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Kx-6Z-zWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
