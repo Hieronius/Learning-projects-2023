@@ -7,31 +7,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
-}
-
-extension ViewController: UITableViewDataSource {
     
     // how much cells you wan't?
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
     }
     
     // What cell should be displayed on the table view?
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create a reusable cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "Cell index: \(indexPath.row)"
         return cell
     }
-    
-    
+
+
 }
+
+//extension ViewController: UITableViewDataSource {
+//
+//    // how much cells you wan't?
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        10
+//    }
+//
+//    // What cell should be displayed on the table view?
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        // create a reusable cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = "Cell index: \(indexPath.row)"
+//        return cell
+//    }
+//
+//
+//}
 
