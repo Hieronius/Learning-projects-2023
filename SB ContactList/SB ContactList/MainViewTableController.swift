@@ -9,12 +9,16 @@ import UIKit
 
 class MainViewTableController: UITableViewController {
     
+    var usersArray = DataManager().getUsers()
+    
+    
     
     var userName = "Alfred"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(usersArray.count)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,12 +31,13 @@ class MainViewTableController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return usersArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Check"
+        let cellData = usersArray[indexPath.row]
+        cell.textLabel?.text = "\(cellData.firstName) \(cellData.lastName)"
         cell.textLabel!.font = UIFont(name: "system", size: 50)
         return cell
     }
