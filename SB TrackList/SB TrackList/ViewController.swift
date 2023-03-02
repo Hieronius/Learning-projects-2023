@@ -27,7 +27,9 @@ extension ViewController: UITableViewDataSource {
     // What cell should be displayed on the table view?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create a reusable cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Cell index: \(indexPath.row)"
+        return cell
     }
     
     
