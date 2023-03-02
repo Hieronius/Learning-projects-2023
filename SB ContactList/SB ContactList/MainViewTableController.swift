@@ -8,6 +8,9 @@
 import UIKit
 
 class MainViewTableController: UITableViewController {
+    
+    
+    var userName = "Alfred"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,8 @@ class MainViewTableController: UITableViewController {
         let detailVC = segue.destination as? DetailViewController
         detailVC?.phoneNumber = "89522928313"
         detailVC?.emailAddress = "uha@gmail.com"
+        // title view section
+        detailVC?.userTitle = userName
     }
 
     
