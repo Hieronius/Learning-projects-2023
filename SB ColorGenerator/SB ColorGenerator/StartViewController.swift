@@ -8,7 +8,7 @@ protocol StartViewControllerDelegate: AnyObject {
 
 class StartViewController: UIViewController {
     
-    var startBackGroundColor: UIColor = .white
+    var startBackGroundColor: UIColor = .blue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,11 @@ class StartViewController: UIViewController {
     
     
     @IBAction func barButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "showGenerator", sender: sender)
+        
+        let vc = ViewController()
+        vc.view.backgroundColor = .yellow
+        
+          performSegue(withIdentifier: "showGenerator", sender: sender)
     }
     
 }

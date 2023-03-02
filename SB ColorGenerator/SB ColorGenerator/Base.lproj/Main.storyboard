@@ -24,11 +24,13 @@
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="0jG-f3-cFP">
                             <connections>
                                 <action selector="barButtonPressed:" destination="ymA-mv-P7f" id="sGs-bH-E6Y"/>
-                                <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showGenerator" id="YZn-Dg-PuT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showGenerator" id="xaa-qe-z3U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTf-UP-L8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

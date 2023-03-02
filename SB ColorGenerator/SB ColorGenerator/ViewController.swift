@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     @IBOutlet weak var colorImageView: UIImageView!
     
     @IBOutlet weak var redLabelColor: UILabel!
