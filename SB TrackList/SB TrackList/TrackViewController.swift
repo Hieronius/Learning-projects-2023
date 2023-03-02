@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class TrackViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
