@@ -13,7 +13,7 @@ class MainViewTableController: UITableViewController {
     
     
     
-    var userName = "Alfred"
+    var userName: Person?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +22,18 @@ class MainViewTableController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailVC = segue.destination as? DetailViewController
-        detailVC?.phoneNumber = "89522928313"
-        detailVC?.emailAddress = "uha@gmail.com"
-        // title view section
-        detailVC?.userTitle = userName
+        let detailVC = segue.destination as! DetailViewController
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        detailVC.phoneNumber = usersArray[indexPath.row].phoneNumber
+        detailVC.emailAddress = usersArray[indexPath.row].emailAddress
+        
+    
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        userName = usersArray[indexPath.row]
+//    }
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
