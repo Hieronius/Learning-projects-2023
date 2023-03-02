@@ -13,6 +13,12 @@ class MainViewTableController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as? DetailViewController
+        detailVC?.phoneNumber = "89522928313"
+        detailVC?.emailAddress = "uha@gmail.com"
+    }
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
