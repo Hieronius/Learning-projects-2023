@@ -26,14 +26,19 @@ class TrackViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create a reusable cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let track = trackList[0]
+        let track = trackList[indexPath.row]
         cell.textLabel?.text = track.song
         cell.textLabel?.font = UIFont(name: "system", size: 50)
         cell.detailTextLabel?.text = track.artist
         cell.detailTextLabel?.font = UIFont(name: "system", size: 30)
+        cell.imageView?.image = UIImage(named: track.track)
         
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 
 
