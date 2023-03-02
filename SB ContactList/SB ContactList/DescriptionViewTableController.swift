@@ -32,4 +32,18 @@ class DescriptionViewTableViewController: UITableViewController {
         cell.detailTextLabel?.font = UIFont(name: "system", size: 50)
         return cell
     }
+    
+    // Great, it's working. Just need to customise
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let sectionName: String
+        switch section {
+        case 0:
+            sectionName = NSLocalizedString("Person1", comment: "mySectionName1")
+        case 1:
+            sectionName = NSLocalizedString("Person2", comment: "mySectionName2")
+        default:
+            sectionName = ""
+        }
+        return sectionName
+    }
 }
