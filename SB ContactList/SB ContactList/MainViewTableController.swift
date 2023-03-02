@@ -22,6 +22,7 @@ class MainViewTableController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "Check"
+        cell.textLabel!.font = UIFont(name: "system", size: 50)
         return cell
     }
 
