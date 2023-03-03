@@ -27,13 +27,18 @@ class DataManager {
         
         var arrayOfUser = [Person]()
         let numberOfUsers = arrayOfFirstNames.count
+        
+        var firstNames = arrayOfFirstNames.shuffled()
+        var lastNames = arrayOfLastNames.shuffled()
+        var numbers = arrayOfPhoneNumbers.shuffled()
+        var emails = arrayOfEmailAddresses.shuffled()
+        
         for person in 1...numberOfUsers {
             arrayOfUser.append(Person(
-                firstName: arrayOfFirstNames.shuffled()[0],
-                lastName: arrayOfLastNames.shuffled()[0],
-                phoneNumber: arrayOfPhoneNumbers.shuffled()[0],
-                emailAddress: arrayOfEmailAddresses.shuffled()[0]))
-            
+                firstName: firstNames.removeLast(),
+                lastName: lastNames.removeLast(),
+                phoneNumber: numbers.removeLast(),
+                emailAddress: emails.removeLast()))
             
         }
         return arrayOfUser

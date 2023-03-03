@@ -9,17 +9,36 @@ import UIKit
 
 class MainViewTableController: UITableViewController {
     
-    var usersArray = DataManager().getUsers()
+    static let shared = MainViewTableController()
     
+    var usersArray = [Person]()
+    
+    var secondUsersArray = [Person]()
     
     
     var userName: Person?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        usersArray = DataManager().getUsers()
         print(usersArray.count)
+        for number in 0...(usersArray.count - 1) {
+                    print(usersArray[number].firstName)
+                }
+        secondUsersArray = usersArray
+        print(secondUsersArray.count)
+        
+//        sendData()
     }
+    
+    func sendData() {
+        let vc = DescriptionTableViewController()
+        vc.descriptionArray = self.usersArray
+        print(vc.descriptionArray.count)
+        print("ORDER IS DONE!!!")
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! DetailViewController
@@ -28,13 +47,8 @@ class MainViewTableController: UITableViewController {
         detailVC.phoneNumber = usersArray[indexPath.row].phoneNumber
         detailVC.emailAddress = usersArray[indexPath.row].emailAddress
         
-    
+        
     }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        userName = usersArray[indexPath.row]
-//    }
-
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArray.count
