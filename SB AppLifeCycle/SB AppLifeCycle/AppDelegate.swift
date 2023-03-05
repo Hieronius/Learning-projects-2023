@@ -11,10 +11,37 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    // 1. Загрузка приложения завершена
+    // На этой стадии можно задать стартовый вью контроллер
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
+    }
+    
+    // 2. Вызывается перед переходом в фоновый режим
+    // Когда мы тянем приложение в диспетчере - оно якобы на переднем плане, но не активно
+    func applicationWillResignActive(_ application: UIApplication) {
+        
+    }
+    
+    // 3. Вызывается при переходе в фоновый режим
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        
+    }
+    
+    // 4. Вызывается перед переходом на передний план
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        
+    }
+    
+    // 5. Вызывается после перехода приложения на передний план
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+    }
+    
+    // 6. Вызывается при завершении работы приложения
+    func applicationWillTerminate(_ application: UIApplication) {
+        
     }
 
     // MARK: UISceneSession Lifecycle

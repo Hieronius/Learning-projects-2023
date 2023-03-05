@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     // 12. Срабатывает перед освобождением экземпляра view
     // deinit()
     
-    
+     
     
 
 
