@@ -102,7 +102,6 @@
                                     <color key="baseForegroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="coreAnimationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrc-LY-NVp"/>
                                     <action selector="springAnimationRunButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8f-A1-Cod"/>
                                 </connections>
                             </button>

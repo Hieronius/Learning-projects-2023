@@ -48,8 +48,8 @@ class ViewController: UIViewController {
     
     @IBAction func springAnimationRunButtonPressed(_ sender: SpringButton) {
         
-        springAnimationView.animation = "fall"
-        springAnimationView.curve = "easeIn"
+        springAnimationView.animation = Spring.AnimationPreset.slideLeft.rawValue
+        springAnimationView.curve = Spring.AnimationCurve.easeIn.rawValue
         springAnimationView.duration = 1
         springAnimationView.animate()
         
