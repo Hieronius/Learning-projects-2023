@@ -47,6 +47,14 @@ class ViewController: UIViewController {
         }
     
     @IBAction func springAnimationRunButtonPressed(_ sender: SpringButton) {
+        
+        springAnimationView.animation = "fall"
+        springAnimationView.curve = "easeIn"
+        springAnimationView.duration = 1
+        springAnimationView.animate()
+        
+        sender.animation = "shake"
+        sender.animate()
     }
     
 }
