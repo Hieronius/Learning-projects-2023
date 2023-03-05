@@ -6,14 +6,29 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var springAnimationView: SpringView!
+    
+    @IBOutlet weak var animationLabel: UILabel!
+    @IBOutlet weak var buttonLabel: SpringButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func springAnimationRunButtonPressed(_ sender: SpringButton) {
+        
+        // change view animation and define name for animation label
+        // probably i should define the whole array of animations and use switch or if else to define it's name for label and for button
+        springAnimationView.animation = "fall"
+        springAnimationView.duration = 2
+        springAnimationView.animate()
+        animationLabel.text = "\(springAnimationView.animation)"
+    }
+    
 }
 
