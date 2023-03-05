@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func coreAnimationButtonPressed(_ sender: UIButton) {
-        
+        sender.pulsate()
     }
     
 }
