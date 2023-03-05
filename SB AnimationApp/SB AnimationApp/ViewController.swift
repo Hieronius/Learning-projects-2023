@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 self.coreAnimationView.frame.origin.x -= 40.0
             }
             
-        }
+        } 
             
         }
     }
