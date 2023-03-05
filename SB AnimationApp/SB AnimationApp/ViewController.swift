@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController {
     
     
     @IBOutlet weak var coreAnimationView: UIView!
+    
+    @IBOutlet weak var springAnimationView: SpringView!
+    
     
     private var originCoordinate: CGFloat?
     
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         originCoordinate = coreAnimationView.frame.origin.x
-        print(originCoordinate)
+        
         
         // Do any additional setup after loading the view.
     }
@@ -41,4 +45,8 @@ class ViewController: UIViewController {
         } 
             
         }
+    
+    @IBAction func springAnimationRunButtonPressed(_ sender: SpringButton) {
     }
+    
+}
