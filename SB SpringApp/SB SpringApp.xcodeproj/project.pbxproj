@@ -14,6 +14,7 @@
 		DD34CD0C29B4CC9C0086AE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD34CD0A29B4CC9C0086AE0F /* Main.storyboard */; };
 		DD34CD0E29B4CC9E0086AE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD34CD0D29B4CC9E0086AE0F /* Assets.xcassets */; };
 		DD34CD1129B4CC9E0086AE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD34CD0F29B4CC9E0086AE0F /* LaunchScreen.storyboard */; };
+		DD34CD1929B65CBD0086AE0F /* AnimationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34CD1829B65CBD0086AE0F /* AnimationsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DD34CD0D29B4CC9E0086AE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD34CD1029B4CC9E0086AE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD34CD1229B4CC9E0086AE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD34CD1829B65CBD0086AE0F /* AnimationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				DD34CD0429B4CC9C0086AE0F /* AppDelegate.swift */,
 				DD34CD0629B4CC9C0086AE0F /* SceneDelegate.swift */,
 				DD34CD0829B4CC9C0086AE0F /* ViewController.swift */,
+				DD34CD1829B65CBD0086AE0F /* AnimationsModel.swift */,
 				DD34CD0A29B4CC9C0086AE0F /* Main.storyboard */,
 				DD34CD0D29B4CC9E0086AE0F /* Assets.xcassets */,
 				DD34CD0F29B4CC9E0086AE0F /* LaunchScreen.storyboard */,
@@ -88,7 +91,6 @@
 				4A90D07A0DCF9538CD1EC77B /* Pods-SB SpringApp.debug.xcconfig */,
 				0D4734DCB54E9FA389A65270 /* Pods-SB SpringApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD34CD1929B65CBD0086AE0F /* AnimationsModel.swift in Sources */,
 				DD34CD0929B4CC9C0086AE0F /* ViewController.swift in Sources */,
 				DD34CD0529B4CC9C0086AE0F /* AppDelegate.swift in Sources */,
 				DD34CD0729B4CC9C0086AE0F /* SceneDelegate.swift in Sources */,
