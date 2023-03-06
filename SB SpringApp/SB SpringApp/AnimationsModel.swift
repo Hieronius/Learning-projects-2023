@@ -9,11 +9,11 @@ import Foundation
 
 class AnimationsManager {
     
-    static let share = AnimationsManager()
+    static let shared = AnimationsManager()
     
     var animations = ["pop", "slideLeft", "slideRight", "slideDown", "slideUp", "squeezeLeft", "squeezeRight", "squeezeUp", "fadeIn", "fadeOut"]
     
-    func getAnimation() -> String {
-        animations.shuffled().randomElement()!
+    func getAnimation() -> [String] {
+        animations.shuffled()
     }
 }
