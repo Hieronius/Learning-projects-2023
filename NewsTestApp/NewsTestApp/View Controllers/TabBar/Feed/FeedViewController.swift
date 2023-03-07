@@ -11,7 +11,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var table: UITableView!
     
-    let urlStringImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
+    let defaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
 
     // test array for parsed data from our API
     var articles = [Article]()
@@ -45,7 +45,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
          
         // there is need some default image for articles without propper image
         // plus may be i should unwrap image with guard or if else
-        cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? urlStringImage)
+        cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
         
         cell.likeButton.imageView?.image = UIImage(named: "likeImage")
         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
