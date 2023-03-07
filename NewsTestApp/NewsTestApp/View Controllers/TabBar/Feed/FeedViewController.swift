@@ -57,7 +57,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.layer.cornerRadius = 20
 
         return cell
-
-
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 }
