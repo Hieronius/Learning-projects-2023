@@ -598,7 +598,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="eQL-zF-5rj" firstAttribute="top" secondItem="zt5-Qb-qza" secondAttribute="top" id="HHS-iv-CC7"/>
                                     <constraint firstAttribute="bottom" secondItem="eQL-zF-5rj" secondAttribute="bottom" id="ONc-R0-qPn"/>

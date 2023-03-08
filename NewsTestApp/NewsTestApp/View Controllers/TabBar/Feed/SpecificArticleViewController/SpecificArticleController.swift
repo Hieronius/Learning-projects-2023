@@ -24,12 +24,18 @@ class SpecificViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        specificImageView.layer.cornerRadius = 40
+        specificImageView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        
         specificDateLabel.text = article.publishedAt
         specificArticleLabel.text = article.title
         specificArticleText.text = article.content
         specificImageView.loadImage(urlString: article.urlToImage ?? specificDefaultImage)
         specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
         
+        
+    
         
         
     }
