@@ -11,7 +11,6 @@
 		DD78E07329AA2D6A0055E656 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */; };
 		DD78E07629AA2D950055E656 /* FeedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E07529AA2D950055E656 /* FeedAPIManager.swift */; };
 		DD7A493A29B8D023008D1A93 /* SpecificArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */; };
-		DD7A493C29B8D503008D1A93 /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A493B29B8D503008D1A93 /* FeedPost.swift */; };
 		DD7C6A4929B7BA3C00A9A368 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C6A4829B7BA3C00A9A368 /* DetailTableViewCell.swift */; };
 		DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82224D29A79AD900E830C1 /* AppDelegate.swift */; };
 		DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82224F29A79AD900E830C1 /* SceneDelegate.swift */; };
@@ -36,7 +35,6 @@
 		DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		DD78E07529AA2D950055E656 /* FeedAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPIManager.swift; sourceTree = "<group>"; };
 		DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificArticleController.swift; sourceTree = "<group>"; };
-		DD7A493B29B8D503008D1A93 /* FeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
 		DD7C6A4829B7BA3C00A9A368 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		DD82224A29A79AD900E830C1 /* NewsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD82224D29A79AD900E830C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				DD78E07529AA2D950055E656 /* FeedAPIManager.swift */,
 				DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */,
-				DD7A493B29B8D503008D1A93 /* FeedPost.swift */,
 			);
 			path = FeedViewModel;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 				DDD1B89E29ADFCE800FEC5B2 /* FeedData.swift in Sources */,
 				DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */,
 				DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */,
-				DD7A493C29B8D503008D1A93 /* FeedPost.swift in Sources */,
 				DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */,
 				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,
 				DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */,

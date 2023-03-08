@@ -601,10 +601,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-YM-wpO">
-                                <rect key="frame" x="330" y="318" width="22" height="21"/>
+                                <rect key="frame" x="312" y="318" width="40" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="ecC-tb-xYa"/>
-                                    <constraint firstAttribute="height" constant="21" id="sOe-w8-oEY"/>
+                                    <constraint firstAttribute="width" constant="40" id="ecC-tb-xYa"/>
+                                    <constraint firstAttribute="height" constant="36" id="sOe-w8-oEY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>

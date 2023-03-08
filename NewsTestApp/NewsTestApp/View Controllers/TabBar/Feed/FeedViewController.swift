@@ -34,6 +34,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SpecificViewController
+        guard let indexPath = table.indexPathForSelectedRow else { return }
+        vc.article = articles[indexPath.row]
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // articles.count
@@ -59,7 +65,4 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "showDetail", sender: nil)
-//    }
 }
