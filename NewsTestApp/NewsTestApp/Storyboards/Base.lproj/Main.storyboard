@@ -644,6 +644,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Статья" largeTitleDisplayMode="never" id="2JC-m1-9ed"/>
+                    <connections>
+                        <outlet property="specificArticleLabel" destination="ZfY-gU-xT7" id="BjQ-B7-ldG"/>
+                        <outlet property="specificArticleText" destination="W7H-Lg-2Jq" id="jRD-gt-3Zn"/>
+                        <outlet property="specificDateLabel" destination="A1k-UK-vXo" id="opj-Z1-nmC"/>
+                        <outlet property="specificImageView" destination="eQL-zF-5rj" id="nzf-gL-zA9"/>
+                        <outlet property="specificLikeButton" destination="jYh-YM-wpO" id="ElT-HL-Tba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlO-wW-dqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
