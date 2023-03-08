@@ -80,7 +80,7 @@
 			children = (
 				DD82226A29A7AB7200E830C1 /* FeedViewController.swift */,
 				DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */,
-				DDD1B89F29ADFE5100FEC5B2 /* DetailArticleViewController */,
+				DDD1B89F29ADFE5100FEC5B2 /* SpecificArticleViewController */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -213,14 +213,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DDD1B89F29ADFE5100FEC5B2 /* DetailArticleViewController */ = {
+		DDD1B89F29ADFE5100FEC5B2 /* SpecificArticleViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */,
 				DD82227229A7ADC400E830C1 /* DetailArticleViewController.swift */,
 				DD7C6A4829B7BA3C00A9A368 /* DetailTableViewCell.swift */,
-				DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */,
 			);
-			path = DetailArticleViewController;
+			path = SpecificArticleViewController;
 			sourceTree = "<group>";
 		};
 		DDF5AD6D29A90CE500FA48F9 /* Extensions */ = {
