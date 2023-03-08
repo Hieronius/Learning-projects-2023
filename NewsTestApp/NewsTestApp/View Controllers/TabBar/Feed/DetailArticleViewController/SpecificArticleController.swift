@@ -27,6 +27,6 @@ class SpecificViewController: UIViewController {
         specificArticleLabel.text = article.title
         specificArticleText.text = article.content
         specificImageView.loadImage(urlString: article.urlToImage ?? specificDefaultImage)
-        specificLikeButton.imageView?.image = UIImage(named: "likeImage")
+        specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
     }
 }
