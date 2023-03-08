@@ -588,12 +588,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-zF-5rj">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zt5-Qb-qza" userLabel="Specific View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="260"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-zF-5rj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="260" id="ptM-84-7yp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="ptM-84-7yp"/>
+                                    <constraint firstItem="eQL-zF-5rj" firstAttribute="top" secondItem="zt5-Qb-qza" secondAttribute="top" id="HHS-iv-CC7"/>
+                                    <constraint firstAttribute="bottom" secondItem="eQL-zF-5rj" secondAttribute="bottom" id="ONc-R0-qPn"/>
+                                    <constraint firstAttribute="trailing" secondItem="eQL-zF-5rj" secondAttribute="trailing" id="Pj5-RU-xrI"/>
+                                    <constraint firstItem="eQL-zF-5rj" firstAttribute="leading" secondItem="zt5-Qb-qza" secondAttribute="leading" id="hJi-fS-EMQ"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1k-UK-vXo">
                                 <rect key="frame" x="15" y="319" width="33" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -615,7 +627,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7H-Lg-2Jq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7H-Lg-2Jq">
                                 <rect key="frame" x="15" y="380" width="345" height="140"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
@@ -626,19 +638,19 @@
                         <viewLayoutGuide key="safeArea" id="M8c-l7-chL"/>
                         <color key="backgroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jYh-YM-wpO" firstAttribute="top" secondItem="eQL-zF-5rj" secondAttribute="bottom" constant="4" id="2wk-0T-8qb"/>
-                            <constraint firstItem="ZfY-gU-xT7" firstAttribute="top" secondItem="eQL-zF-5rj" secondAttribute="bottom" constant="44" id="4zr-f1-Q8k"/>
+                            <constraint firstItem="A1k-UK-vXo" firstAttribute="top" secondItem="zt5-Qb-qza" secondAttribute="bottom" constant="15" id="3zz-cG-HT9"/>
                             <constraint firstItem="W7H-Lg-2Jq" firstAttribute="leading" secondItem="M8c-l7-chL" secondAttribute="leading" constant="15" id="8aW-9G-uIM"/>
                             <constraint firstItem="M8c-l7-chL" firstAttribute="trailing" secondItem="jYh-YM-wpO" secondAttribute="trailing" constant="23" id="Cgj-4C-e5v"/>
                             <constraint firstItem="A1k-UK-vXo" firstAttribute="leading" secondItem="M8c-l7-chL" secondAttribute="leading" constant="15" id="Cn8-Kv-Qp8"/>
                             <constraint firstItem="W7H-Lg-2Jq" firstAttribute="top" secondItem="ZfY-gU-xT7" secondAttribute="bottom" constant="8" id="DJf-7c-L9A"/>
-                            <constraint firstItem="A1k-UK-vXo" firstAttribute="top" secondItem="eQL-zF-5rj" secondAttribute="bottom" constant="15" id="Fnn-d2-fr0"/>
+                            <constraint firstItem="jYh-YM-wpO" firstAttribute="top" secondItem="zt5-Qb-qza" secondAttribute="bottom" constant="4" id="FAC-C6-Ivh"/>
                             <constraint firstItem="M8c-l7-chL" firstAttribute="trailing" secondItem="ZfY-gU-xT7" secondAttribute="trailing" constant="15" id="PqY-nP-QV4"/>
-                            <constraint firstItem="eQL-zF-5rj" firstAttribute="top" secondItem="M8c-l7-chL" secondAttribute="top" id="fwP-Bg-giC"/>
+                            <constraint firstItem="zt5-Qb-qza" firstAttribute="top" secondItem="M8c-l7-chL" secondAttribute="top" id="QAS-WW-kd3"/>
+                            <constraint firstItem="zt5-Qb-qza" firstAttribute="trailing" secondItem="M8c-l7-chL" secondAttribute="trailing" id="XZI-st-F9t"/>
+                            <constraint firstItem="ZfY-gU-xT7" firstAttribute="top" secondItem="zt5-Qb-qza" secondAttribute="bottom" constant="44" id="fyG-ie-8oE"/>
                             <constraint firstItem="ZfY-gU-xT7" firstAttribute="leading" secondItem="M8c-l7-chL" secondAttribute="leading" constant="15" id="iqh-i1-ydP"/>
                             <constraint firstItem="M8c-l7-chL" firstAttribute="trailing" secondItem="W7H-Lg-2Jq" secondAttribute="trailing" constant="15" id="oaD-gK-1dv"/>
-                            <constraint firstItem="eQL-zF-5rj" firstAttribute="leading" secondItem="M8c-l7-chL" secondAttribute="leading" id="on6-72-2jF"/>
-                            <constraint firstItem="M8c-l7-chL" firstAttribute="trailing" secondItem="eQL-zF-5rj" secondAttribute="trailing" id="rn8-0G-AYo"/>
+                            <constraint firstItem="zt5-Qb-qza" firstAttribute="leading" secondItem="M8c-l7-chL" secondAttribute="leading" id="xzk-6f-UC0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Статья" largeTitleDisplayMode="never" id="2JC-m1-9ed"/>
@@ -648,6 +660,7 @@
                         <outlet property="specificDateLabel" destination="A1k-UK-vXo" id="opj-Z1-nmC"/>
                         <outlet property="specificImageView" destination="eQL-zF-5rj" id="nzf-gL-zA9"/>
                         <outlet property="specificLikeButton" destination="jYh-YM-wpO" id="ElT-HL-Tba"/>
+                        <outlet property="specificView" destination="zt5-Qb-qza" id="xJ0-VK-gVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlO-wW-dqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
