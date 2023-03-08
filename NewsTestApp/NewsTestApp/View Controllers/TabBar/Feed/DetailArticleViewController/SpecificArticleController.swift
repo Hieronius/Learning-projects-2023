@@ -15,10 +15,16 @@ class SpecificViewController: UIViewController {
     @IBOutlet weak var specificArticleLabel: UILabel!
     @IBOutlet weak var specificArticleText: UILabel!
     
+    // data for our specificViewController
+    var post: Post!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // some code here
+        specificDateLabel.text = post.date
+        specificArticleLabel.text = post.label
+        specificArticleText.text = post.text
+        specificImageView.image = post.mainImage
+        specificLikeButton.imageView?.image = post.likeImage
     }
 }
