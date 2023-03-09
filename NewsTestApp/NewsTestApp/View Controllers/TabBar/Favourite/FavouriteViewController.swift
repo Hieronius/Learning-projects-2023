@@ -7,11 +7,23 @@
 
 import UIKit
 
-class FavouriteViewController: UIViewController {
+class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var articles: [Article]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // some code here
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath)
+        collectionCell.
+        return collectionCell
     }
 }

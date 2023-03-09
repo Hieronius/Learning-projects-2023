@@ -373,8 +373,18 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="177"/>
+                                        <connections>
+                                            <outlet property="collectionArticleLabel" destination="hBM-T1-A7t" id="uzs-OD-oOA"/>
+                                            <outlet property="collectionDateLabel" destination="ffq-wG-7Gi" id="tem-oh-xYy"/>
+                                            <outlet property="collectionImageView" destination="aRK-m9-umS" id="mKY-To-vNG"/>
+                                            <outlet property="collectionLikeButton" destination="HWQ-Xi-3Mu" id="u4N-8s-MSj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="FcK-57-udj" id="u0e-XC-PIy"/>
+                                    <outlet property="delegate" destination="FcK-57-udj" id="5r2-dO-0UU"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lbZ-eC-iN3"/>
