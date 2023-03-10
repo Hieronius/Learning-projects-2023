@@ -157,7 +157,7 @@
         <!--evrvevr-->
         <scene sceneID="C9J-6c-WiI">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="WeB-LM-VMn" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="WeB-LM-VMn" customClass="TabBarViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="evrvevr" leftItemsSupplementBackButton="YES" id="vL0-Zf-tB4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pLp-5D-VMX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>

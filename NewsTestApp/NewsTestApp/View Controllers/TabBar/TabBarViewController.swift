@@ -9,9 +9,14 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
+    
+    
+    var savedArticles =  [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // some code here
+        let vc = FavouriteViewController()
+        vc.articles = self.savedArticles
     }
 }

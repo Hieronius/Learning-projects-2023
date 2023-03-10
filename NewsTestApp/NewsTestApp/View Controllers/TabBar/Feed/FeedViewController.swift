@@ -11,6 +11,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var table: UITableView!
     
+    
     let defaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
 
     // test array for parsed data from our API
@@ -31,16 +32,32 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // now we have raw data. Access is stable and working.
     
         
+        
     }
     
     @IBAction func likeButtonPressed(_ sender: UIButton) {
+        
+        let likedArticleIndex = sender.tag
+        let tabBar = tabBarController as! TabBarViewController
+//        let fVC = tabBar.viewControllers![2] as! FavouriteViewController
+//        print("\(fVC) is needed ViewController")
+        
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
             print("like button has been pressed")
+            print(sender.tag)
+
+            tabBar.savedArticles.append(articles[likedArticleIndex])
+            print(tabBar.savedArticles.count)
+            
             
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
             print("dislike button has been pressed")
+            print(sender.tag)
+            
+            tabBar.savedArticles.removeLast()
+            print(tabBar.savedArticles.count)
         }
     }
     
@@ -54,7 +71,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // articles.count
         return articles.count
     }
 
@@ -65,8 +81,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // plus may be i should unwrap image with guard or if else
         cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
          cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
-        // cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
-        // cell.likeButton.addTarget(self, action: #selector(pressLikeButton), for: .touchUpInside)
         cell.likeButton.tag = indexPath.row
         print(cell.likeButton.tag)
         print(cell.likeButton.tag)
