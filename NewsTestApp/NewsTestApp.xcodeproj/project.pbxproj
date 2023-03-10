@@ -12,7 +12,6 @@
 		DD78E07629AA2D950055E656 /* FeedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78E07529AA2D950055E656 /* FeedAPIManager.swift */; };
 		DD7A493A29B8D023008D1A93 /* SpecificArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */; };
 		DD7A495E29B91161008D1A93 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A495D29B91161008D1A93 /* FavouriteCollectionViewCell.swift */; };
-		DD7C6A4929B7BA3C00A9A368 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C6A4829B7BA3C00A9A368 /* DetailTableViewCell.swift */; };
 		DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82224D29A79AD900E830C1 /* AppDelegate.swift */; };
 		DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82224F29A79AD900E830C1 /* SceneDelegate.swift */; };
 		DD82225229A79AD900E830C1 /* AuthorisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82225129A79AD900E830C1 /* AuthorisationViewController.swift */; };
@@ -25,7 +24,6 @@
 		DD82226D29A7ABCE00E830C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226C29A7ABCE00E830C1 /* MapViewController.swift */; };
 		DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */; };
 		DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */; };
-		DD82227329A7ADC400E830C1 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227229A7ADC400E830C1 /* DetailArticleViewController.swift */; };
 		DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */; };
 		DDD1B89E29ADFCE800FEC5B2 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */; };
 		DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */; };
@@ -37,7 +35,6 @@
 		DD78E07529AA2D950055E656 /* FeedAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPIManager.swift; sourceTree = "<group>"; };
 		DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificArticleController.swift; sourceTree = "<group>"; };
 		DD7A495D29B91161008D1A93 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
-		DD7C6A4829B7BA3C00A9A368 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		DD82224A29A79AD900E830C1 /* NewsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD82224D29A79AD900E830C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD82224F29A79AD900E830C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +49,6 @@
 		DD82226C29A7ABCE00E830C1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		DD82227229A7ADC400E830C1 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
@@ -220,8 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */,
-				DD82227229A7ADC400E830C1 /* DetailArticleViewController.swift */,
-				DD7C6A4829B7BA3C00A9A368 /* DetailTableViewCell.swift */,
 			);
 			path = SpecificArticleViewController;
 			sourceTree = "<group>";
@@ -308,7 +302,6 @@
 			files = (
 				DD7A493A29B8D023008D1A93 /* SpecificArticleController.swift in Sources */,
 				DD82225229A79AD900E830C1 /* AuthorisationViewController.swift in Sources */,
-				DD7C6A4929B7BA3C00A9A368 /* DetailTableViewCell.swift in Sources */,
 				DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */,
 				DD82224E29A79AD900E830C1 /* AppDelegate.swift in Sources */,
 				DD78E06F29A9303E0055E656 /* Coordinates.swift in Sources */,
@@ -322,7 +315,6 @@
 				DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */,
 				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,
 				DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */,
-				DD82227329A7ADC400E830C1 /* DetailArticleViewController.swift in Sources */,
 				DD82226929A7A83500E830C1 /* ResetViewController.swift in Sources */,
 				DD82226D29A7ABCE00E830C1 /* MapViewController.swift in Sources */,
 			);
