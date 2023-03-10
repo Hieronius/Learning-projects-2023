@@ -316,8 +316,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TEx-Se-Iie">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="15" y="44" width="345" height="574"/>
+                                <color key="backgroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZMb-tN-03x">
                                     <size key="itemSize" width="128" height="177"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -332,7 +332,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-m9-umS" userLabel="articleImage">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-m9-umS" userLabel="articleImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="95"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="95" id="U4Q-Ik-zQt"/>
@@ -353,17 +353,19 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title=" "/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-T1-A7t" userLabel="articleLabel">
-                                                    <rect key="frame" x="8" y="132" width="42.5" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-T1-A7t" userLabel="articleLabel">
+                                                    <rect key="frame" x="8" y="132" width="112" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="aRK-m9-umS" firstAttribute="leading" secondItem="pSi-k6-zBH" secondAttribute="leading" id="0NX-pT-MF6"/>
                                                 <constraint firstItem="hBM-T1-A7t" firstAttribute="top" secondItem="aRK-m9-umS" secondAttribute="bottom" constant="37" id="7yg-Lw-4UV"/>
                                                 <constraint firstAttribute="trailing" secondItem="HWQ-Xi-3Mu" secondAttribute="trailing" id="Nnn-HW-n0C"/>
+                                                <constraint firstAttribute="trailing" secondItem="hBM-T1-A7t" secondAttribute="trailing" constant="8" id="Q6l-oi-CdR"/>
                                                 <constraint firstItem="HWQ-Xi-3Mu" firstAttribute="top" secondItem="aRK-m9-umS" secondAttribute="bottom" id="VYr-Qt-t4D"/>
                                                 <constraint firstItem="ffq-wG-7Gi" firstAttribute="leading" secondItem="pSi-k6-zBH" secondAttribute="leading" constant="6" id="cNt-PD-uS9"/>
                                                 <constraint firstItem="ffq-wG-7Gi" firstAttribute="top" secondItem="aRK-m9-umS" secondAttribute="bottom" constant="11" id="egh-jp-c9l"/>
@@ -390,13 +392,16 @@
                         <viewLayoutGuide key="safeArea" id="lbZ-eC-iN3"/>
                         <color key="backgroundColor" red="0.92156863209999995" green="0.92156857250000002" blue="0.92156857250000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lbZ-eC-iN3" firstAttribute="trailing" secondItem="TEx-Se-Iie" secondAttribute="trailing" id="3Dg-Hm-Vdt"/>
-                            <constraint firstItem="TEx-Se-Iie" firstAttribute="leading" secondItem="lbZ-eC-iN3" secondAttribute="leading" id="8x4-xN-bhH"/>
+                            <constraint firstItem="lbZ-eC-iN3" firstAttribute="trailing" secondItem="TEx-Se-Iie" secondAttribute="trailing" constant="15" id="3Dg-Hm-Vdt"/>
+                            <constraint firstItem="TEx-Se-Iie" firstAttribute="leading" secondItem="lbZ-eC-iN3" secondAttribute="leading" constant="15" id="8x4-xN-bhH"/>
                             <constraint firstItem="TEx-Se-Iie" firstAttribute="top" secondItem="lbZ-eC-iN3" secondAttribute="top" id="9TV-NR-lvT"/>
                             <constraint firstItem="lbZ-eC-iN3" firstAttribute="bottom" secondItem="TEx-Se-Iie" secondAttribute="bottom" id="Lp9-HN-vfP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Избранное" largeTitleDisplayMode="always" id="fqT-Mb-OIE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TEx-Se-Iie" id="J8D-0O-p2N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOj-wI-7Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
