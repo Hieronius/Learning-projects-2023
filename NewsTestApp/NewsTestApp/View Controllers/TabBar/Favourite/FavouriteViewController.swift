@@ -35,6 +35,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionCell.collectionImageView.image = UIImage(named: "Image")
         collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
         print("cell has beed created")
+        collectionCell.layer.cornerRadius = 20
         return collectionCell
     }
     
