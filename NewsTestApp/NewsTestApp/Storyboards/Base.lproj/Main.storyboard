@@ -351,7 +351,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="Ncm-xD-zGB"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="likePressed" title=" "/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-T1-A7t" userLabel="articleLabel">
                                                     <rect key="frame" x="8" y="132" width="112" height="19.5"/>
@@ -589,7 +589,10 @@
                                                                 <constraint firstAttribute="width" constant="40" id="h0A-YC-Oh4"/>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="like" title=" "/>
+                                                            <connections>
+                                                                <action selector="likeButtonPressed:" destination="UJz-8f-IYJ" eventType="touchUpInside" id="dgB-Uf-sgM"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-gc-oBA">
                                                             <rect key="frame" x="16" y="170" width="42.5" height="19.5"/>
@@ -704,7 +707,7 @@
                                     <constraint firstAttribute="height" constant="36" id="sOe-w8-oEY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                <buttonConfiguration key="configuration" style="plain" image="like" title=" "/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-gU-xT7">
                                 <rect key="frame" x="15" y="348" width="345" height="24"/>
@@ -781,6 +784,7 @@
         <image name="icon-3" width="30" height="30"/>
         <image name="image 1" width="100" height="100"/>
         <image name="like" width="28" height="24"/>
+        <image name="likePressed" width="40" height="41"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

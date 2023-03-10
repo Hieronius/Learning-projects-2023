@@ -17,9 +17,6 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // some code here
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
@@ -32,8 +29,8 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath) as! FavouriteCollectionViewCell
         collectionCell.collectionDateLabel.text = "14 february"
         collectionCell.collectionArticleLabel.text = "Lorem ipsum dolor sit amet."
-        collectionCell.collectionImageView.image = UIImage(named: "Image")
-        collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+        // collectionCell.collectionImageView.image = UIImage(named: "Image")
+        // collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
         print("cell has beed created")
         collectionCell.layer.cornerRadius = 20
         return collectionCell

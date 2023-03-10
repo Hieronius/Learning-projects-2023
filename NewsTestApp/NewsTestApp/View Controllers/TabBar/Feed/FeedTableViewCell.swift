@@ -15,5 +15,12 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var articleText: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
+    @IBAction func likeButtonPressed(_ sender: UIButton) {
+        if sender.imageView?.image == UIImage(named: "like") {
+            sender.imageView?.image = UIImage(named: "likePressed")
+        } else {
+            sender.imageView?.image = UIImage(named: "like")
+        }
+    }
     
 }

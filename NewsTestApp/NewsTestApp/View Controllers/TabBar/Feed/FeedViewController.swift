@@ -52,10 +52,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // there is need some default image for articles without propper image
         // plus may be i should unwrap image with guard or if else
         cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
-        
-        cell.likeButton.imageView?.image = UIImage(named: "likeImage")
-        cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+        // cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
+        // cell.likeButton.addTarget(self, action: #selector(pressLikeButton), for: .touchUpInside)
+        cell.likeButton.tag = indexPath.row
+        print(cell.likeButton.tag)
+        print(cell.likeButton.tag)
+        print(cell.likeButton.tag)
+        
+            
         cell.dateLabel.text = articles[indexPath.row].publishedAt
         cell.articleLabel.text = articles[indexPath.row].title
         cell.articleText.text = articles[indexPath.row].description
@@ -64,5 +69,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         return cell
     }
+    
     
 }

@@ -32,7 +32,7 @@ class SpecificViewController: UIViewController {
         specificArticleLabel.text = article.title
         specificArticleText.text = article.content
         specificImageView.loadImage(urlString: article.urlToImage ?? specificDefaultImage)
-        specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
+        // specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
         
         
     
