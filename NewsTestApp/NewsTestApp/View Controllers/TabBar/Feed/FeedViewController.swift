@@ -34,6 +34,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! SpecificViewController
         guard let indexPath = table.indexPathForSelectedRow else { return }
@@ -53,7 +54,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // plus may be i should unwrap image with guard or if else
         cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
         // cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
-        cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
+        // cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
         // cell.likeButton.addTarget(self, action: #selector(pressLikeButton), for: .touchUpInside)
         cell.likeButton.tag = indexPath.row
         print(cell.likeButton.tag)

@@ -708,6 +708,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="like" title=" "/>
+                                <connections>
+                                    <action selector="specificLikeButtonPressed:" destination="GlJ-RN-gP9" eventType="touchUpInside" id="07Q-SF-HHC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-gU-xT7">
                                 <rect key="frame" x="15" y="348" width="345" height="24"/>

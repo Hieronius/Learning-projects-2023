@@ -15,11 +15,16 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var articleText: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
+    
+    // in this method i should add specific article to the favourite view controller
     @IBAction func likeButtonPressed(_ sender: UIButton) {
         if sender.imageView?.image == UIImage(named: "like") {
-            sender.imageView?.image = UIImage(named: "likePressed")
+            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+            print("like button has been pressed")
+            
         } else {
-            sender.imageView?.image = UIImage(named: "like")
+            sender.setImage(UIImage(named: "like"), for: .normal)
+            print("dislike button has been pressed")
         }
     }
     
