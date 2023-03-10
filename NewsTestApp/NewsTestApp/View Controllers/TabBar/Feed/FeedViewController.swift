@@ -39,8 +39,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let likedArticleIndex = sender.tag
         let tabBar = tabBarController as! TabBarViewController
-//        let fVC = tabBar.viewControllers![2] as! FavouriteViewController
-//        print("\(fVC) is needed ViewController")
+        
         
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
@@ -51,6 +50,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             print(tabBar.savedArticles.count)
             
             
+            
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
             print("dislike button has been pressed")
@@ -58,6 +58,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             tabBar.savedArticles.removeLast()
             print(tabBar.savedArticles.count)
+            
         }
     }
     
