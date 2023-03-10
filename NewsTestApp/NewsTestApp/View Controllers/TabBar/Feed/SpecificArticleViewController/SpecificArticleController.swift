@@ -34,18 +34,18 @@ class SpecificViewController: UIViewController {
         specificArticleLabel.text = article.title
         specificArticleText.text = article.content
         specificImageView.loadImage(urlString: article.urlToImage ?? specificDefaultImage)
-        // specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
+         specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
         }
     
     
     @IBAction func specificLikeButtonPressed(_ sender: UIButton) {
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
-            print("button has been pressed")
+            print("like button has been pressed")
             
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
-            print("button has been pressed")
+            print("dislike button has been pressed")
         }
     }
 }

@@ -31,8 +31,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // now we have raw data. Access is stable and working.
     
         
-        
     }
+    
+    @IBAction func likeButtonPressed(_ sender: UIButton) {
+        if sender.imageView?.image == UIImage(named: "like") {
+            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+            print("like button has been pressed")
+            
+        } else {
+            sender.setImage(UIImage(named: "like"), for: .normal)
+            print("dislike button has been pressed")
+        }
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,7 +64,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // there is need some default image for articles without propper image
         // plus may be i should unwrap image with guard or if else
         cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
-        // cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
         // cell.likeButton.setImage(UIImage(named: "likePressed"), for: .selected)
         // cell.likeButton.addTarget(self, action: #selector(pressLikeButton), for: .touchUpInside)
         cell.likeButton.tag = indexPath.row

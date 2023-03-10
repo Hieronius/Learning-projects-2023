@@ -20,6 +20,18 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
+    
+    @IBAction func favouriteLikeButtonPressed(_ sender: UIButton) {
+        if sender.imageView?.image == UIImage(named: "like") {
+            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+            print("like button has been pressed")
+            
+        } else {
+            sender.setImage(UIImage(named: "like"), for: .normal)
+            print("dislike button has been pressed")
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("10 items have been created")
         return 10
@@ -29,8 +41,8 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath) as! FavouriteCollectionViewCell
         collectionCell.collectionDateLabel.text = "14 february"
         collectionCell.collectionArticleLabel.text = "Lorem ipsum dolor sit amet."
-        // collectionCell.collectionImageView.image = UIImage(named: "Image")
-        // collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+         collectionCell.collectionImageView.image = UIImage(named: "Image")
+         collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
         print("cell has beed created")
         collectionCell.layer.cornerRadius = 20
         return collectionCell
