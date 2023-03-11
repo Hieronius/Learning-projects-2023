@@ -25,7 +25,6 @@
 		DD82226D29A7ABCE00E830C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226C29A7ABCE00E830C1 /* MapViewController.swift */; };
 		DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */; };
 		DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */; };
-		DD88BFCE29BCB5580008D76D /* RangedReplaceableCollection + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFCD29BCB5580008D76D /* RangedReplaceableCollection + Extension.swift */; };
 		DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */; };
 		DDD1B89E29ADFCE800FEC5B2 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */; };
 		DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */; };
@@ -52,7 +51,6 @@
 		DD82226C29A7ABCE00E830C1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DD82227029A7ACDA00E830C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		DD88BFCD29BCB5580008D76D /* RangedReplaceableCollection + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangedReplaceableCollection + Extension.swift"; sourceTree = "<group>"; };
 		DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 			children = (
 				DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */,
 				DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */,
-				DD88BFCD29BCB5580008D76D /* RangedReplaceableCollection + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,7 +316,6 @@
 				DDD1B89E29ADFCE800FEC5B2 /* FeedData.swift in Sources */,
 				DD82225029A79AD900E830C1 /* SceneDelegate.swift in Sources */,
 				DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */,
-				DD88BFCE29BCB5580008D76D /* RangedReplaceableCollection + Extension.swift in Sources */,
 				DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */,
 				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,
 				DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */,

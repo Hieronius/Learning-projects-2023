@@ -34,6 +34,12 @@ class TabBarViewController: UITabBarController {
 //        print(arrayForExample.count)
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let feedVC = segue.destination as? FeedViewController {
+            feedVC.tabBarDelegate = self
+        }
+    }
 }
 
 extension TabBarViewController: TabBarViewControllerDelegate {
@@ -42,7 +48,6 @@ extension TabBarViewController: TabBarViewControllerDelegate {
     }
     
     func removeArticle(article: Article) {
-        
         if let index = self.savedArticles.firstIndex(of: article) {
             self.savedArticles.remove(at: index)
         }
