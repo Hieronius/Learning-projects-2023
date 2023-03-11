@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol TabBarViewControllerDelegate: AnyObject {
+    func saveArticle(article: Article)
+    func removeArticle(article: Article)
+}
+
 class TabBarViewController: UITabBarController {
     
     
@@ -15,7 +20,7 @@ class TabBarViewController: UITabBarController {
     // both of them should affect "savedArticles" array here
     var savedArticles =  [Article]() 
         
-    
+    // also may be i should use method "prepare to reach a specific view controller"
     
     override func viewDidLoad() {
         super.viewDidLoad()
