@@ -513,7 +513,7 @@
         <!--Избранное-->
         <scene sceneID="6NV-ER-sMe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NR7-KP-WFr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NR7-KP-WFr" customClass="FavouriteNavigationViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Избранное" image="like" id="IS2-x8-jnk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qhb-n0-xVr">
@@ -535,7 +535,7 @@
         <!--Профиль-->
         <scene sceneID="eAf-2e-7Rt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6p9-af-2gw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6p9-af-2gw" customClass="ProfileNavigationViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Профиль" image="icon-3" id="tUO-HZ-dKu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hpF-Ud-wp4">
