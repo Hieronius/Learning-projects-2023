@@ -35,7 +35,9 @@ class FavouriteViewController: UIViewController {
     }
     
     
+    
     @IBAction func saveArticleButtonPressed(_ sender: Any) {
         numberOfSavedArticles += 1
+        articlesFromFeed += 1
     }
 }

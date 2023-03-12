@@ -45,6 +45,22 @@ class FeedViewController: UIViewController {
         getArticlesFromFavourite.text = "\(articlesFromFavourite)"
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let tabBar = tabBarController
+        guard let viewControllers = tabBar?.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            
+            if let favourNaviVC = viewController as? FavouriteNavigationViewController {
+                
+                if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
+                    favouriteViewController.articlesFromFeed = articlesFromFavourite
+                }
+            }
+        }
+    }
+    
     
     @IBAction func addArticleButtonPressed(_ sender: Any) {
         self.numberOfArticles += 1
