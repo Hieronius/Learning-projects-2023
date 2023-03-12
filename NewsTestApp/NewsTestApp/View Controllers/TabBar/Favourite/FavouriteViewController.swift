@@ -19,6 +19,8 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let vc = tabBarController as! TabBarViewController
+        articles = vc.savedArticles
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
@@ -40,7 +42,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
 //    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("10 items have been created")
+        print(articles.count)
         return articles.count
     }
     
