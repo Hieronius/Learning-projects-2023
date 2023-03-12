@@ -9,9 +9,26 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
+    var login: String?
+    var password: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // some code here
+//        guard let viewControllers = viewControllers else { return }
+//
+//        for viewController in viewControllers {
+//            if let feedNagivationViewController = viewController as? FeedNavigationViewController {
+//                if let feedViewController = feedNagivationViewController.viewControllers.first as? FeedViewController {
+//                    feedViewController.testVar = testLet
+//                    print(feedViewController.testVar)
+//                    print(feedViewController.testVar)
+//                    print(feedViewController.testVar)
+//                    print("adadawdawdawd")
+//                    print("adadawdawdawd")
+//                    print("adadawdawdawd")
+//                }
+//            }
+//        }
     }
 }
