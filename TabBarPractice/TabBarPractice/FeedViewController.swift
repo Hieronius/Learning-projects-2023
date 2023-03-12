@@ -15,7 +15,21 @@ class FeedViewController: UIViewController {
     
     @IBOutlet weak var feedNumberOfArticles: UILabel!
     
-    var numberOfArticles = 0
+    
+    @IBOutlet weak var getArticlesFromFavourite: UILabel!
+    
+    var articlesFromFavourite = 0 {
+        didSet {
+            getArticlesFromFavourite.text = "\(articlesFromFavourite)"
+        }
+    }
+    
+    var numberOfArticles = 0 {
+        didSet {
+            feedNumberOfArticles.text = "\(numberOfArticles)"
+        }
+        
+    }
     
     var feedLogin: String?
     var feedPassword: String?
@@ -28,10 +42,11 @@ class FeedViewController: UIViewController {
         feedUserPassword.text = feedPassword
         
         feedNumberOfArticles.text = "\(numberOfArticles)"
+        getArticlesFromFavourite.text = "\(articlesFromFavourite)"
     }
     
     
     @IBAction func addArticleButtonPressed(_ sender: Any) {
-        numberOfArticles += 1
+        self.numberOfArticles += 1
     }
 }

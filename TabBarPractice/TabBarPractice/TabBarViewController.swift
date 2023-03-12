@@ -9,6 +9,8 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
+    var arrayOfArticles = 0
+    
     var login: String?
     var password: String?
     

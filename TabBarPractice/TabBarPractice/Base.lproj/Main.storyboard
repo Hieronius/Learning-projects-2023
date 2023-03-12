@@ -72,10 +72,66 @@
                     <view key="view" contentMode="scaleToFill" id="dzR-vg-sYA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="lB4-m5-v2e">
+                                <rect key="frame" x="50" y="294" width="275.5" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numbers of saved articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1a-eN-OM7">
+                                        <rect key="frame" x="0.0" y="0.0" width="275.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4X-by-ahF">
+                                        <rect key="frame" x="108" y="49" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9e-YB-dej">
+                                <rect key="frame" x="130.5" y="415" width="114.5" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Article"/>
+                                <connections>
+                                    <action selector="saveArticleButtonPressed:" destination="6rB-DX-7K5" eventType="touchUpInside" id="JGh-tU-O1t"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="tIr-4X-jqf">
+                                <rect key="frame" x="56.5" y="184" width="262.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="articlesfromFeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-a1-fJT">
+                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-xH-Vxz">
+                                        <rect key="frame" x="203.5" y="0.0" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="B8J-YX-z0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lB4-m5-v2e" firstAttribute="centerY" secondItem="dzR-vg-sYA" secondAttribute="centerY" id="6Ww-WM-WvQ"/>
+                            <constraint firstItem="tIr-4X-jqf" firstAttribute="centerX" secondItem="dzR-vg-sYA" secondAttribute="centerX" id="BUs-Ai-ZNL"/>
+                            <constraint firstItem="M9e-YB-dej" firstAttribute="top" secondItem="lB4-m5-v2e" secondAttribute="bottom" constant="42" id="HOg-di-7SI"/>
+                            <constraint firstItem="tIr-4X-jqf" firstAttribute="top" secondItem="B8J-YX-z0v" secondAttribute="top" constant="88" id="Hx4-nz-kI3"/>
+                            <constraint firstItem="M9e-YB-dej" firstAttribute="centerX" secondItem="dzR-vg-sYA" secondAttribute="centerX" id="KhU-HN-J25"/>
+                            <constraint firstItem="lB4-m5-v2e" firstAttribute="centerX" secondItem="dzR-vg-sYA" secondAttribute="centerX" id="ezv-lV-T23"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite" id="hF2-VC-Cd6"/>
+                    <connections>
+                        <outlet property="favouriteNumberOfArticles" destination="f4X-by-ahF" id="uWf-36-KMC"/>
+                        <outlet property="getArticlesFromFeed" destination="jNa-xH-Vxz" id="gie-DQ-aI2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcm-5T-h5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,38 +179,58 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="N90-0p-XOe">
-                                <rect key="frame" x="81.5" y="208" width="212" height="20.5"/>
+                                <rect key="frame" x="35" y="208" width="305" height="32.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numbers of articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvT-y8-LvK">
-                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sW-em-lHc">
-                                        <rect key="frame" x="170.5" y="0.0" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="246" y="0.0" width="59" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-Zq-f84">
-                                <rect key="frame" x="134" y="428" width="108" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-Zq-f84">
+                                <rect key="frame" x="133.5" y="428" width="108" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Article"/>
                                 <connections>
                                     <action selector="addArticleButtonPressed:" destination="Osi-Vv-hYB" eventType="touchUpInside" id="hU2-g0-oZf"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="4eH-LZ-y2l">
+                                <rect key="frame" x="30" y="143" width="315" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="articlesFromFavourite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdl-nI-odI">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-zq-ycc">
+                                        <rect key="frame" x="256" y="0.0" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M9f-Lv-gmm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cSo-Zq-f84" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="2s8-Os-qyD"/>
                             <constraint firstItem="N90-0p-XOe" firstAttribute="top" secondItem="M9f-Lv-gmm" secondAttribute="top" constant="112" id="7aa-ib-IzP"/>
                             <constraint firstItem="JCS-bZ-jHR" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="BHv-Z8-TRq"/>
                             <constraint firstItem="N90-0p-XOe" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="MTR-CH-eUI"/>
+                            <constraint firstItem="cSo-Zq-f84" firstAttribute="top" secondItem="JCS-bZ-jHR" secondAttribute="bottom" constant="64.5" id="Zny-9F-RRb"/>
+                            <constraint firstItem="4eH-LZ-y2l" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="eHh-Lp-upL"/>
+                            <constraint firstItem="4eH-LZ-y2l" firstAttribute="top" secondItem="M9f-Lv-gmm" secondAttribute="top" constant="47" id="vbH-XI-a9V"/>
                             <constraint firstItem="JCS-bZ-jHR" firstAttribute="centerY" secondItem="a8q-DJ-iWc" secondAttribute="centerY" id="yO6-JR-CsG"/>
                         </constraints>
                     </view>
@@ -163,6 +239,7 @@
                         <outlet property="feedNumberOfArticles" destination="3sW-em-lHc" id="9OZ-fG-izl"/>
                         <outlet property="feedUserLogin" destination="2cT-27-H4N" id="98B-hW-Am4"/>
                         <outlet property="feedUserPassword" destination="9dc-BP-IAF" id="X9L-3q-GKG"/>
+                        <outlet property="getArticlesFromFavourite" destination="wpA-zq-ycc" id="Kml-Eb-D8p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAJ-Al-pVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
