@@ -13,6 +13,10 @@ protocol TabBarViewControllerDelegate: AnyObject {
 }
 
 class TabBarViewController: UITabBarController {
+    
+    // there i should save name, login and pass from the user so i can pass it to the ProfileViewController
+    
+    var testLet = 5
 
     // may be i should try to use delegation to save data here?
     // so i can use delegation for FeedViewController and in the same moment in Favourite ViewController
@@ -28,8 +32,21 @@ class TabBarViewController: UITabBarController {
 //        vc.articles = self.savedArticles
 //        print("Favourite articles += 1")
         
-        let vc = self.tabBarController?.viewControllers?[0] as? FeedViewController
-        vc?.testVar = 5
+        guard let viewControllers = viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let feedNagivationViewController = viewController as? FeedNavigationViewController {
+                if let feedViewController = feedNagivationViewController.viewControllers.first as? FeedViewController {
+                    feedViewController.testVar = testLet
+                    print(feedViewController.testVar)
+                    print(feedViewController.testVar)
+                    print(feedViewController.testVar)
+                    print("adadawdawdawd")
+                    print("adadawdawdawd")
+                    print("adadawdawdawd")
+                }
+            }
+        }
         
         
         

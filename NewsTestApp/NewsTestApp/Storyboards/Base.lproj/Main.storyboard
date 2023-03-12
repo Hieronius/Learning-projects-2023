@@ -764,7 +764,7 @@
         <!--Новости-->
         <scene sceneID="De5-vI-aLh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qqv-om-5aB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qqv-om-5aB" customClass="FeedNavigationViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Новости" image="Vector-2" id="AxF-FU-LeW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="sts-8t-UP2">
@@ -782,7 +782,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FZd-nQ-uJF"/>
+        <segue reference="6aW-PU-FYD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>
