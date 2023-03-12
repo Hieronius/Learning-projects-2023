@@ -17,6 +17,7 @@
 		DD88BFF229BDF35A0008D76D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFF129BDF35A0008D76D /* FeedViewController.swift */; };
 		DD88BFF429BDF3870008D76D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFF329BDF3870008D76D /* DetailViewController.swift */; };
 		DD88BFF629BDF3F30008D76D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFF529BDF3F30008D76D /* FavouriteViewController.swift */; };
+		DD88BFFA29BE08880008D76D /* FeedNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFF929BE08880008D76D /* FeedNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DD88BFF129BDF35A0008D76D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		DD88BFF329BDF3870008D76D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DD88BFF529BDF3F30008D76D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		DD88BFF929BE08880008D76D /* FeedNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				DD88BFDB29BDF20C0008D76D /* AppDelegate.swift */,
 				DD88BFDD29BDF20C0008D76D /* SceneDelegate.swift */,
 				DD88BFE129BDF20C0008D76D /* Main.storyboard */,
+				DD88BFF929BE08880008D76D /* FeedNavigationViewController.swift */,
 				DD88BFE429BDF2110008D76D /* Assets.xcassets */,
 				DD88BFE629BDF2110008D76D /* LaunchScreen.storyboard */,
 				DD88BFE929BDF2110008D76D /* Info.plist */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD88BFFA29BE08880008D76D /* FeedNavigationViewController.swift in Sources */,
 				DD88BFF029BDF3140008D76D /* TabBarViewController.swift in Sources */,
 				DD88BFE029BDF20C0008D76D /* LoginViewController.swift in Sources */,
 				DD88BFF229BDF35A0008D76D /* FeedViewController.swift in Sources */,

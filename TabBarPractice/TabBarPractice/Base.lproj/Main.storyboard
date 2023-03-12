@@ -100,18 +100,41 @@
         <!--Feed-->
         <scene sceneID="aFJ-fd-S4N">
             <objects>
-                <viewController id="Osi-Vv-hYB" sceneMemberID="viewController">
+                <viewController id="Osi-Vv-hYB" customClass="FeedViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8q-DJ-iWc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JCS-bZ-jHR">
+                                <rect key="frame" x="158" y="303.5" width="59" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cT-27-H4N">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-BP-IAF">
+                                        <rect key="frame" x="0.0" y="30" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="M9f-Lv-gmm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JCS-bZ-jHR" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="BHv-Z8-TRq"/>
+                            <constraint firstItem="JCS-bZ-jHR" firstAttribute="centerY" secondItem="a8q-DJ-iWc" secondAttribute="centerY" id="yO6-JR-CsG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="note.text" catalog="system" id="R5h-sK-TAQ"/>
+                    <navigationItem key="navigationItem" title="Feed" id="AXr-aY-igY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAJ-Al-pVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="-734"/>
+            <point key="canvasLocation" x="3740" y="-734.48275862068976"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="QM8-sR-apY">
@@ -123,7 +146,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Osi-Vv-hYB" kind="relationship" relationship="viewControllers" id="6MD-2p-lnd"/>
+                        <segue destination="PwV-75-1bn" kind="relationship" relationship="viewControllers" id="6MD-2p-lnd"/>
                         <segue destination="6rB-DX-7K5" kind="relationship" relationship="viewControllers" id="De3-eU-rQa"/>
                         <segue destination="Zop-HR-vsn" kind="relationship" relationship="viewControllers" id="mIQ-Ga-Dft"/>
                     </connections>
@@ -149,6 +172,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTc-Qw-RkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="3.1484257871064472"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="aw5-Mb-LSb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PwV-75-1bn" customClass="FeedNavigationViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="note.text" catalog="system" id="R5h-sK-TAQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="JqN-ZY-8V3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Osi-Vv-hYB" kind="relationship" relationship="rootViewController" id="sBD-IA-DdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1D-bD-eCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800.8000000000002" y="-734.48275862068976"/>
         </scene>
     </scenes>
     <resources>
