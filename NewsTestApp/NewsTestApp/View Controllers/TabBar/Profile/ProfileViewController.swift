@@ -27,12 +27,12 @@ class ProfileViewController: UIViewController {
         
         profileNameField.layer.cornerRadius = 20
         profileNameField.layer.borderWidth = 0.5
-        profileNameField.layer.borderColor = UIColor.white.cgColor
+        profileNameField.layer.borderColor = textFieldColor.cgColor
         profileNameField.layer.masksToBounds = true
         
         profileEmailFeild.layer.cornerRadius = 20
         profileEmailFeild.layer.borderWidth = 0.5
-        profileEmailFeild.layer.borderColor = UIColor.white.cgColor
+        profileEmailFeild.layer.borderColor = textFieldColor.cgColor
         profileEmailFeild.layer.masksToBounds = true
     
     }
