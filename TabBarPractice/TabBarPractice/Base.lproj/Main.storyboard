@@ -131,6 +131,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="AXr-aY-igY"/>
+                    <connections>
+                        <outlet property="feedUserLogin" destination="2cT-27-H4N" id="98B-hW-Am4"/>
+                        <outlet property="feedUserPassword" destination="9dc-BP-IAF" id="X9L-3q-GKG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAJ-Al-pVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
