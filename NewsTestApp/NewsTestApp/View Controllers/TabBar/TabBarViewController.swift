@@ -28,13 +28,8 @@ class TabBarViewController: UITabBarController {
 //        vc.articles = self.savedArticles
 //        print("Favourite articles += 1")
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            let vc = self.tabBarController?.viewControllers?[0] as? FeedViewController
-            vc?.testVar = 5
-            print(vc?.testVar)
-            print(vc?.testVar)
-            print(vc?.testVar)
-        })
+        let vc = self.tabBarController?.viewControllers?[0] as? FeedViewController
+        vc?.testVar = 5
         
         
         
