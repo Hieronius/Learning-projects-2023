@@ -24,6 +24,8 @@ class FeedViewController: UIViewController {
         }
     }
     
+    // var articlesFromFavourite = 0
+    
     var numberOfArticles = 0 {
         didSet {
             feedNumberOfArticles.text = "\(numberOfArticles)"
@@ -43,11 +45,33 @@ class FeedViewController: UIViewController {
         
         feedNumberOfArticles.text = "\(numberOfArticles)"
         getArticlesFromFavourite.text = "\(articlesFromFavourite)"
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //
+    //        let tabBar = tabBarController
+    //        guard let viewControllers = tabBar?.viewControllers else { return }
+    //
+    //        for viewController in viewControllers {
+    //
+    //            if let favourNaviVC = viewController as? FavouriteNavigationViewController {
+    //
+    //                if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
+    //                    favouriteViewController.articlesFromFeed = articlesFromFavourite
+    //                    print("data has been sended")
+    //                }
+    //            }
+    //        }
+    //    }
+    
+    
+    @IBAction func addArticleButtonPressed(_ sender: Any) {
+        self.numberOfArticles += 1
+        self.articlesFromFavourite += 1
         
-        let tabBar = tabBarController
+        let tabBar = self.tabBarController
         guard let viewControllers = tabBar?.viewControllers else { return }
         
         for viewController in viewControllers {
@@ -55,14 +79,12 @@ class FeedViewController: UIViewController {
             if let favourNaviVC = viewController as? FavouriteNavigationViewController {
                 
                 if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
-                    favouriteViewController.articlesFromFeed = articlesFromFavourite
+                    favouriteViewController.articlesFromFeed = self.articlesFromFavourite
+                    print("data has been sended")
+                    print(favouriteViewController.articlesFromFeed)
                 }
             }
+            
         }
-    }
-    
-    
-    @IBAction func addArticleButtonPressed(_ sender: Any) {
-        self.numberOfArticles += 1
     }
 }

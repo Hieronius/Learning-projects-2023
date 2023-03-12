@@ -38,6 +38,17 @@ class TabBarViewController: UITabBarController {
                     feedViewController.feedPassword = password
                 }
             }
+            
+            // step 4 - try to run second view controller right after app run
+            // get access to FavouriteNavigationViewController
+            if let favouriteNaviViewController = viewController as? FavouriteNavigationViewController {
+                
+                // get access to FavouriteViewController
+                if let favouriteViewController = favouriteNaviViewController.viewControllers.first as? FavouriteViewController {
+                    
+                    
+                }
+            }
         }
     }
 }

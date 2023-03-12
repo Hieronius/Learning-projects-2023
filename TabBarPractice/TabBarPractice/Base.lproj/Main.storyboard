@@ -91,9 +91,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9e-YB-dej">
-                                <rect key="frame" x="130.5" y="415" width="114.5" height="34.5"/>
+                                <rect key="frame" x="124" y="415" width="127" height="34.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save Article"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete Article"/>
                                 <connections>
                                     <action selector="saveArticleButtonPressed:" destination="6rB-DX-7K5" eventType="touchUpInside" id="JGh-tU-O1t"/>
                                 </connections>
@@ -245,6 +245,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAJ-Al-pVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3740" y="-734.48275862068976"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="oHL-sU-vSc">
+            <objects>
+                <viewController id="QhG-Aq-W0l" customClass="DetailViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HNH-Xd-KbE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-x1-mAa">
+                                <rect key="frame" x="37" y="148" width="301.5" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Articles from Feed/Favourite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31C-qt-5dq">
+                                        <rect key="frame" x="0.0" y="0.0" width="301.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7O-7t-tMF">
+                                        <rect key="frame" x="121" y="52" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wT9-jE-qpZ">
+                                <rect key="frame" x="125" y="281" width="125" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGx-OS-RPk">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Like article"/>
+                                        <connections>
+                                            <action selector="likeArticleButtonPressed:" destination="QhG-Aq-W0l" eventType="touchUpInside" id="0gy-nZ-BXV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHE-XI-MIT">
+                                        <rect key="frame" x="0.0" y="42.5" width="125" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dislike article"/>
+                                        <connections>
+                                            <action selector="dislikeButtonPressed:" destination="QhG-Aq-W0l" eventType="touchUpInside" id="Ebk-B5-PKs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qRh-f0-6co"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7GT-x1-mAa" firstAttribute="top" secondItem="qRh-f0-6co" secondAttribute="top" constant="148" id="2Na-3D-ldY"/>
+                            <constraint firstItem="7GT-x1-mAa" firstAttribute="centerX" secondItem="HNH-Xd-KbE" secondAttribute="centerX" id="EJB-QK-OpL"/>
+                            <constraint firstItem="wT9-jE-qpZ" firstAttribute="centerX" secondItem="HNH-Xd-KbE" secondAttribute="centerX" id="JGK-wH-Ppp"/>
+                            <constraint firstItem="wT9-jE-qpZ" firstAttribute="top" secondItem="7GT-x1-mAa" secondAttribute="bottom" constant="51" id="zls-1I-tKQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getArticlesFromFeedFavourite" destination="m7O-7t-tMF" id="kN7-aB-4av"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9L-MH-rPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4698" y="-734"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="QM8-sR-apY">

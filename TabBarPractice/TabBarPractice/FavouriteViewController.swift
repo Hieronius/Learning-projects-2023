@@ -14,13 +14,15 @@ class FavouriteViewController: UIViewController {
     
     @IBOutlet weak var getArticlesFromFeed: UILabel!
     
-    var articlesFromFeed = 0 {
-        didSet {
-            getArticlesFromFeed.text = "\(articlesFromFeed)"
-        }
-    }
+//    var articlesFromFeed: Int = 0 {
+//        didSet {
+//            getArticlesFromFeed.text = "\(articlesFromFeed)"
+//        }
+//    }
     
-    var numberOfSavedArticles = 0 {
+      var articlesFromFeed = 0
+//    
+     var numberOfSavedArticles = 0 {
         didSet {
             favouriteNumberOfArticles.text = "\(numberOfSavedArticles)"
         }
@@ -31,6 +33,12 @@ class FavouriteViewController: UIViewController {
         
         // some code here
         favouriteNumberOfArticles.text = "\(numberOfSavedArticles)"
+          getArticlesFromFeed.text = "\(articlesFromFeed)"
+        print("get articles has been created")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         getArticlesFromFeed.text = "\(articlesFromFeed)"
     }
     
@@ -38,6 +46,22 @@ class FavouriteViewController: UIViewController {
     
     @IBAction func saveArticleButtonPressed(_ sender: Any) {
         numberOfSavedArticles += 1
-        articlesFromFeed += 1
+        articlesFromFeed -= 1
+        
+        let tabBar = self.tabBarController
+        guard let viewControllers = tabBar?.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            
+            if let feedNaviVC = viewController as? FeedNavigationViewController {
+                
+                if let feedViewController = feedNaviVC.viewControllers.first as? FeedViewController {
+                    feedViewController.articlesFromFavourite = self.articlesFromFeed
+                    print("data has been sended")
+                    print(feedViewController.articlesFromFavourite)
+                }
+            }
+        }
+        viewDidLoad()
     }
 }
