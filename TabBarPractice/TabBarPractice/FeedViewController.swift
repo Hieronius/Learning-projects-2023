@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol FeedViewControllerDelegate: AnyObject {
+    func saveArticle(article: Int)
+    func deleteArticle(article: Int)
+}
+
 class FeedViewController: UIViewController {
     
     
@@ -24,7 +29,9 @@ class FeedViewController: UIViewController {
         }
     }
     
-    // var articlesFromFavourite = 0
+
+    
+     // var articlesFromFavourite = 0
     
     var numberOfArticles = 0 {
         didSet {
@@ -48,10 +55,18 @@ class FeedViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        getArticlesFromFavourite.text = "\(articlesFromFavourite)"
+        print("FeedVC appeared")
+    }
+    
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let detailVC = segue.destination as? DetailViewController {
                 detailVC.numberOfDetailedArticles = self.articlesFromFavourite
+                detailVC.feedViewControllerDelegate = self
+                
             }
         }
     
@@ -75,7 +90,22 @@ class FeedViewController: UIViewController {
             }
             
         }
+        viewDidLoad()
     }
+}
+
+extension FeedViewController: FeedViewControllerDelegate {
+    func saveArticle(article: Int) {
+        self.articlesFromFavourite += article
+        print("article has been added")
+    }
+    
+    func deleteArticle(article: Int) {
+        self.articlesFromFavourite -= article
+        print("article has been removed")
+    }
+    
+
 }
 
 

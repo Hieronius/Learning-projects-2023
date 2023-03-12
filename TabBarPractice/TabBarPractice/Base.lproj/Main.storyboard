@@ -225,7 +225,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Detail"/>
                                 <connections>
-                                    <segue destination="QhG-Aq-W0l" kind="presentation" id="8ad-49-Kpj"/>
+                                    <segue destination="QhG-Aq-W0l" kind="presentation" modalPresentationStyle="automatic" id="8ad-49-Kpj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,7 +259,7 @@
         <!--Detail View Controller-->
         <scene sceneID="oHL-sU-vSc">
             <objects>
-                <viewController id="QhG-Aq-W0l" customClass="DetailViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QhG-Aq-W0l" customClass="DetailViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HNH-Xd-KbE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,6 +312,7 @@
                             <constraint firstItem="wT9-jE-qpZ" firstAttribute="top" secondItem="7GT-x1-mAa" secondAttribute="bottom" constant="51" id="zls-1I-tKQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="t29-RU-WHD"/>
                     <connections>
                         <outlet property="getArticlesFromFeedFavourite" destination="m7O-7t-tMF" id="kN7-aB-4av"/>
                     </connections>

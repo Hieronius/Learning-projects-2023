@@ -37,10 +37,10 @@ class FavouriteViewController: UIViewController {
         print("get articles has been created")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        getArticlesFromFeed.text = "\(articlesFromFeed)"
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        getArticlesFromFeed.text = "\(articlesFromFeed)"
+//    }
     
     
     
@@ -62,6 +62,8 @@ class FavouriteViewController: UIViewController {
                 }
             }
         }
+//        viewDidLoad()
+//        viewDidAppear(true)
         viewDidLoad()
     }
 }
