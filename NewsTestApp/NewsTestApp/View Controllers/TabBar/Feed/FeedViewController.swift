@@ -13,6 +13,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     weak var tabBarDelegate: TabBarViewControllerDelegate?
     
+    // probably this variable can be used as a container for saved articles so i can send it to the Favourite View COntroller and back
     var feedArticles = [Article]()
     
     var testVar = 0

@@ -38,6 +38,7 @@ class SpecificViewController: UIViewController {
         }
     
     
+    // place where i can send data about like button being pressed with the help of delegation protocol to the FeedViewController
     @IBAction func specificLikeButtonPressed(_ sender: UIButton) {
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
