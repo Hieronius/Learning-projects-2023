@@ -9,6 +9,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var userLogin = ""
+    var userPassword = ""
+    var userName = ""
+    
     // color for text fields background color from Figma
     var textFieldColor = UIColor(displayP3Red: 117, green: 146, blue: 221, alpha: 0.1)
     
