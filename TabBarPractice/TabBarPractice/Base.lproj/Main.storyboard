@@ -220,6 +220,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZY-lK-345">
+                                <rect key="frame" x="131" y="502" width="113.5" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Detail"/>
+                                <connections>
+                                    <segue destination="QhG-Aq-W0l" kind="presentation" id="8ad-49-Kpj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M9f-Lv-gmm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -230,7 +238,9 @@
                             <constraint firstItem="N90-0p-XOe" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="MTR-CH-eUI"/>
                             <constraint firstItem="cSo-Zq-f84" firstAttribute="top" secondItem="JCS-bZ-jHR" secondAttribute="bottom" constant="64.5" id="Zny-9F-RRb"/>
                             <constraint firstItem="4eH-LZ-y2l" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="eHh-Lp-upL"/>
+                            <constraint firstItem="yZY-lK-345" firstAttribute="top" secondItem="cSo-Zq-f84" secondAttribute="bottom" constant="39.5" id="s6H-7q-ERY"/>
                             <constraint firstItem="4eH-LZ-y2l" firstAttribute="top" secondItem="M9f-Lv-gmm" secondAttribute="top" constant="47" id="vbH-XI-a9V"/>
+                            <constraint firstItem="yZY-lK-345" firstAttribute="centerX" secondItem="a8q-DJ-iWc" secondAttribute="centerX" id="wkT-op-Kpa"/>
                             <constraint firstItem="JCS-bZ-jHR" firstAttribute="centerY" secondItem="a8q-DJ-iWc" secondAttribute="centerY" id="yO6-JR-CsG"/>
                         </constraints>
                     </view>
@@ -251,7 +261,7 @@
             <objects>
                 <viewController id="QhG-Aq-W0l" customClass="DetailViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HNH-Xd-KbE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-x1-mAa">

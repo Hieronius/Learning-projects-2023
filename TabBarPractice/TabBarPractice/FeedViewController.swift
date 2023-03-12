@@ -49,22 +49,11 @@ class FeedViewController: UIViewController {
     }
     
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //        let tabBar = tabBarController
-    //        guard let viewControllers = tabBar?.viewControllers else { return }
-    //
-    //        for viewController in viewControllers {
-    //
-    //            if let favourNaviVC = viewController as? FavouriteNavigationViewController {
-    //
-    //                if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
-    //                    favouriteViewController.articlesFromFeed = articlesFromFavourite
-    //                    print("data has been sended")
-    //                }
-    //            }
-    //        }
-    //    }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let detailVC = segue.destination as? DetailViewController {
+                detailVC.numberOfDetailedArticles = self.articlesFromFavourite
+            }
+        }
     
     
     @IBAction func addArticleButtonPressed(_ sender: Any) {
@@ -88,3 +77,18 @@ class FeedViewController: UIViewController {
         }
     }
 }
+
+
+//let tabBar = tabBarController
+//guard let viewControllers = tabBar?.viewControllers else { return }
+//
+//for viewController in viewControllers {
+//
+//    if let favourNaviVC = viewController as? FavouriteNavigationViewController {
+//
+//        if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
+//            favouriteViewController.articlesFromFeed = articlesFromFavourite
+//            print("data has been sended")
+//        }
+//    }
+//}
