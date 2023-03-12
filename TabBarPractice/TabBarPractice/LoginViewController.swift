@@ -21,5 +21,14 @@ class LoginViewController: UIViewController {
     @IBAction func logInButtonPressed(_ sender: Any) {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tabBar = segue.destination as? TabBarViewController {
+            tabBar.login = loginTextField.text
+            tabBar.password = passTextField.text
+            print(tabBar.login)
+            print(tabBar.password)
+        }
+    }
+    
 }
 
