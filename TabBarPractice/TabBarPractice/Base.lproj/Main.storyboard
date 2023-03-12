@@ -65,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="879" y="10"/>
         </scene>
-        <!--Item 2-->
+        <!--Article-->
         <scene sceneID="SWV-wo-PXP">
             <objects>
                 <viewController id="6rB-DX-7K5" sceneMemberID="viewController">
@@ -75,13 +75,13 @@
                         <viewLayoutGuide key="safeArea" id="B8J-YX-z0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="53p-zb-jIZ"/>
+                    <tabBarItem key="tabBarItem" title="Article" image="note" catalog="system" id="53p-zb-jIZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcm-5T-h5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802" y="314"/>
+            <point key="canvasLocation" x="2801" y="10"/>
         </scene>
-        <!--Item-->
+        <!--Favourite-->
         <scene sceneID="liO-9x-cpE">
             <objects>
                 <viewController id="Zop-HR-vsn" sceneMemberID="viewController">
@@ -91,13 +91,13 @@
                         <viewLayoutGuide key="safeArea" id="DW2-wM-MA3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bGh-BH-mW4"/>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="star" catalog="system" id="bGh-BH-mW4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgh-MO-D3m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="993"/>
+            <point key="canvasLocation" x="2801" y="770"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="aFJ-fd-S4N">
             <objects>
                 <viewController id="Osi-Vv-hYB" sceneMemberID="viewController">
@@ -107,11 +107,11 @@
                         <viewLayoutGuide key="safeArea" id="M9f-Lv-gmm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="R5h-sK-TAQ"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="note.text" catalog="system" id="R5h-sK-TAQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAJ-Al-pVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802" y="-294"/>
+            <point key="canvasLocation" x="2801" y="-734"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="QM8-sR-apY">
@@ -152,6 +152,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="note" catalog="system" width="128" height="107"/>
+        <image name="note.text" catalog="system" width="128" height="107"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
