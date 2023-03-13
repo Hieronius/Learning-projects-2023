@@ -14,9 +14,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     weak var tabBarDelegate: TabBarViewControllerDelegate?
     
     // probably this variable can be used as a container for saved articles so i can send it to the Favourite View COntroller and back
-    var feedArticles = [Article]()
+    var savedArticles = [Article]()
     
-    var testVar = 0
     
     let defaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
     
@@ -34,28 +33,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.articles = values
                 self.table.reloadData()
                 
-//                print(self.tabBarController?.viewControllers!.count)
-//                print(self.tabBarController?.viewControllers!.count)
-//                print(" AJFkjsfkjsafkjsf - \(self.tabBarController?.viewControllers!.count)")
             }
         }
-        
-//        print(self.tabBarController?.viewControllers![1].title)
-//        print(self.tabBarController?.viewControllers![1].title)
-//        print(self.tabBarController?.viewControllers![1].title)
-//        var favouriteVC = self.tabBarController?.viewControllers![2] as! FavouriteViewController
-//        favouriteVC.articles = feedArticles
-        // now we have raw data. Access is stable and working.
-        
-        
-        
     }
     
     @IBAction func likeButtonPressed(_ sender: UIButton) {
         
+        // get access to selected article
         let likedArticleIndex = sender.tag
-        let tabBar = tabBarController as! TabBarViewController
         let likedArticle = articles[likedArticleIndex]
+    
         
         
         if sender.imageView?.image == UIImage(named: "like") {
@@ -63,12 +50,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("like button has been pressed")
             print(sender.tag)
             
-            // tabBar.savedArticles.append(articles[likedArticleIndex])
-            // self.tabBarDelegate?.saveArticle(article: likedArticle)
             
-            // print(tabBar.savedArticles.count)
-            feedArticles.append(likedArticle)
-            print(feedArticles.count)
+            savedArticles.append(likedArticle)
+            print(savedArticles.count)
             
             
             
@@ -77,14 +61,32 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("dislike button has been pressed")
             print(sender.tag)
             
-            // tabBar.savedArticles.removeLast()
-            // self.tabBarDelegate?.removeArticle(article: likedArticle)
-            // print(tabBar.savedArticles.count)
             
-            if let index = feedArticles.firstIndex(of: likedArticle) {
-                self.feedArticles.remove(at: index)
-                print(feedArticles.count)
+            if let index = savedArticles.firstIndex(of: likedArticle) {
+                self.savedArticles.remove(at: index)
+                print(savedArticles.count)
                 
+            }
+        }
+        
+        // define tab bar
+        let tabBar = self.tabBarController
+        
+        // check is there is a view controllers or nil
+        guard let viewControllers = tabBar?.viewControllers else { return }
+        
+        // get access to the Navigation View Controller which is connected to the specific ViewController
+        for viewController in viewControllers {
+            
+            if let favouriteNaviVC = viewController as? FavouriteNavigationViewController {
+                
+                // if our way to the NavigationViewController is succesful let's try to get viewController
+                if let favouriteVC = favouriteNaviVC.viewControllers.first as? FavouriteViewController {
+                    
+                    print("The article has been saved")
+                    favouriteVC.articles = self.savedArticles
+                    print(favouriteVC.articles.count)
+                }
             }
         }
     }
@@ -127,3 +129,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
 
+
+
+//let tabBar = self.tabBarController
+//guard let viewControllers = tabBar?.viewControllers else { return }
+//
+//for viewController in viewControllers {
+//
+//    if let favourNaviVC = viewController as? FavouriteNavigationViewController {
+//
+//        if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
+//            favouriteViewController.articlesFromFeed = self.articlesFromFavourite
+//            print("data has been sended")
+//            print(favouriteViewController.articlesFromFeed)
+//        }
+//    }
+//
+//}
+//viewDidLoad()

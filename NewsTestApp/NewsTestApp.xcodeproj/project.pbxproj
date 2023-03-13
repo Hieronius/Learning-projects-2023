@@ -134,9 +134,9 @@
 		DD78E0A229AB6F460055E656 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
+				DD88BFFD29BE555B0008D76D /* FavouriteNavigationViewController.swift */,
 				DD82226E29A7AC3D00E830C1 /* FavouriteViewController.swift */,
 				DD7A495D29B91161008D1A93 /* FavouriteCollectionViewCell.swift */,
-				DD88BFFD29BE555B0008D76D /* FavouriteNavigationViewController.swift */,
 			);
 			path = Favourite;
 			sourceTree = "<group>";

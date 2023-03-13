@@ -28,19 +28,14 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let vc = FavouriteViewController()
-//        vc.articles = self.savedArticles
-//        print("Favourite articles += 1")
         
+        
+        // code to get access to the profile view controller so it can display our data from createAccountViewController
         guard let viewControllers = viewControllers else { return }
         
         for viewController in viewControllers {
             if let feedNagivationViewController = viewController as? FeedNavigationViewController {
                 if let feedViewController = feedNagivationViewController.viewControllers.first as? FeedViewController {
-                    feedViewController.testVar = testLet
-                    print(feedViewController.testVar)
-                    print(feedViewController.testVar)
-                    print(feedViewController.testVar)
                     print("adadawdawdawd")
                     print("adadawdawdawd")
                     print("adadawdawdawd")
