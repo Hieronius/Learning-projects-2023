@@ -16,6 +16,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     // probably this variable can be used as a container for saved articles so i can send it to the Favourite View COntroller and back
     var savedArticles = [Article]()
     
+    // var arrayOfLikedButtons = [Int]()
+    
     
     let defaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
     
@@ -35,6 +37,31 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("FeedViewController appeared")
+        
+        var arrayOfArticlesToChange = [Int]()
+        
+        for article in articles {
+            if !savedArticles.contains(article) {
+                arrayOfArticlesToChange.append(articles.firstIndex(of: article)!)
+            } else {
+                print("there is nothing to fix")
+            }
+        }
+        
+        // here we should check our like button in tableView for this articles which have been deleted
+        for index in arrayOfArticlesToChange {
+        
+            if let cell = table.cellForRow(at: IndexPath(row: index, section: 0)) as? FeedTableViewCell {
+                cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+            }
+            
+        }
+        
     }
     
     @IBAction func likeButtonPressed(_ sender: UIButton) {
@@ -68,6 +95,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             }
         }
+        
+        // save position of the cell with pressed like button
+        // arrayOfLikedButtons.append(likedArticleIndex)
         
         // send current array of the articles to favourite
         
