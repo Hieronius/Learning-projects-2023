@@ -136,7 +136,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             guard let indexPath = table.indexPathForSelectedRow else { return }
             vc.article = articles[indexPath.row]
             vc.specificArticleIndex = indexPath
-            print(vc.specificArticleIndex)
+            if let articleCell = table.cellForRow(at: indexPath) as? FeedTableViewCell {
+                vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
+            }
             vc.feedVCDelegate = self
         }
         
@@ -180,7 +182,7 @@ extension FeedViewController: FeedViewControllerDelegate {
     
     func dislikeArticle(index: IndexPath) {
         if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
-            cell.likeButton.setImage(UIImage(named: "likeP"), for: .normal)
+            cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             
             if let indexOfSavedArticle = savedArticles.firstIndex(of: articles[index.row]) {
                 self.savedArticles.remove(at: indexOfSavedArticle)

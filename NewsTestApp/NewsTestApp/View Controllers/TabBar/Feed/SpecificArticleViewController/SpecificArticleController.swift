@@ -20,6 +20,8 @@ class SpecificViewController: UIViewController {
     
     var specificArticleIndex: IndexPath?
     
+    var specificLikeButtonImage: UIImage?
+    
     let specificDefaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
     
     // data for our specificViewController
@@ -36,8 +38,14 @@ class SpecificViewController: UIViewController {
         specificArticleLabel.text = article.title
         specificArticleText.text = article.content
         specificImageView.loadImage(urlString: article.urlToImage ?? specificDefaultImage)
-         specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
+        // specificLikeButton.setImage(UIImage(named: "like"), for: .normal)
+        specificLikeButton.setImage(specificLikeButtonImage, for: .normal)
         }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("specific vc has been loaded")
+    }
     
     
     // place where i can send data about like button being pressed with the help of delegation protocol to the FeedViewController
