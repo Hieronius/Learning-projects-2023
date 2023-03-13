@@ -45,12 +45,14 @@ class SpecificViewController: UIViewController {
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
             print("like button has been pressed")
-            print(sender.tag)
+            feedVCDelegate?.likeArticle(index: specificArticleIndex!)
+            
             
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
             print("dislike button has been pressed")
-            print(sender.tag)
+            feedVCDelegate?.dislikeArticle(index: specificArticleIndex!)
+            
         }
     }
 }

@@ -8,8 +8,8 @@
 import UIKit
 
 protocol FeedViewControllerDelegate: AnyObject {
-    func likeArticle(article: Article)
-    func dislikeArticle(article: Article)
+    func likeArticle(index: IndexPath)
+    func dislikeArticle(index: IndexPath)
 }
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -171,12 +171,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
 extension FeedViewController: FeedViewControllerDelegate {
-    func likeArticle(article: Article) {
-        
+    func likeArticle(index: IndexPath) {
+        if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
+            cell.likeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+        }
     }
     
-    func dislikeArticle(article: Article) {
-        
+    func dislikeArticle(index: IndexPath) {
+        if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
+            cell.likeButton.setImage(UIImage(named: "likeP"), for: .normal)
+        }
     }
     
     
