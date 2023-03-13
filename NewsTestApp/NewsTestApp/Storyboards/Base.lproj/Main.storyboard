@@ -573,7 +573,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-d5-5O5" userLabel="cellView">
                                                     <rect key="frame" x="0.0" y="0.0" width="355" height="289"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x66-wq-a2N">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x66-wq-a2N">
                                                             <rect key="frame" x="0.0" y="0.0" width="355" height="132"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="132" id="xLW-a6-lJC"/>

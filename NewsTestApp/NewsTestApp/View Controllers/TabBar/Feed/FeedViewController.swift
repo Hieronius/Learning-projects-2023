@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol FeedViewControllerDelegate: AnyObject {
+    func likeArticle(article: Article)
+    func dislikeArticle(article: Article)
+}
+
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
@@ -54,6 +59,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         // here we should check our like button in tableView for this articles which have been deleted
+        // use array of saved articles to clean it's like buttons if they have been pressed
         for index in arrayOfArticlesToChange {
         
             if let cell = table.cellForRow(at: IndexPath(row: index, section: 0)) as? FeedTableViewCell {
@@ -129,6 +135,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let vc = segue.destination as! SpecificViewController
             guard let indexPath = table.indexPathForSelectedRow else { return }
             vc.article = articles[indexPath.row]
+            vc.specificArticleIndex = indexPath
+            print(vc.specificArticleIndex)
+            vc.feedVCDelegate = self
         }
         
         
@@ -161,21 +170,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
 
-
-
-//let tabBar = self.tabBarController
-//guard let viewControllers = tabBar?.viewControllers else { return }
-//
-//for viewController in viewControllers {
-//
-//    if let favourNaviVC = viewController as? FavouriteNavigationViewController {
-//
-//        if let favouriteViewController = favourNaviVC.viewControllers.first as? FavouriteViewController {
-//            favouriteViewController.articlesFromFeed = self.articlesFromFavourite
-//            print("data has been sended")
-//            print(favouriteViewController.articlesFromFeed)
-//        }
-//    }
-//
-//}
-//viewDidLoad()
+extension FeedViewController: FeedViewControllerDelegate {
+    func likeArticle(article: Article) {
+        
+    }
+    
+    func dislikeArticle(article: Article) {
+        
+    }
+    
+    
+}
