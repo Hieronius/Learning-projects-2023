@@ -598,7 +598,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-gc-oBA">
-                                                            <rect key="frame" x="16" y="170" width="42.5" height="19.5"/>
+                                                            <rect key="frame" x="16" y="170" width="323" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -623,6 +623,7 @@
                                                         <constraint firstItem="c1B-gc-oBA" firstAttribute="top" secondItem="x66-wq-a2N" secondAttribute="bottom" constant="38" id="le4-Xb-z5E"/>
                                                         <constraint firstItem="mhe-lu-MA0" firstAttribute="top" secondItem="x66-wq-a2N" secondAttribute="bottom" constant="60" id="mih-r5-d0h"/>
                                                         <constraint firstAttribute="trailing" secondItem="mhe-lu-MA0" secondAttribute="trailing" constant="16" id="n75-wl-9Tn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="c1B-gc-oBA" secondAttribute="trailing" constant="16" id="rhR-aX-3Ob"/>
                                                         <constraint firstAttribute="trailing" secondItem="VKu-O4-jZ4" secondAttribute="trailing" constant="10" id="vh9-qJ-OWJ"/>
                                                         <constraint firstItem="VKu-O4-jZ4" firstAttribute="top" secondItem="x66-wq-a2N" secondAttribute="bottom" id="zU4-W2-Xbu"/>
                                                     </constraints>
