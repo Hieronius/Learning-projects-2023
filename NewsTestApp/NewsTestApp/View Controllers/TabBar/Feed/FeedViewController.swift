@@ -43,7 +43,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let likedArticleIndex = sender.tag
         let likedArticle = articles[likedArticleIndex]
     
-        
+        // add or remove selected articles from savedArticles array
         
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
@@ -68,6 +68,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             }
         }
+        
+        // send current array of the articles to favourite
         
         // define tab bar
         let tabBar = self.tabBarController

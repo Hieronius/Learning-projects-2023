@@ -22,6 +22,11 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        collectionView.reloadData()
+    }
+    
     
     @IBAction func favouriteLikeButtonPressed(_ sender: UIButton) {
         if sender.imageView?.image == UIImage(named: "like") {
