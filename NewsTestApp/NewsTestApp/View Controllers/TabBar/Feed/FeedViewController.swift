@@ -174,14 +174,19 @@ extension FeedViewController: FeedViewControllerDelegate {
     func likeArticle(index: IndexPath) {
         if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            savedArticles.append(articles[index.row])
         }
     }
     
     func dislikeArticle(index: IndexPath) {
         if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "likeP"), for: .normal)
+            
+            if let indexOfSavedArticle = savedArticles.firstIndex(of: articles[index.row]) {
+                self.savedArticles.remove(at: indexOfSavedArticle)
+                
+            }
         }
+        
     }
-    
-    
 }
