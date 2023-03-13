@@ -25,26 +25,15 @@ class DetailViewController: UIViewController {
         getArticlesFromFeedFavourite.text = "\(numberOfDetailedArticles)"
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        getArticlesFromFeedFavourite.text = "\(numberOfDetailedArticles)"
-//    }
-    
     @IBAction func likeArticleButtonPressed(_ sender: Any) {
         
         numberOfDetailedArticles += 1
-//        let feedVC = FeedViewController()
-//        feedVC.articlesFromFavourite = self.numberOfDetailedArticles
         self.feedViewControllerDelegate?.saveArticle(article: 1)
-        // viewDidAppear(<#T##animated: Bool##Bool#>)
-        // print("Now there is - \(feedVC.articlesFromFavourite)")
         viewDidLoad()
     }
     
     @IBAction func dislikeButtonPressed(_ sender: Any) {
         numberOfDetailedArticles -= 1
-//         let feedVC = FeedViewController()
-//        feedVC.articlesFromFavourite = self.numberOfDetailedArticles
         self.feedViewControllerDelegate?.deleteArticle(article: 1)
         viewDidLoad()
     }

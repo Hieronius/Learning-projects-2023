@@ -62,8 +62,6 @@ class FavouriteViewController: UIViewController {
                 }
             }
         }
-//        viewDidLoad()
-//        viewDidAppear(true)
         viewDidLoad()
     }
 }

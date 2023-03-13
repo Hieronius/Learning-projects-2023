@@ -225,7 +225,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to Detail"/>
                                 <connections>
-                                    <segue destination="QhG-Aq-W0l" kind="presentation" modalPresentationStyle="automatic" id="8ad-49-Kpj"/>
+                                    <segue destination="QhG-Aq-W0l" kind="show" id="8ad-49-Kpj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -261,11 +261,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="QhG-Aq-W0l" customClass="DetailViewController" customModule="TabBarPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HNH-Xd-KbE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-x1-mAa">
-                                <rect key="frame" x="37" y="148" width="301.5" height="82"/>
+                                <rect key="frame" x="37" y="244" width="301.5" height="82"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Articles from Feed/Favourite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31C-qt-5dq">
                                         <rect key="frame" x="0.0" y="0.0" width="301.5" height="30"/>
@@ -282,7 +282,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wT9-jE-qpZ">
-                                <rect key="frame" x="125" y="281" width="125" height="77"/>
+                                <rect key="frame" x="125" y="377" width="125" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGx-OS-RPk">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="34.5"/>
