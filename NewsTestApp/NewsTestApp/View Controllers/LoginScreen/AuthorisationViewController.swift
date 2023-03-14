@@ -16,6 +16,11 @@ class AuthorisationViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     
+    var isLogAndPasswordTextFieldsIsEmpty: Bool {
+        emailTextField.text?.isEmpty == true ||
+        passwordTextField.text?.isEmpty == true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +40,29 @@ class AuthorisationViewController: UIViewController {
     }
     
     @IBAction func logInButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "TabBarSegue", sender: sender)
+        
+        if emailTextField.text == testUser.userLogin && passwordTextField.text == testUser.userPassword {
+            performSegue(withIdentifier: "TabBarSegue", sender: sender)
+            
+        } else if isLogAndPasswordTextFieldsIsEmpty {
+            
+            
+            let ac = UIAlertController(title: "Ошибка", message: "Заполните пустые поля", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            
+        } else if isValidEmail(emailTextField.text!) == false {
+            
+            let ac = UIAlertController(title: "Ошибка", message: "Проверьте правильность ввода почты", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+            
+        } else {
+            
+            let ac = UIAlertController(title: "Ошибка", message: "Указан неправильный логин или пароль", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(ac, animated: true)
+        }
     }
     
     

@@ -5,14 +5,20 @@
 //  Created by Арсентий Халимовский on 14.03.2023.
 //
 
-import Foundation
+import UIKit
 
 struct UserData {
     var userName: String
     var userLogin: String
     var userPassword: String
     var userID: Int
+    var userTestPhoto: UIImage
         
 }
 
-let testUser = UserData(userName: "Иван", userLogin: "test@mail.ru", userPassword: "12345", userID: 252553)
+let testUser = UserData(userName: "Иван",
+                        userLogin: "test@mail.ru",
+                        userPassword: "12345",
+                        userID: 252553,
+                        userTestPhoto: UIImage(named: "image1")!)
+                        
