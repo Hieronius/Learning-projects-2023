@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol FavouriteViewControllerDelegate: AnyObject {
+    func likeArticle(index: IndexPath, article: Article)
+    func dislikeArticle(index: IndexPath)
+}
+
 class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
@@ -25,6 +30,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         collectionView.reloadData()
+        print("Favourite View Controller has been appeared")
     }
     
     
@@ -32,22 +38,15 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         let vc = segue.destination as! SpecificViewController
         guard let indexPath = collectionView.indexPathsForSelectedItems?[0] else { return }
         vc.article = articles[indexPath.row]
+        vc.specificArticleIndex = indexPath
         if let collectionCell = collectionView.cellForItem(at: indexPath) as? FavouriteCollectionViewCell {
             vc.specificLikeButtonImage = collectionCell.collectionLikeButton.imageView?.image
         }
         
+        // here i should define delegation for specific View COntroller
+        vc.favouriteVCDelegate = self
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vc = segue.destination as! SpecificViewController
-//        guard let indexPath = table.indexPathForSelectedRow else { return }
-//        vc.article = articles[indexPath.row]
-//        vc.specificArticleIndex = indexPath
-//        if let articleCell = table.cellForRow(at: indexPath) as? FeedTableViewCell {
-//            vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
-//        }
-//        vc.feedVCDelegate = self
-//    }
+
     
     
     @IBAction func favouriteLikeButtonPressed(_ sender: UIButton) {
@@ -65,6 +64,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             print("Favourite like button has been pressed")
             
             articles.append(likedArticle)
+             viewDidAppear(true)
             
         } else {
             
@@ -75,6 +75,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             if let index = articles.firstIndex(of: likedArticle) {
                 self.articles.remove(at: index)
                 print(articles.count)
+                viewDidAppear(true)
             }
         }
         
@@ -126,4 +127,69 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         }
         
     }
+
+extension FavouriteViewController: FavouriteViewControllerDelegate {
+    
+    func likeArticle(index: IndexPath, article: Article) {
+        if let collectionCell = collectionView.cellForItem(at: index) as? FavouriteCollectionViewCell {
+            collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            articles.append(article)
+            
+            
+            // probably we can use this chunk of code as a special function like addArticleToSavedArticles
+            let tabBar = self.tabBarController
+            
+            // check is there is a view controllers or nil
+            guard let viewControllers = tabBar?.viewControllers else { return }
+            
+            // get access to the Navigation View Controller which is connected to the specific ViewController
+            for viewController in viewControllers {
+                
+                if let feedNaviVC = viewController as? FeedNavigationViewController {
+                    
+                    // if our way to the NavigationViewController is succesful let's try to get viewController
+                    if let feedVC = feedNaviVC.viewControllers.first as? FeedViewController {
+                        
+                        print("The article has been saved")
+                        feedVC.savedArticles = self.articles
+                        print(feedVC.savedArticles.count)
+                    }
+                }
+            }
+        }
+    }
+    
+    func dislikeArticle(index: IndexPath) {
+        if let collectionCell = collectionView.cellForItem(at: index) as? FavouriteCollectionViewCell {
+            collectionCell.collectionLikeButton.setImage(UIImage(named: "like"), for: .normal)
+            
+            if let indexOfSavedArticle = articles.firstIndex(of: articles[index.row]) {
+                self.articles.remove(at: indexOfSavedArticle)
+                
+            }
+            
+            let tabBar = self.tabBarController
+            
+            // check is there is a view controllers or nil
+            guard let viewControllers = tabBar?.viewControllers else { return }
+            
+            // get access to the Navigation View Controller which is connected to the specific ViewController
+            for viewController in viewControllers {
+                
+                if let feedNaviVC = viewController as? FeedNavigationViewController {
+                    
+                    // if our way to the NavigationViewController is succesful let's try to get viewController
+                    if let feedVC = feedNaviVC.viewControllers.first as? FeedViewController {
+                        
+                        print("The article has been saved")
+                        feedVC.savedArticles = self.articles
+                        print(feedVC.savedArticles.count)
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}
     

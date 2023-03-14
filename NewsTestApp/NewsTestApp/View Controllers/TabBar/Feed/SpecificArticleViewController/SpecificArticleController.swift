@@ -18,6 +18,8 @@ class SpecificViewController: UIViewController {
     
     weak var feedVCDelegate: FeedViewControllerDelegate?
     
+    weak var favouriteVCDelegate: FavouriteViewControllerDelegate?
+    
     var specificArticleIndex: IndexPath?
     
     var specificLikeButtonImage: UIImage?
@@ -54,12 +56,14 @@ class SpecificViewController: UIViewController {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
             print("like button has been pressed")
             feedVCDelegate?.likeArticle(index: specificArticleIndex!)
+            favouriteVCDelegate?.likeArticle(index: specificArticleIndex!, article: self.article)
             
             
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
             print("dislike button has been pressed")
             feedVCDelegate?.dislikeArticle(index: specificArticleIndex!)
+            favouriteVCDelegate?.dislikeArticle(index: specificArticleIndex!)
             
         }
     }

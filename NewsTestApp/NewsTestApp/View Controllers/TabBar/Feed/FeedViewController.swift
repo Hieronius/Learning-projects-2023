@@ -54,7 +54,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if !savedArticles.contains(article) {
                 arrayOfArticlesToChange.append(articles.firstIndex(of: article)!)
             } else {
-                print("there is nothing to fix")
+                print("there is no like buttons to fix")
             }
         }
         

@@ -402,7 +402,9 @@
                             <constraint firstItem="lbZ-eC-iN3" firstAttribute="bottom" secondItem="TEx-Se-Iie" secondAttribute="bottom" id="Lp9-HN-vfP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Избранное" largeTitleDisplayMode="always" id="fqT-Mb-OIE"/>
+                    <navigationItem key="navigationItem" title="Избранное" largeTitleDisplayMode="always" id="fqT-Mb-OIE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Fzy-qK-HEv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="TEx-Se-Iie" id="J8D-0O-p2N"/>
                     </connections>
