@@ -28,6 +28,28 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SpecificViewController
+        guard let indexPath = collectionView.indexPathsForSelectedItems?[0] else { return }
+        vc.article = articles[indexPath.row]
+        if let collectionCell = collectionView.cellForItem(at: indexPath) as? FavouriteCollectionViewCell {
+            vc.specificLikeButtonImage = collectionCell.collectionLikeButton.imageView?.image
+        }
+        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! SpecificViewController
+//        guard let indexPath = table.indexPathForSelectedRow else { return }
+//        vc.article = articles[indexPath.row]
+//        vc.specificArticleIndex = indexPath
+//        if let articleCell = table.cellForRow(at: indexPath) as? FeedTableViewCell {
+//            vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
+//        }
+//        vc.feedVCDelegate = self
+//    }
+    
+    
     @IBAction func favouriteLikeButtonPressed(_ sender: UIButton) {
         
         

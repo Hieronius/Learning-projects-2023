@@ -383,6 +383,7 @@
                                             <outlet property="collectionDateLabel" destination="ffq-wG-7Gi" id="tem-oh-xYy"/>
                                             <outlet property="collectionImageView" destination="aRK-m9-umS" id="mKY-To-vNG"/>
                                             <outlet property="collectionLikeButton" destination="HWQ-Xi-3Mu" id="u4N-8s-MSj"/>
+                                            <segue destination="GlJ-RN-gP9" kind="show" id="qsf-Mb-sth"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -783,6 +784,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="qsf-Mb-sth"/>
         <segue reference="6aW-PU-FYD"/>
     </inferredMetricsTieBreakers>
     <resources>
