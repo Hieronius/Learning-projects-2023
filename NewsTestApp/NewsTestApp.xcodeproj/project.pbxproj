@@ -30,6 +30,7 @@
 		DD88C00029BE55BA0008D76D /* ProfileNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFFF29BE55BA0008D76D /* ProfileNavigationViewController.swift */; };
 		DD88C00329C0CDE80008D76D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88C00229C0CDE80008D76D /* UserData.swift */; };
 		DD88C00529C0E3A20008D76D /* DefaultArticleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88C00429C0E3A20008D76D /* DefaultArticleImage.swift */; };
+		DD88C00729C0E6460008D76D /* Article + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88C00629C0E6460008D76D /* Article + Extension.swift */; };
 		DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */; };
 		DDD1B89E29ADFCE800FEC5B2 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */; };
 		DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */; };
@@ -61,6 +62,7 @@
 		DD88BFFF29BE55BA0008D76D /* ProfileNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationViewController.swift; sourceTree = "<group>"; };
 		DD88C00229C0CDE80008D76D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		DD88C00429C0E3A20008D76D /* DefaultArticleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultArticleImage.swift; sourceTree = "<group>"; };
+		DD88C00629C0E6460008D76D /* Article + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article + Extension.swift"; sourceTree = "<group>"; };
 		DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */,
 				DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */,
+				DD88C00629C0E6460008D76D /* Article + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				DD82226F29A7AC3D00E830C1 /* FavouriteViewController.swift in Sources */,
 				DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */,
 				DD88BFFE29BE555B0008D76D /* FavouriteNavigationViewController.swift in Sources */,
+				DD88C00729C0E6460008D76D /* Article + Extension.swift in Sources */,
 				DD88BFF829BDF5D40008D76D /* FeedNavigationViewController.swift in Sources */,
 				DD88C00329C0CDE80008D76D /* UserData.swift in Sources */,
 				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,

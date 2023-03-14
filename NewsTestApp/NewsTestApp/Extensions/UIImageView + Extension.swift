@@ -7,8 +7,10 @@
 
 import UIKit
 
-// String file needed
+
 extension UIImageView {
+    
+    /// Load image from API web-adress
     func loadImage(urlString: String) {
         guard let url = URL(string: urlString) else { return }
         

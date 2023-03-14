@@ -55,14 +55,14 @@ class SpecificViewController: UIViewController {
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
             print("like button has been pressed")
-            feedVCDelegate?.likeArticle(index: specificArticleIndex!)
+            feedVCDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
             favouriteVCDelegate?.likeArticle(index: specificArticleIndex!, article: self.article)
             
             
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
             print("dislike button has been pressed")
-            feedVCDelegate?.dislikeArticle(index: specificArticleIndex!)
+            feedVCDelegate?.removeLikedArticleFromSaved(index: specificArticleIndex!)
             favouriteVCDelegate?.dislikeArticle(index: specificArticleIndex!)
             
         }

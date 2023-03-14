@@ -22,8 +22,6 @@ struct Article: Codable {
      let description: String?
      let url: String
      let urlToImage: String?
-     // JSON has Date data type of the publishedAt property
-     // May be need some fixes
      let publishedAt: String
      let content: String
 }
@@ -32,12 +30,6 @@ struct Article: Codable {
 struct Source: Codable {
     let id: String?
     let name: String
-}
-
-extension Article: Equatable {
-    static func == (lhs: Article, rhs: Article) -> Bool {
-        return lhs.title == rhs.title
-    }
 }
 
 

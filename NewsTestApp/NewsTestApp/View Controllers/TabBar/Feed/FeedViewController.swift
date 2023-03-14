@@ -6,189 +6,137 @@
 //
 
 import UIKit
-
+// add this protocol for protocol files
 protocol FeedViewControllerDelegate: AnyObject {
-    func likeArticle(index: IndexPath)
-    func dislikeArticle(index: IndexPath)
+    func addToSavedLikedArticle(index: IndexPath)
+    func removeLikedArticleFromSaved(index: IndexPath)
 }
 
+// make two different extensions here for FeedUITable
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var feedTable: UITableView!
     
-    @IBOutlet weak var table: UITableView!
-    
-    weak var tabBarDelegate: TabBarViewControllerDelegate?
-    
-    // probably this variable can be used as a container for saved articles so i can send it to the Favourite View COntroller and back
     var savedArticles = [Article]()
-    
-    // var arrayOfLikedButtons = [Int]()
-    
-    
-    // let defaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
-    
-    // test array for parsed data from our API
-    var articles = [Article]()
+    var articlesDownloadedFromAPI = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        // call our task to get data in JSON format from Free NEWs API
-        FeedAPIManager.shared.getNews { [weak self] values in
+        FeedAPIManager.shared.getNewsFromAPI { [weak self] values in
             DispatchQueue.main.async {
                 guard let self else { return }
-                self.articles = values
-                self.table.reloadData()
-                
+                self.articlesDownloadedFromAPI = values
+                self.feedTable.reloadData()
             }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print("FeedViewController appeared")
         
+        checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton()
+    }
+    
+    /// When user wan't to go back from Detail article screen back to the News Feed screen this method should check is article has been liked or disliked
+    func checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton() {
         var arrayOfArticlesToChange = [Int]()
         
-        for article in articles {
+        for article in articlesDownloadedFromAPI {
             if !savedArticles.contains(article) {
-                arrayOfArticlesToChange.append(articles.firstIndex(of: article)!)
-            } else {
-                print("there is no like buttons to fix")
+                arrayOfArticlesToChange.append(articlesDownloadedFromAPI.firstIndex(of: article)!)
             }
         }
         
-        // here we should check our like button in tableView for this articles which have been deleted
-        // use array of saved articles to clean it's like buttons if they have been pressed
         for index in arrayOfArticlesToChange {
         
-            if let cell = table.cellForRow(at: IndexPath(row: index, section: 0)) as? FeedTableViewCell {
+            if let cell = feedTable.cellForRow(at: IndexPath(row: index, section: 0)) as? FeedTableViewCell {
                 cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             }
-            
         }
-        
     }
     
     @IBAction func likeButtonPressed(_ sender: UIButton) {
-        
-        // get access to selected article
         let likedArticleIndex = sender.tag
-        let likedArticle = articles[likedArticleIndex]
-    
-        // add or remove selected articles from savedArticles array
+        let likedArticle = articlesDownloadedFromAPI[likedArticleIndex]
         
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
-            print("Feed like button has been pressed")
-            print("Feed sender tag - \(likedArticleIndex) has been pressed")
-            
-            
             savedArticles.append(likedArticle)
-            print(savedArticles.count)
-            
-            
-            
+        
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
-            print("Feed dislike button has been pressed")
-            print("Feed sender tag - \(likedArticleIndex) has been pressed")
-            
             
             if let index = savedArticles.firstIndex(of: likedArticle) {
                 self.savedArticles.remove(at: index)
-                print(savedArticles.count)
-                
             }
         }
-        
-        // save position of the cell with pressed like button
-        // arrayOfLikedButtons.append(likedArticleIndex)
-        
-        // send current array of the articles to favourite
-        
-        // define tab bar
+        matchSavedArticlesWithFavouriteArticles()
+    }
+    
+    func matchSavedArticlesWithFavouriteArticles() {
         let tabBar = self.tabBarController
-        
-        // check is there is a view controllers or nil
+    
         guard let viewControllers = tabBar?.viewControllers else { return }
         
-        // get access to the Navigation View Controller which is connected to the specific ViewController
         for viewController in viewControllers {
-            
             if let favouriteNaviVC = viewController as? FavouriteNavigationViewController {
-                
-                // if our way to the NavigationViewController is succesful let's try to get viewController
                 if let favouriteVC = favouriteNaviVC.viewControllers.first as? FavouriteViewController {
-                    
-                    print("The article has been saved")
                     favouriteVC.articles = self.savedArticles
-                    print(favouriteVC.articles.count)
                 }
             }
         }
     }
         
-        
-        
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let vc = segue.destination as! SpecificViewController
-            guard let indexPath = table.indexPathForSelectedRow else { return }
-            vc.article = articles[indexPath.row]
+            guard let indexPath = feedTable.indexPathForSelectedRow else { return }
+            vc.article = articlesDownloadedFromAPI[indexPath.row]
             vc.specificArticleIndex = indexPath
-            if let articleCell = table.cellForRow(at: indexPath) as? FeedTableViewCell {
+            if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
                 vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
             }
             vc.feedVCDelegate = self
         }
         
-        
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return articles.count
+            return articlesDownloadedFromAPI.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
             
-            // there is need some default image for articles without propper image
-            // plus may be i should unwrap image with guard or if else
-            cell.bigImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
+            cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.row].urlToImage ?? defaultImage)
             cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             cell.likeButton.tag = indexPath.row
-            print(cell.likeButton.tag)
-            print(cell.likeButton.tag)
-            print(cell.likeButton.tag)
             
-            
-            cell.dateLabel.text = articles[indexPath.row].publishedAt
-            cell.articleLabel.text = articles[indexPath.row].title
-            cell.articleText.text = articles[indexPath.row].description
+            cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.row].publishedAt
+            cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.row].title
+            cell.articleText.text = articlesDownloadedFromAPI[indexPath.row].description
             
             cell.layer.cornerRadius = 20
             
             return cell
         }
         
-        
     }
 
+// probably should send this code to the extension
 extension FeedViewController: FeedViewControllerDelegate {
-    func likeArticle(index: IndexPath) {
-        if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
+    func addToSavedLikedArticle(index: IndexPath) {
+        if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "likePressed"), for: .normal)
-            savedArticles.append(articles[index.row])
+            savedArticles.append(articlesDownloadedFromAPI[index.row])
         }
     }
     
-    func dislikeArticle(index: IndexPath) {
-        if let cell = table.cellForRow(at: index) as? FeedTableViewCell {
+    func removeLikedArticleFromSaved(index: IndexPath) {
+        if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             
-            if let indexOfSavedArticle = savedArticles.firstIndex(of: articles[index.row]) {
+            if let indexOfSavedArticle = savedArticles.firstIndex(of: articlesDownloadedFromAPI[index.row]) {
                 self.savedArticles.remove(at: indexOfSavedArticle)
                 
             }
         }
-        
     }
 }

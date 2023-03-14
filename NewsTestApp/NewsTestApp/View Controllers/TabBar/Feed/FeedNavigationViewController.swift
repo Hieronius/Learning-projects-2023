@@ -11,7 +11,5 @@ class FeedNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // some code here
     }
 }

@@ -13,7 +13,6 @@ struct UserData {
     var userPassword: String
     var userID: Int
     var userTestPhoto: UIImage
-        
 }
 
 var testUser = UserData(userName: "Иван",

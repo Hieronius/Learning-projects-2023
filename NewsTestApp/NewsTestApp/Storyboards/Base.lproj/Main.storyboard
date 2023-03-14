@@ -668,7 +668,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="f9P-f7-AKS"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="table" destination="Wek-fy-EUv" id="mfA-qP-xer"/>
+                        <outlet property="feedTable" destination="Wek-fy-EUv" id="mfA-qP-xer"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSB-pE-1eR" sceneMemberID="firstResponder"/>
