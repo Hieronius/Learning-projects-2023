@@ -47,6 +47,7 @@ class ResetViewController: UIViewController {
             ac.addAction(UIAlertAction(title: "Ok", style: .default))
             present(ac, animated: true)
             resetEmailTextField.text = ""
+            
         }
         
         

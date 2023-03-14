@@ -28,6 +28,7 @@
 		DD88BFF829BDF5D40008D76D /* FeedNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFF729BDF5D40008D76D /* FeedNavigationViewController.swift */; };
 		DD88BFFE29BE555B0008D76D /* FavouriteNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFFD29BE555B0008D76D /* FavouriteNavigationViewController.swift */; };
 		DD88C00029BE55BA0008D76D /* ProfileNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88BFFF29BE55BA0008D76D /* ProfileNavigationViewController.swift */; };
+		DD88C00329C0CDE80008D76D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88C00229C0CDE80008D76D /* UserData.swift */; };
 		DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */; };
 		DDD1B89E29ADFCE800FEC5B2 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */; };
 		DDF5AD6F29A90D3A00FA48F9 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */; };
@@ -57,6 +58,7 @@
 		DD88BFF729BDF5D40008D76D /* FeedNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavigationViewController.swift; sourceTree = "<group>"; };
 		DD88BFFD29BE555B0008D76D /* FavouriteNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteNavigationViewController.swift; sourceTree = "<group>"; };
 		DD88BFFF29BE55BA0008D76D /* ProfileNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationViewController.swift; sourceTree = "<group>"; };
+		DD88C00229C0CDE80008D76D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		DDD1B89B29ADFC5D00FEC5B2 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		DDD1B89D29ADFCE800FEC5B2 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		DDF5AD6E29A90D3A00FA48F9 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
@@ -218,10 +220,19 @@
 		DD82226529A79F5000E830C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD88C00129C0CDD30008D76D /* AuthorisationModel */,
 				DD78E07429AA2D790055E656 /* FeedViewModel */,
 				DD78E07029AA141A0055E656 /* MapViewModel */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DD88C00129C0CDD30008D76D /* AuthorisationModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD88C00229C0CDE80008D76D /* UserData.swift */,
+			);
+			path = AuthorisationModel;
 			sourceTree = "<group>";
 		};
 		DDD1B89F29ADFE5100FEC5B2 /* SpecificArticleViewController */ = {
@@ -328,6 +339,7 @@
 				DDD1B89C29ADFC5D00FEC5B2 /* UIImageView + Extension.swift in Sources */,
 				DD88BFFE29BE555B0008D76D /* FavouriteNavigationViewController.swift in Sources */,
 				DD88BFF829BDF5D40008D76D /* FeedNavigationViewController.swift in Sources */,
+				DD88C00329C0CDE80008D76D /* UserData.swift in Sources */,
 				DD82226B29A7AB7200E830C1 /* FeedViewController.swift in Sources */,
 				DD82227129A7ACDA00E830C1 /* ProfileViewController.swift in Sources */,
 				DD88C00029BE55BA0008D76D /* ProfileNavigationViewController.swift in Sources */,
