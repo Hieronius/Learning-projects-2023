@@ -16,9 +16,9 @@ struct UserData {
         
 }
 
-let testUser = UserData(userName: "Иван",
+var testUser = UserData(userName: "Иван",
                         userLogin: "test@mail.ru",
                         userPassword: "12345",
                         userID: 252553,
-                        userTestPhoto: UIImage(named: "image1")!)
+                        userTestPhoto: UIImage(named: "image 1")!)
                         

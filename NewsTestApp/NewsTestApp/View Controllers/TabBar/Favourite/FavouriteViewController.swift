@@ -17,7 +17,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let favouriteDefaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
+    // let favouriteDefaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
     
     var articles = [Article]()
     
@@ -123,7 +123,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath) as! FavouriteCollectionViewCell
             collectionCell.collectionDateLabel.text = articles[indexPath.row].publishedAt
             collectionCell.collectionArticleLabel.text = articles[indexPath.row].title
-            collectionCell.collectionImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? favouriteDefaultImage)
+            collectionCell.collectionImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
             collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
             collectionCell.collectionLikeButton.tag = indexPath.row
             print("collection cell with buttonTag - \(collectionCell.collectionLikeButton.tag)has beed created")

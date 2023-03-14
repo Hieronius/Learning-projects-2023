@@ -9,9 +9,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    var userLogin = ""
-    var userPassword = ""
-    var userName = ""
+//    var userLogin = ""
+//    var userPassword = ""
+//    var userName = ""
     
     // color for text fields background color from Figma
     var textFieldColor = UIColor(displayP3Red: 117, green: 146, blue: 221, alpha: 0.1)
@@ -34,6 +34,10 @@ class ProfileViewController: UIViewController {
         profileEmailFeild.layer.borderWidth = 0.5
         profileEmailFeild.layer.borderColor = textFieldColor.cgColor
         profileEmailFeild.layer.masksToBounds = true
+        
+        profileImageView.image = testUser.userTestPhoto
+        profileNameField.text = testUser.userName
+        profileEmailFeild.text = testUser.userLogin
     
     }
     
