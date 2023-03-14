@@ -56,12 +56,18 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         let likedArticleIndex = sender.tag
         let likedArticle = articles[likedArticleIndex]
         
+//        let likedArticleIndex = collectionView.indexPathsForSelectedItems!.first
+//        let likedArticle = articles[likedArticleIndex!.row]
+        
+    
+        
         // add or remove selected articles from savedArticles array
         
         
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
             print("Favourite like button has been pressed")
+            print("article with senderTag - \(sender.tag) has been pressed")
             
             articles.append(likedArticle)
              viewDidAppear(true)
@@ -70,12 +76,14 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             
             sender.setImage(UIImage(named: "like"), for: .normal)
             print("Favourite dislike button has been pressed")
+            print("article with senderTag - \(sender.tag) has been pressed")
             
             // if there is like button already pressed and we wan't to remove article
             if let index = articles.firstIndex(of: likedArticle) {
                 self.articles.remove(at: index)
                 print(articles.count)
                 viewDidAppear(true)
+                
             }
         }
         
@@ -117,7 +125,8 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             collectionCell.collectionArticleLabel.text = articles[indexPath.row].title
             collectionCell.collectionImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? favouriteDefaultImage)
             collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
-            print("cell has beed created")
+            collectionCell.collectionLikeButton.tag = indexPath.row
+            print("collection cell with buttonTag - \(collectionCell.collectionLikeButton.tag)has beed created")
             collectionCell.layer.cornerRadius = 20
             return collectionCell
         }

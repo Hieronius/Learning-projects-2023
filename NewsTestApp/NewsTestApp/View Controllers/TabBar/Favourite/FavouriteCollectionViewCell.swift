@@ -14,4 +14,7 @@ class FavouriteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var collectionDateLabel: UILabel!
     @IBOutlet weak var collectionArticleLabel: UILabel!
     @IBOutlet weak var collectionLikeButton: UIButton!
+    
+    
+    
 }

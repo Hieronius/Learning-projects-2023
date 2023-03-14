@@ -80,8 +80,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
-            print("like button has been pressed")
-            print(sender.tag)
+            print("Feed like button has been pressed")
+            print("Feed sender tag - \(likedArticleIndex) has been pressed")
             
             
             savedArticles.append(likedArticle)
@@ -91,8 +91,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
-            print("dislike button has been pressed")
-            print(sender.tag)
+            print("Feed dislike button has been pressed")
+            print("Feed sender tag - \(likedArticleIndex) has been pressed")
             
             
             if let index = savedArticles.firstIndex(of: likedArticle) {
