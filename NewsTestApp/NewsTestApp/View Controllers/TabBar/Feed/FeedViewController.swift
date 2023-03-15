@@ -40,15 +40,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     /// When user wan't to go back from Detail article screen back to the News Feed screen this method should check is article has been liked or disliked
     func checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton() {
         var arrayOfArticlesToChange = [Int]()
-        
         for article in articlesDownloadedFromAPI {
             if !savedArticles.contains(article) {
                 arrayOfArticlesToChange.append(articlesDownloadedFromAPI.firstIndex(of: article)!)
             }
         }
-        
         for index in arrayOfArticlesToChange {
-        
             if let cell = feedTable.cellForRow(at: IndexPath(row: index, section: 0)) as? FeedTableViewCell {
                 cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             }
@@ -58,14 +55,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func likeButtonPressed(_ sender: UIButton) {
         let likedArticleIndex = sender.tag
         let likedArticle = articlesDownloadedFromAPI[likedArticleIndex]
-        
         if sender.imageView?.image == UIImage(named: "like") {
             sender.setImage(UIImage(named: "likePressed"), for: .normal)
             savedArticles.append(likedArticle)
-        
         } else {
             sender.setImage(UIImage(named: "like"), for: .normal)
-            
             if let index = savedArticles.firstIndex(of: likedArticle) {
                 self.savedArticles.remove(at: index)
             }
@@ -75,7 +69,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func matchSavedArticlesWithFavouriteArticles() {
         let tabBar = self.tabBarController
-    
         guard let viewControllers = tabBar?.viewControllers else { return }
         
         for viewController in viewControllers {

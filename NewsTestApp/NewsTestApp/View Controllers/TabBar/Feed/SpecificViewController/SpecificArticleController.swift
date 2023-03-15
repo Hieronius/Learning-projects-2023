@@ -42,11 +42,11 @@ class SpecificViewController: UIViewController {
             if sender.imageView?.image == UIImage(named: "like") {
                 sender.setImage(UIImage(named: "likePressed"), for: .normal)
                 feedVCDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
-                favouriteVCDelegate?.likeArticle(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
+                favouriteVCDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
             } else {
                 sender.setImage(UIImage(named: "like"), for: .normal)
                 feedVCDelegate?.removeLikedArticleFromSaved(index: specificArticleIndex!)
-                favouriteVCDelegate?.dislikeArticle(indexOfDislikedArticle: specificArticleIndex!)
+                favouriteVCDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
             }
         }
     }
