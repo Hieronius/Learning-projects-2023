@@ -81,7 +81,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         for viewController in viewControllers {
             if let favouriteNaviVC = viewController as? FavouriteNavigationViewController {
                 if let favouriteVC = favouriteNaviVC.viewControllers.first as? FavouriteViewController {
-                    favouriteVC.articles = self.savedArticles
+                    favouriteVC.favouriteArticles = self.savedArticles
                 }
             }
         }
@@ -90,7 +90,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let vc = segue.destination as! SpecificViewController
             guard let indexPath = feedTable.indexPathForSelectedRow else { return }
-            vc.article = articlesDownloadedFromAPI[indexPath.row]
+            vc.specificArticle = articlesDownloadedFromAPI[indexPath.row]
             vc.specificArticleIndex = indexPath
             if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
                 vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image

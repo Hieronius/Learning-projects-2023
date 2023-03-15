@@ -12,6 +12,5 @@ class FavouriteNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // some code here
     }
 }

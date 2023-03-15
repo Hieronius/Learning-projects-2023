@@ -315,7 +315,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TEx-Se-Iie">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TEx-Se-Iie" userLabel="favouriteCollectionView">
                                 <rect key="frame" x="15" y="67" width="345" height="551"/>
                                 <color key="backgroundColor" red="0.94905835390000004" green="0.9489961267" blue="0.96544474359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZMb-tN-03x">
@@ -379,10 +379,10 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="177"/>
                                         <connections>
-                                            <outlet property="collectionArticleLabel" destination="hBM-T1-A7t" id="uzs-OD-oOA"/>
-                                            <outlet property="collectionDateLabel" destination="ffq-wG-7Gi" id="tem-oh-xYy"/>
-                                            <outlet property="collectionImageView" destination="aRK-m9-umS" id="mKY-To-vNG"/>
-                                            <outlet property="collectionLikeButton" destination="HWQ-Xi-3Mu" id="u4N-8s-MSj"/>
+                                            <outlet property="favouriteCollectionArticleLabel" destination="hBM-T1-A7t" id="uzs-OD-oOA"/>
+                                            <outlet property="favouriteCollectionDateLabel" destination="ffq-wG-7Gi" id="tem-oh-xYy"/>
+                                            <outlet property="favouriteCollectionImageView" destination="aRK-m9-umS" id="mKY-To-vNG"/>
+                                            <outlet property="favouriteCollectionLikeButton" destination="HWQ-Xi-3Mu" id="u4N-8s-MSj"/>
                                             <segue destination="GlJ-RN-gP9" kind="show" id="qsf-Mb-sth"/>
                                         </connections>
                                     </collectionViewCell>
@@ -406,7 +406,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Fzy-qK-HEv"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="TEx-Se-Iie" id="J8D-0O-p2N"/>
+                        <outlet property="favouriteCollectionView" destination="TEx-Se-Iie" id="5Tw-ky-6QC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOj-wI-7Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -8,43 +8,39 @@
 import UIKit
 
 protocol FavouriteViewControllerDelegate: AnyObject {
-    func likeArticle(index: IndexPath, article: Article)
-    func dislikeArticle(index: IndexPath)
+    func likeArticle(indexOfLikedArticle: IndexPath, likedArticle: Article)
+    func dislikeArticle(indexOfDislikedArticle: IndexPath)
 }
 
 class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var favouriteCollectionView: UICollectionView!
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    // let favouriteDefaultImage = "https://media.istockphoto.com/photos/generic-red-suv-on-a-white-background-side-view-picture-id1157655660?b=1&k=20&m=1157655660&s=612x612&w=0&h=ekNZlV17a3wd_yN9PhHXtIabO_zFo4qipCy2AZRpWUI="
-    
-    var articles = [Article]()
+    var favouriteArticles = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        favouriteCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        collectionView.reloadData()
-        print("Favourite View Controller has been appeared")
+        favouriteCollectionView.reloadData()
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! SpecificViewController
-        guard let indexPath = collectionView.indexPathsForSelectedItems?[0] else { return }
-        vc.article = articles[indexPath.row]
-        vc.specificArticleIndex = indexPath
-        if let collectionCell = collectionView.cellForItem(at: indexPath) as? FavouriteCollectionViewCell {
-            vc.specificLikeButtonImage = collectionCell.collectionLikeButton.imageView?.image
+        let specificViewController = segue.destination as! SpecificViewController
+        guard let indexPath = favouriteCollectionView.indexPathsForSelectedItems?[0] else { return }
+        
+        specificViewController.specificArticle = favouriteArticles[indexPath.row]
+        specificViewController.specificArticleIndex = indexPath
+        if let favouriteCollectionCell = favouriteCollectionView.cellForItem(at: indexPath) as? FavouriteCollectionViewCell {
+            specificViewController.specificLikeButtonImage = favouriteCollectionCell.favouriteCollectionLikeButton.imageView?.image
         }
         
         // here i should define delegation for specific View COntroller
-        vc.favouriteVCDelegate = self
+        specificViewController.favouriteVCDelegate = self
     }
 
     
@@ -54,7 +50,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         
         // get access to selected article
         let likedArticleIndex = sender.tag
-        let likedArticle = articles[likedArticleIndex]
+        let likedArticle = favouriteArticles[likedArticleIndex]
         
 //        let likedArticleIndex = collectionView.indexPathsForSelectedItems!.first
 //        let likedArticle = articles[likedArticleIndex!.row]
@@ -69,7 +65,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             print("Favourite like button has been pressed")
             print("article with senderTag - \(sender.tag) has been pressed")
             
-            articles.append(likedArticle)
+            favouriteArticles.append(likedArticle)
              viewDidAppear(true)
             
         } else {
@@ -79,9 +75,9 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             print("article with senderTag - \(sender.tag) has been pressed")
             
             // if there is like button already pressed and we wan't to remove article
-            if let index = articles.firstIndex(of: likedArticle) {
-                self.articles.remove(at: index)
-                print(articles.count)
+            if let index = favouriteArticles.firstIndex(of: likedArticle) {
+                self.favouriteArticles.remove(at: index)
+                print(favouriteArticles.count)
                 viewDidAppear(true)
                 
             }
@@ -104,7 +100,7 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
                 if let feedVC = feedNaviVC.viewControllers.first as? FeedViewController {
                     
                     print("The article has been saved")
-                    feedVC.savedArticles = self.articles
+                    feedVC.savedArticles = self.favouriteArticles
                     print(feedVC.savedArticles.count)
                 }
             }
@@ -114,19 +110,19 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
         
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            print(articles.count)
-            return articles.count
+            print(favouriteArticles.count)
+            return favouriteArticles.count
         }
         
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath) as! FavouriteCollectionViewCell
-            collectionCell.collectionDateLabel.text = articles[indexPath.row].publishedAt
-            collectionCell.collectionArticleLabel.text = articles[indexPath.row].title
-            collectionCell.collectionImageView.loadImage(urlString: articles[indexPath.row].urlToImage ?? defaultImage)
-            collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
-            collectionCell.collectionLikeButton.tag = indexPath.row
-            print("collection cell with buttonTag - \(collectionCell.collectionLikeButton.tag)has beed created")
+            collectionCell.favouriteCollectionDateLabel.text = favouriteArticles[indexPath.row].publishedAt
+            collectionCell.favouriteCollectionArticleLabel.text = favouriteArticles[indexPath.row].title
+            collectionCell.favouriteCollectionImageView.loadImage(urlString: favouriteArticles[indexPath.row].urlToImage ?? defaultImage)
+            collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            collectionCell.favouriteCollectionLikeButton.tag = indexPath.row
+            print("collection cell with buttonTag - \(collectionCell.favouriteCollectionLikeButton.tag)has beed created")
             collectionCell.layer.cornerRadius = 20
             return collectionCell
         }
@@ -139,10 +135,10 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
 
 extension FavouriteViewController: FavouriteViewControllerDelegate {
     
-    func likeArticle(index: IndexPath, article: Article) {
-        if let collectionCell = collectionView.cellForItem(at: index) as? FavouriteCollectionViewCell {
-            collectionCell.collectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
-            articles.append(article)
+    func likeArticle(indexOfLikedArticle: IndexPath, likedArticle: Article) {
+        if let collectionCell = favouriteCollectionView.cellForItem(at: indexOfLikedArticle) as? FavouriteCollectionViewCell {
+            collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            favouriteArticles.append(likedArticle)
             
             
             // probably we can use this chunk of code as a special function like addArticleToSavedArticles
@@ -160,7 +156,7 @@ extension FavouriteViewController: FavouriteViewControllerDelegate {
                     if let feedVC = feedNaviVC.viewControllers.first as? FeedViewController {
                         
                         print("The article has been saved")
-                        feedVC.savedArticles = self.articles
+                        feedVC.savedArticles = self.favouriteArticles
                         print(feedVC.savedArticles.count)
                     }
                 }
@@ -168,12 +164,12 @@ extension FavouriteViewController: FavouriteViewControllerDelegate {
         }
     }
     
-    func dislikeArticle(index: IndexPath) {
-        if let collectionCell = collectionView.cellForItem(at: index) as? FavouriteCollectionViewCell {
-            collectionCell.collectionLikeButton.setImage(UIImage(named: "like"), for: .normal)
+    func dislikeArticle(indexOfDislikedArticle: IndexPath) {
+        if let collectionCell = favouriteCollectionView.cellForItem(at: indexOfDislikedArticle) as? FavouriteCollectionViewCell {
+            collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "like"), for: .normal)
             
-            if let indexOfSavedArticle = articles.firstIndex(of: articles[index.row]) {
-                self.articles.remove(at: indexOfSavedArticle)
+            if let indexOfSavedArticle = favouriteArticles.firstIndex(of: favouriteArticles[indexOfDislikedArticle.row]) {
+                self.favouriteArticles.remove(at: indexOfSavedArticle)
                 
             }
             
@@ -191,7 +187,7 @@ extension FavouriteViewController: FavouriteViewControllerDelegate {
                     if let feedVC = feedNaviVC.viewControllers.first as? FeedViewController {
                         
                         print("The article has been saved")
-                        feedVC.savedArticles = self.articles
+                        feedVC.savedArticles = self.favouriteArticles
                         print(feedVC.savedArticles.count)
                     }
                 }

@@ -93,7 +93,7 @@
 				DD88BFF729BDF5D40008D76D /* FeedNavigationViewController.swift */,
 				DD82226A29A7AB7200E830C1 /* FeedViewController.swift */,
 				DD78E07229AA2D6A0055E656 /* FeedTableViewCell.swift */,
-				DDD1B89F29ADFE5100FEC5B2 /* SpecificArticleViewController */,
+				DDD1B89F29ADFE5100FEC5B2 /* SpecificViewController */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -240,12 +240,12 @@
 			path = AuthorisationModel;
 			sourceTree = "<group>";
 		};
-		DDD1B89F29ADFE5100FEC5B2 /* SpecificArticleViewController */ = {
+		DDD1B89F29ADFE5100FEC5B2 /* SpecificViewController */ = {
 			isa = PBXGroup;
 			children = (
 				DD7A493929B8D023008D1A93 /* SpecificArticleController.swift */,
 			);
-			path = SpecificArticleViewController;
+			path = SpecificViewController;
 			sourceTree = "<group>";
 		};
 		DDF5AD6D29A90CE500FA48F9 /* Extensions */ = {
