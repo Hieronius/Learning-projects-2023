@@ -110,7 +110,7 @@ extension FeedViewController: UITableViewDataSource {
          cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.row].title
          cell.articleText.text = articlesDownloadedFromAPI[indexPath.row].description
          
-         cell.layer.cornerRadius = 20
+         cell.layer.cornerRadius = 25
          
          return cell
     }
