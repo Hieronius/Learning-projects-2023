@@ -82,7 +82,7 @@ extension FavouriteViewController: UICollectionViewDelegate {
 extension FavouriteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath) as! FavouriteCollectionViewCell
-            collectionCell.favouriteCollectionDateLabel.text = favouriteArticles[indexPath.row].publishedAt
+        collectionCell.favouriteCollectionDateLabel.text = favouriteArticles[indexPath.row].publishedAt.formateArticleDate()
             collectionCell.favouriteCollectionArticleLabel.text = favouriteArticles[indexPath.row].title
             collectionCell.favouriteCollectionImageView.loadImage(urlString: favouriteArticles[indexPath.row].urlToImage ?? defaultImage)
             collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)

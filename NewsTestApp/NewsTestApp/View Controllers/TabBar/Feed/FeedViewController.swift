@@ -6,13 +6,12 @@
 //
 
 import UIKit
-// add this protocol for protocol files
+
 protocol FeedViewControllerDelegate: AnyObject {
     func addToSavedLikedArticle(index: IndexPath)
     func removeLikedArticleFromSaved(index: IndexPath)
 }
 
-// make two different extensions here for FeedUITable
 class FeedViewController: UIViewController {
     @IBOutlet weak var feedTable: UITableView!
     
@@ -101,17 +100,13 @@ extension FeedViewController: UITableViewDelegate {
 extension FeedViewController: UITableViewDataSource {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-         
          cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.row].urlToImage ?? defaultImage)
          cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
          cell.likeButton.tag = indexPath.row
-         
-         cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.row].publishedAt
+         cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.row].publishedAt.formateArticleDate()
          cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.row].title
          cell.articleText.text = articlesDownloadedFromAPI[indexPath.row].description
-         
          cell.layer.cornerRadius = 25
-         
          return cell
     }
 }

@@ -32,7 +32,7 @@ class SpecificViewController: UIViewController {
         func setupSpecificArticleView() {
             specificImageView.layer.cornerRadius = 40
             specificImageView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-            specificDateLabel.text = specificArticle.publishedAt
+            specificDateLabel.text = specificArticle.publishedAt.formateArticleDate()
             specificArticleLabel.text = specificArticle.title
             specificArticleText.text = specificArticle.content
             specificImageView.loadImage(urlString: specificArticle.urlToImage ?? defaultImage)
