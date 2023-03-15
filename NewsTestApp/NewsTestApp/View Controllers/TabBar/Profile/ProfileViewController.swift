@@ -8,50 +8,48 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    
-//    var userLogin = ""
-//    var userPassword = ""
-//    var userName = ""
-    
-    // color for text fields background color from Figma
-    var textFieldColor = UIColor(displayP3Red: 117, green: 146, blue: 221, alpha: 0.1)
-    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameField: UITextField!
     @IBOutlet weak var profileEmailFeild: UITextField!
     
+    let backgroundColorForViewControllersFromFigma = UIColor(displayP3Red: 117, green: 146, blue: 221, alpha: 0.1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupProfileImageView()
+        setupProfileNameField()
+        setupProfileEmailField()
+    }
+    
+    func setupProfileImageView() {
+        profileImageView.image = testUser.userTestPhoto
         profileImageView.layer.cornerRadius = 50
-        
+    }
+    
+    func setupProfileNameField() {
+        profileNameField.text = testUser.userName
         profileNameField.layer.cornerRadius = 20
         profileNameField.layer.borderWidth = 0.5
-        profileNameField.layer.borderColor = textFieldColor.cgColor
+        profileNameField.layer.borderColor = backgroundColorForViewControllersFromFigma.cgColor
         profileNameField.layer.masksToBounds = true
-        
+    }
+    
+    func setupProfileEmailField() {
+        profileEmailFeild.text = testUser.userLogin
         profileEmailFeild.layer.cornerRadius = 20
         profileEmailFeild.layer.borderWidth = 0.5
-        profileEmailFeild.layer.borderColor = textFieldColor.cgColor
+        profileEmailFeild.layer.borderColor = backgroundColorForViewControllersFromFigma.cgColor
         profileEmailFeild.layer.masksToBounds = true
-        
-        profileImageView.image = testUser.userTestPhoto
-        profileNameField.text = testUser.userName
-        profileEmailFeild.text = testUser.userLogin
-    
     }
     
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
-        // use unwind segue here plz
-        
         let ac = UIAlertController(title: "Выход", message: "Вы уверены, что хотите выйти из аккаунта?", preferredStyle: .alert)
-        
         ac.addAction(UIAlertAction(title: "Отмена", style: .default))
         ac.addAction(UIAlertAction(title: "Выйти", style: .destructive, handler: { action in
             self.performSegue(withIdentifier: "doUnwind", sender: self)
         }))
-        
         self.present(ac, animated: true)
     }
 }

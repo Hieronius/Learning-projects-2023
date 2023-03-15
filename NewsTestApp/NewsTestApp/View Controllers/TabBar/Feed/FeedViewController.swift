@@ -13,7 +13,7 @@ protocol FeedViewControllerDelegate: AnyObject {
 }
 
 // make two different extensions here for FeedUITable
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController {
     @IBOutlet weak var feedTable: UITableView!
     
     var savedArticles = [Article]()
@@ -80,45 +80,48 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
         
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let vc = segue.destination as! SpecificViewController
-            guard let indexPath = feedTable.indexPathForSelectedRow else { return }
-            vc.specificArticle = articlesDownloadedFromAPI[indexPath.row]
-            vc.specificArticleIndex = indexPath
-            if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
-                vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
-            }
-            vc.feedVCDelegate = self
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SpecificViewController
+        guard let indexPath = feedTable.indexPathForSelectedRow else { return }
+        vc.specificArticle = articlesDownloadedFromAPI[indexPath.row]
+        vc.specificArticleIndex = indexPath
+        if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
+            vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
         }
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return articlesDownloadedFromAPI.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-            
-            cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.row].urlToImage ?? defaultImage)
-            cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
-            cell.likeButton.tag = indexPath.row
-            
-            cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.row].publishedAt
-            cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.row].title
-            cell.articleText.text = articlesDownloadedFromAPI[indexPath.row].description
-            
-            cell.layer.cornerRadius = 20
-            
-            return cell
-        }
-        
-    }
+        vc.feedVCDelegate = self
+     }
+}
 
-// probably should send this code to the extension
+extension FeedViewController: UITableViewDelegate {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return articlesDownloadedFromAPI.count
+     }
+}
+
+extension FeedViewController: UITableViewDataSource {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
+         
+         cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.row].urlToImage ?? defaultImage)
+         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+         cell.likeButton.tag = indexPath.row
+         
+         cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.row].publishedAt
+         cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.row].title
+         cell.articleText.text = articlesDownloadedFromAPI[indexPath.row].description
+         
+         cell.layer.cornerRadius = 20
+         
+         return cell
+    }
+}
+
 extension FeedViewController: FeedViewControllerDelegate {
     func addToSavedLikedArticle(index: IndexPath) {
         if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "likePressed"), for: .normal)
             savedArticles.append(articlesDownloadedFromAPI[index.row])
+            matchSavedArticlesWithFavouriteArticles()
         }
     }
     
@@ -128,8 +131,8 @@ extension FeedViewController: FeedViewControllerDelegate {
             
             if let indexOfSavedArticle = savedArticles.firstIndex(of: articlesDownloadedFromAPI[index.row]) {
                 self.savedArticles.remove(at: indexOfSavedArticle)
-                
             }
+            matchSavedArticlesWithFavouriteArticles()
         }
     }
 }

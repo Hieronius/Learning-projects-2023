@@ -15,6 +15,7 @@ class SpecificViewController: UIViewController {
     @IBOutlet weak var specificArticleText: UILabel!
     @IBOutlet weak var specificView: UIView!
     
+    // rename here
     weak var feedVCDelegate: FeedViewControllerDelegate?
     weak var favouriteVCDelegate: FavouriteViewControllerDelegate?
     

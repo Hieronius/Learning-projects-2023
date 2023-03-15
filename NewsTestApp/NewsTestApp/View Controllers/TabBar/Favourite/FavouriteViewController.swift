@@ -12,8 +12,7 @@ protocol FavouriteViewControllerDelegate: AnyObject {
     func dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: IndexPath)
 }
 
-class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class FavouriteViewController: UIViewController {
     @IBOutlet weak var favouriteCollectionView: UICollectionView!
     
     var favouriteArticles = [Article]()
@@ -72,13 +71,15 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             }
         }
     }
+}
 
+extension FavouriteViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            print(favouriteArticles.count)
             return favouriteArticles.count
     }
-        
-        
+}
+
+extension FavouriteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection", for: indexPath) as! FavouriteCollectionViewCell
             collectionCell.favouriteCollectionDateLabel.text = favouriteArticles[indexPath.row].publishedAt
@@ -86,15 +87,15 @@ class FavouriteViewController: UIViewController, UICollectionViewDelegate, UICol
             collectionCell.favouriteCollectionImageView.loadImage(urlString: favouriteArticles[indexPath.row].urlToImage ?? defaultImage)
             collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
             collectionCell.favouriteCollectionLikeButton.tag = indexPath.row
-            print("collection cell with buttonTag - \(collectionCell.favouriteCollectionLikeButton.tag)has beed created")
             collectionCell.layer.cornerRadius = 20
             return collectionCell
     }
-        
+}
+
+extension FavouriteViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: 164, height: 191)
     }
-        
 }
 
 extension FavouriteViewController: FavouriteViewControllerDelegate {
