@@ -8,8 +8,8 @@
 import UIKit
 
 class FavouriteCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var favouriteCollectionImageView: UIImageView!
-    @IBOutlet weak var favouriteCollectionDateLabel: UILabel!
-    @IBOutlet weak var favouriteCollectionArticleLabel: UILabel!
-    @IBOutlet weak var favouriteCollectionLikeButton: UIButton!
+    @IBOutlet weak var favouriteArticleCollectionImageView: UIImageView!
+    @IBOutlet weak var favouriteArticleCollectionDateLabel: UILabel!
+    @IBOutlet weak var favouriteArticleCollectionArticleLabel: UILabel!
+    @IBOutlet weak var favouriteArticleCollectionLikeButton: UIButton!
 }
