@@ -46,7 +46,7 @@ class SpecificViewController: UIViewController {
                 favouriteViewControllerDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
             } else {
                 sender.setImage(UIImage(named: "like"), for: .normal)
-                feedViewControllerDelegate?.removeLikedArticleFromSaved(index: specificArticleIndex!)
+                feedViewControllerDelegate?.removeDislikedArticleFromSaved(index: specificArticleIndex!)
                 favouriteViewControllerDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
             }
         }

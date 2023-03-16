@@ -9,7 +9,7 @@ import UIKit
 
 protocol FeedViewControllerDelegate: AnyObject {
     func addToSavedLikedArticle(index: IndexPath)
-    func removeLikedArticleFromSaved(index: IndexPath)
+    func removeDislikedArticleFromSaved(index: IndexPath)
 }
 
 class FeedViewController: UIViewController {
@@ -36,7 +36,7 @@ class FeedViewController: UIViewController {
         checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton()
     }
     
-    /// When user wan't to go back from Detail article screen back to the News Feed screen this method should check is article has been liked or disliked
+    /// When user wan't to go back from SpecificArticleViewController or FavouriteViewController  to the FeedViewController  this method should check is article has been liked or disliked and change it's actual like button image.
     func checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton() {
         var arrayOfArticlesToChange = [Int]()
         for article in articlesDownloadedFromAPI {
@@ -45,7 +45,7 @@ class FeedViewController: UIViewController {
             }
         }
         for index in arrayOfArticlesToChange {
-            if let cell = feedTable.cellForRow(at: IndexPath(row: index, section: 0)) as? FeedTableViewCell {
+            if let cell = feedTable.cellForRow(at: IndexPath(row: 0, section: index)) as? FeedTableViewCell {
                 cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             }
         }
@@ -63,6 +63,7 @@ class FeedViewController: UIViewController {
                 self.savedArticles.remove(at: index)
             }
         }
+        print("current number of saved articles - \(savedArticles.count)")
         matchSavedArticlesWithFavouriteArticles()
     }
     
@@ -82,7 +83,7 @@ class FeedViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! SpecificViewController
         guard let indexPath = feedTable.indexPathForSelectedRow else { return }
-        vc.specificArticle = articlesDownloadedFromAPI[indexPath.row]
+        vc.specificArticle = articlesDownloadedFromAPI[indexPath.section]
         vc.specificArticleIndex = indexPath
         if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
             vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
@@ -92,20 +93,29 @@ class FeedViewController: UIViewController {
 }
 
 extension FeedViewController: UITableViewDelegate {
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return articlesDownloadedFromAPI.count
+     func numberOfSections(in tableView: UITableView) -> Int {
+         self.articlesDownloadedFromAPI.count
      }
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return 1
+     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        10
+    }
 }
 
 extension FeedViewController: UITableViewDataSource {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-         cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.row].urlToImage ?? defaultImage)
+         cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.section].urlToImage ?? defaultImage)
          cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
-         cell.likeButton.tag = indexPath.row
-         cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.row].publishedAt.formateArticleDate()
-         cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.row].title
-         cell.articleText.text = articlesDownloadedFromAPI[indexPath.row].description
+         cell.likeButton.tag = indexPath.section
+         // print(cell.likeButton.tag)
+         cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.section].publishedAt.formateArticleDate()
+         cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.section].title
+         cell.articleText.text = articlesDownloadedFromAPI[indexPath.section].description
          cell.layer.cornerRadius = 25
          return cell
     }
@@ -115,19 +125,19 @@ extension FeedViewController: FeedViewControllerDelegate {
     func addToSavedLikedArticle(index: IndexPath) {
         if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "likePressed"), for: .normal)
-            savedArticles.append(articlesDownloadedFromAPI[index.row])
+            savedArticles.append(articlesDownloadedFromAPI[index.section])
             matchSavedArticlesWithFavouriteArticles()
         }
     }
     
-    func removeLikedArticleFromSaved(index: IndexPath) {
+    func removeDislikedArticleFromSaved(index: IndexPath) {
         if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
             cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
             
-            if let indexOfSavedArticle = savedArticles.firstIndex(of: articlesDownloadedFromAPI[index.row]) {
+            if let indexOfSavedArticle = savedArticles.firstIndex(of: articlesDownloadedFromAPI[index.section]) {
                 self.savedArticles.remove(at: indexOfSavedArticle)
+                matchSavedArticlesWithFavouriteArticles()
             }
-            matchSavedArticlesWithFavouriteArticles()
         }
     }
 }

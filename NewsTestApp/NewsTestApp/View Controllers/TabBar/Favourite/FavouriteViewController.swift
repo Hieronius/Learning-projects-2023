@@ -67,6 +67,7 @@ class FavouriteViewController: UIViewController {
             if let feedNavigationViewController = viewController as? FeedNavigationViewController {
                 if let feedViewController = feedNavigationViewController.viewControllers.first as? FeedViewController {
                     feedViewController.savedArticles = self.favouriteArticles
+                    print("current number of saved articles - \(feedViewController.savedArticles.count)")
                 }
             }
         }
