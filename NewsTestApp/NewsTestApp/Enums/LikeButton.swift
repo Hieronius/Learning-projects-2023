@@ -8,13 +8,13 @@
 import UIKit
 
 enum LikeButton {
-    case pressed
     case unpressed
+    case pressed
     
     var image: UIImage {
         switch self {
-        case .pressed: return UIImage(named: "like")!
-        case .unpressed: return UIImage(named: "likePressed")!
+        case .unpressed: return UIImage(named: "like")!
+        case .pressed: return UIImage(named: "likePressed")!
         }
     }
 }

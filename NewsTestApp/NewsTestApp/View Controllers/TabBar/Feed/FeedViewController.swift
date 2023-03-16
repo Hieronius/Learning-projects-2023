@@ -47,9 +47,10 @@ class FeedViewController: UIViewController {
                 arrayOfArticlesToChange.append(articlesDownloadedFromAPI.firstIndex(of: article)!)
             }
         }
+        
         for index in arrayOfArticlesToChange {
             if let cell = feedTable.cellForRow(at: IndexPath(row: 0, section: index)) as? FeedTableViewCell {
-                cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+                cell.likeButton.setImage(LikeButton.unpressed.image, for: .normal)
             }
         }
     }
@@ -57,16 +58,15 @@ class FeedViewController: UIViewController {
     @IBAction func likeButtonPressed(_ sender: UIButton) {
         let likedArticleIndex = sender.tag
         let likedArticle = articlesDownloadedFromAPI[likedArticleIndex]
-        if sender.imageView?.image == UIImage(named: "like") {
-            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+        if sender.imageView?.image == LikeButton.unpressed.image {
+            sender.setImage(LikeButton.pressed.image, for: .normal)
             savedArticles.append(likedArticle)
         } else {
-            sender.setImage(UIImage(named: "like"), for: .normal)
+            sender.setImage(LikeButton.unpressed.image, for: .normal)
             if let index = savedArticles.firstIndex(of: likedArticle) {
                 self.savedArticles.remove(at: index)
             }
         }
-        print("current number of saved articles - \(savedArticles.count)")
         matchSavedArticlesWithFavouriteArticles()
     }
     
@@ -113,9 +113,8 @@ extension FeedViewController: UITableViewDataSource {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
          cell.bigImageView.loadImage(urlString: articlesDownloadedFromAPI[indexPath.section].urlToImage ?? defaultImage)
-         cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+         cell.likeButton.setImage(LikeButton.unpressed.image, for: .normal)
          cell.likeButton.tag = indexPath.section
-         // print(cell.likeButton.tag)
          cell.dateLabel.text = articlesDownloadedFromAPI[indexPath.section].publishedAt.formateArticleDate()
          cell.articleLabel.text = articlesDownloadedFromAPI[indexPath.section].title
          cell.articleText.text = articlesDownloadedFromAPI[indexPath.section].description
@@ -127,7 +126,7 @@ extension FeedViewController: UITableViewDataSource {
 extension FeedViewController: FeedViewControllerDelegate {
     func addToSavedLikedArticle(index: IndexPath) {
         if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
-            cell.likeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            cell.likeButton.setImage(LikeButton.pressed.image, for: .normal)
             savedArticles.append(articlesDownloadedFromAPI[index.section])
             matchSavedArticlesWithFavouriteArticles()
         }
@@ -135,7 +134,7 @@ extension FeedViewController: FeedViewControllerDelegate {
     
     func removeDislikedArticleFromSaved(index: IndexPath) {
         if let cell = feedTable.cellForRow(at: index) as? FeedTableViewCell {
-            cell.likeButton.setImage(UIImage(named: "like"), for: .normal)
+            cell.likeButton.setImage(LikeButton.unpressed.image, for: .normal)
             
             if let indexOfSavedArticle = savedArticles.firstIndex(of: articlesDownloadedFromAPI[index.section]) {
                 self.savedArticles.remove(at: indexOfSavedArticle)

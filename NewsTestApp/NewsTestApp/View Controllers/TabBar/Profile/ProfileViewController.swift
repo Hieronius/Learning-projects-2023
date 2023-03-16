@@ -12,7 +12,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileNameField: UITextField!
     @IBOutlet weak var profileEmailFeild: UITextField!
     
-    private let backgroundColorForViewControllersFromFigma = UIColor(displayP3Red: 242, green: 242, blue: 246, alpha: 1)
+    private let backgroundColorForViewControllersFromFigma = UIColor(displayP3Red: 242,
+                                                                     green: 242,
+                                                                     blue: 246,
+                                                                     alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()

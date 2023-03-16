@@ -43,13 +43,12 @@ class FavouriteViewController: UIViewController {
     @IBAction func favouriteLikeButtonPressed(_ sender: UIButton) {
         let likedArticleIndex = sender.tag
         let likedArticle = favouriteArticles[likedArticleIndex]
-        
-        if sender.imageView?.image == UIImage(named: "like") {
-            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+        if sender.imageView?.image == LikeButton.unpressed.image {
+            sender.setImage(LikeButton.pressed.image, for: .normal)
             favouriteArticles.append(likedArticle)
             viewDidAppear(true)
         } else {
-            sender.setImage(UIImage(named: "like"), for: .normal)
+            sender.setImage(LikeButton.unpressed.image, for: .normal)
             
             if let index = favouriteArticles.firstIndex(of: likedArticle) {
                 self.favouriteArticles.remove(at: index)
@@ -67,7 +66,6 @@ class FavouriteViewController: UIViewController {
             if let feedNavigationViewController = viewController as? FeedNavigationViewController {
                 if let feedViewController = feedNavigationViewController.viewControllers.first as? FeedViewController {
                     feedViewController.savedArticles = self.favouriteArticles
-                    print("current number of saved articles - \(feedViewController.savedArticles.count)")
                 }
             }
         }
@@ -86,7 +84,7 @@ extension FavouriteViewController: UICollectionViewDataSource {
         collectionCell.favouriteCollectionDateLabel.text = favouriteArticles[indexPath.row].publishedAt.formateArticleDate()
             collectionCell.favouriteCollectionArticleLabel.text = favouriteArticles[indexPath.row].title
             collectionCell.favouriteCollectionImageView.loadImage(urlString: favouriteArticles[indexPath.row].urlToImage ?? defaultImage)
-            collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            collectionCell.favouriteCollectionLikeButton.setImage(LikeButton.pressed.image, for: .normal)
             collectionCell.favouriteCollectionLikeButton.tag = indexPath.row
             collectionCell.layer.cornerRadius = 20
             return collectionCell
@@ -102,7 +100,7 @@ extension FavouriteViewController: UICollectionViewDelegateFlowLayout {
 extension FavouriteViewController: FavouriteViewControllerDelegate {
     func likeArticleAndAddToFavourite(indexOfLikedArticle: IndexPath, likedArticle: Article) {
         if let collectionCell = favouriteCollectionView.cellForItem(at: indexOfLikedArticle) as? FavouriteCollectionViewCell {
-            collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "likePressed"), for: .normal)
+            collectionCell.favouriteCollectionLikeButton.setImage(LikeButton.pressed.image, for: .normal)
             favouriteArticles.append(likedArticle)
             
             matchFavouriteArticlesWithSavedArticles()
@@ -111,7 +109,7 @@ extension FavouriteViewController: FavouriteViewControllerDelegate {
     
     func dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: IndexPath) {
         if let collectionCell = favouriteCollectionView.cellForItem(at: indexOfDislikedArticle) as? FavouriteCollectionViewCell {
-            collectionCell.favouriteCollectionLikeButton.setImage(UIImage(named: "like"), for: .normal)
+            collectionCell.favouriteCollectionLikeButton.setImage(LikeButton.unpressed.image, for: .normal)
             if let indexOfSavedArticle = favouriteArticles.firstIndex(of: favouriteArticles[indexOfDislikedArticle.row]) {
                 self.favouriteArticles.remove(at: indexOfSavedArticle)
             }

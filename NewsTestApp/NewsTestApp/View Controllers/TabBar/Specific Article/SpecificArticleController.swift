@@ -39,12 +39,12 @@ class SpecificViewController: UIViewController {
         }
         
     @IBAction func specificLikeButtonPressed(_ sender: UIButton) {
-        if sender.imageView?.image == UIImage(named: "like") {
-            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+        if sender.imageView?.image == LikeButton.unpressed.image {
+            sender.setImage(LikeButton.pressed.image, for: .normal)
             feedViewControllerDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
             favouriteViewControllerDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
         } else {
-            sender.setImage(UIImage(named: "like"), for: .normal)
+            sender.setImage(LikeButton.unpressed.image, for: .normal)
             feedViewControllerDelegate?.removeDislikedArticleFromSaved(index: specificArticleIndex!)
             favouriteViewControllerDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
         }
