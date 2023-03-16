@@ -47,7 +47,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Вход"/>
                                 <connections>
-                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ON-gE-4Ab"/>
+                                    <action selector="authorisationlogInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YN0-ds-HVR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет аккаунта ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-QA-lBK">
@@ -77,7 +77,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="resetPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8w5-yH-sWy"/>
+                                    <action selector="toResetPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OgT-rL-ZGE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7O-5Y-0rE">
@@ -98,7 +98,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registrationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUX-I3-oev"/>
+                                    <action selector="toRegistrationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxP-ga-2xY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,9 +127,9 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="yhc-SW-zgO"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTextField" destination="JEe-BV-dtd" id="L0L-sO-PM0"/>
-                        <outlet property="logInButton" destination="mHw-aE-smf" id="TC2-Bl-ebk"/>
-                        <outlet property="passwordTextField" destination="FuS-dx-58h" id="gPk-kp-Vvm"/>
+                        <outlet property="authorisationEmailTextField" destination="JEe-BV-dtd" id="L0L-sO-PM0"/>
+                        <outlet property="authorisationLogInButton" destination="mHw-aE-smf" id="02a-jr-1To"/>
+                        <outlet property="authorisationPasswordTextField" destination="FuS-dx-58h" id="gPk-kp-Vvm"/>
                         <segue destination="Tla-Gz-Jhh" kind="show" identifier="ShowRegistration" id="PWE-Wu-mus"/>
                         <segue destination="Eeg-iX-796" kind="show" identifier="showReset" id="k7F-vV-yFi"/>
                         <segue destination="WeB-LM-VMn" kind="showDetail" identifier="TabBarSegue" id="6aW-PU-FYD"/>
@@ -243,10 +243,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Регистрация" largeTitleDisplayMode="never" id="6nc-Hc-eqt"/>
                     <connections>
-                        <outlet property="emailTextField" destination="3OM-VX-BEc" id="JsC-sR-VAj"/>
-                        <outlet property="logInButton" destination="yuB-Km-rg2" id="vir-BB-EVG"/>
-                        <outlet property="nameTextField" destination="ctj-nC-5kK" id="90I-sl-bOC"/>
-                        <outlet property="passwordTextField" destination="jdl-7c-qpa" id="JAG-3F-Hin"/>
+                        <outlet property="registrationEmailTextField" destination="3OM-VX-BEc" id="JsC-sR-VAj"/>
+                        <outlet property="registrationLogInButton" destination="yuB-Km-rg2" id="vir-BB-EVG"/>
+                        <outlet property="registrationNameTextField" destination="ctj-nC-5kK" id="90I-sl-bOC"/>
+                        <outlet property="registrationPasswordTextField" destination="jdl-7c-qpa" id="JAG-3F-Hin"/>
                         <segue destination="WeB-LM-VMn" kind="showDetail" identifier="RegistrationToTabBarSegue" id="FZd-nQ-uJF"/>
                     </connections>
                 </viewController>
@@ -640,11 +640,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="articleLabel" destination="c1B-gc-oBA" id="Soh-ZV-7Rm"/>
-                                            <outlet property="articleText" destination="mhe-lu-MA0" id="MsP-l4-J9c"/>
-                                            <outlet property="bigImageView" destination="x66-wq-a2N" id="u9e-HM-Ym5"/>
-                                            <outlet property="dateLabel" destination="rMs-NC-Y88" id="ybf-Tc-Gdi"/>
-                                            <outlet property="likeButton" destination="VKu-O4-jZ4" id="lUF-2d-kjO"/>
+                                            <outlet property="feedArticleDateLabel" destination="rMs-NC-Y88" id="ybf-Tc-Gdi"/>
+                                            <outlet property="feedArticleImageView" destination="x66-wq-a2N" id="u9e-HM-Ym5"/>
+                                            <outlet property="feedArticleLabel" destination="c1B-gc-oBA" id="Soh-ZV-7Rm"/>
+                                            <outlet property="feedArticleLikeButton" destination="VKu-O4-jZ4" id="lUF-2d-kjO"/>
+                                            <outlet property="feedArticleText" destination="mhe-lu-MA0" id="MsP-l4-J9c"/>
                                             <segue destination="GlJ-RN-gP9" kind="show" id="5mT-hG-Sdv"/>
                                         </connections>
                                     </tableViewCell>
@@ -787,7 +787,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5mT-hG-Sdv"/>
-        <segue reference="FZd-nQ-uJF"/>
+        <segue reference="6aW-PU-FYD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>

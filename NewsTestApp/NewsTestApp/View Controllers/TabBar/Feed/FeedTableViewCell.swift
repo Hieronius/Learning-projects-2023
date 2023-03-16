@@ -8,9 +8,9 @@
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-    @IBOutlet weak var bigImageView: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var articleLabel: UILabel!
-    @IBOutlet weak var articleText: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var feedArticleImageView: UIImageView!
+    @IBOutlet weak var feedArticleDateLabel: UILabel!
+    @IBOutlet weak var feedArticleLabel: UILabel!
+    @IBOutlet weak var feedArticleText: UILabel!
+    @IBOutlet weak var feedArticleLikeButton: UIButton!
 }

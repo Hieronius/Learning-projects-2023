@@ -5,16 +5,12 @@
 //  Created by Арсентий Халимовский on 28.02.2023.
 //
 
-import Foundation
-
-// MARK: - FeedData
 struct FeedData: Codable {
     let status: String
     let totalResults: Int
     let articles: [Article]
 }
 
-// MARK: - Article
 struct Article: Codable {
      let source: Source
      let author: String?
@@ -26,7 +22,6 @@ struct Article: Codable {
      let content: String
 }
 
-// MARK: - Source
 struct Source: Codable {
     let id: String?
     let name: String

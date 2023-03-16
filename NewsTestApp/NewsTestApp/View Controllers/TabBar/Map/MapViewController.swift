@@ -60,7 +60,6 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(pointsArray)
         mapView.delegate = self
         setMapViewRegion()
-        
     }
     
     private func setupMapViewConstraints() {
