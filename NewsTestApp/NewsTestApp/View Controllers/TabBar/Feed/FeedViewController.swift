@@ -87,7 +87,7 @@ class FeedViewController: UIViewController {
         if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
             vc.specificLikeButtonImage = articleCell.likeButton.imageView?.image
         }
-        vc.feedVCDelegate = self
+        vc.feedViewControllerDelegate = self
      }
 }
 

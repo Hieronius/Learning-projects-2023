@@ -37,7 +37,7 @@ class FavouriteViewController: UIViewController {
         if let favouriteCollectionCell = favouriteCollectionView.cellForItem(at: indexPath) as? FavouriteCollectionViewCell {
             specificViewController.specificLikeButtonImage = favouriteCollectionCell.favouriteCollectionLikeButton.imageView?.image
         }
-        specificViewController.favouriteVCDelegate = self
+        specificViewController.favouriteViewControllerDelegate = self
     }
 
     @IBAction func favouriteLikeButtonPressed(_ sender: UIButton) {

@@ -16,8 +16,8 @@ class SpecificViewController: UIViewController {
     @IBOutlet weak var specificView: UIView!
     
     // rename here
-    weak var feedVCDelegate: FeedViewControllerDelegate?
-    weak var favouriteVCDelegate: FavouriteViewControllerDelegate?
+    weak var feedViewControllerDelegate: FeedViewControllerDelegate?
+    weak var favouriteViewControllerDelegate: FavouriteViewControllerDelegate?
     
     var specificArticleIndex: IndexPath?
     var specificLikeButtonImage: UIImage?
@@ -42,12 +42,12 @@ class SpecificViewController: UIViewController {
         @IBAction func specificLikeButtonPressed(_ sender: UIButton) {
             if sender.imageView?.image == UIImage(named: "like") {
                 sender.setImage(UIImage(named: "likePressed"), for: .normal)
-                feedVCDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
-                favouriteVCDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
+                feedViewControllerDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
+                favouriteViewControllerDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
             } else {
                 sender.setImage(UIImage(named: "like"), for: .normal)
-                feedVCDelegate?.removeLikedArticleFromSaved(index: specificArticleIndex!)
-                favouriteVCDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
+                feedViewControllerDelegate?.removeLikedArticleFromSaved(index: specificArticleIndex!)
+                favouriteViewControllerDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
             }
         }
     }
