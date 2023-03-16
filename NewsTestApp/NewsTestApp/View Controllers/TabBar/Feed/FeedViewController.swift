@@ -55,7 +55,7 @@ class FeedViewController: UIViewController {
         }
     }
     
-    @IBAction func likeButtonPressed(_ sender: UIButton) {
+    @IBAction func feedArticleLikeButtonPressed(_ sender: UIButton) {
         let likedArticleIndex = sender.tag
         let likedArticle = articlesDownloadedFromAPI[likedArticleIndex]
         if sender.imageView?.image == LikeButton.unpressed.image {
@@ -84,12 +84,12 @@ class FeedViewController: UIViewController {
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! SpecificViewController
+        let vc = segue.destination as! DetailViewController
         guard let indexPath = feedTable.indexPathForSelectedRow else { return }
-        vc.specificArticle = articlesDownloadedFromAPI[indexPath.section]
-        vc.specificArticleIndex = indexPath
+        vc.selectedArticle = articlesDownloadedFromAPI[indexPath.section]
+        vc.indexOfSelectedArticle = indexPath
         if let articleCell = feedTable.cellForRow(at: indexPath) as? FeedTableViewCell {
-            vc.specificLikeButtonImage = articleCell.feedArticleLikeButton.imageView?.image
+            vc.currentStateOfLikeButtonOfSelectedArticle = articleCell.feedArticleLikeButton.imageView?.image
         }
         vc.feedViewControllerDelegate = self
      }

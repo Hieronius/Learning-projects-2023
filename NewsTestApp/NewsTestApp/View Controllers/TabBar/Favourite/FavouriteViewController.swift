@@ -29,13 +29,13 @@ class FavouriteViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let specificViewController = segue.destination as! SpecificViewController
+        let specificViewController = segue.destination as! DetailViewController
         guard let indexPath = favouriteCollectionView.indexPathsForSelectedItems?[0] else { return }
         
-        specificViewController.specificArticle = favouriteArticles[indexPath.row]
-        specificViewController.specificArticleIndex = indexPath
+        specificViewController.selectedArticle = favouriteArticles[indexPath.row]
+        specificViewController.indexOfSelectedArticle = indexPath
         if let favouriteCollectionCell = favouriteCollectionView.cellForItem(at: indexPath) as? FavouriteCollectionViewCell {
-            specificViewController.specificLikeButtonImage = favouriteCollectionCell.favouriteCollectionLikeButton.imageView?.image
+            specificViewController.currentStateOfLikeButtonOfSelectedArticle = favouriteCollectionCell.favouriteCollectionLikeButton.imageView?.image
         }
         specificViewController.favouriteViewControllerDelegate = self
     }

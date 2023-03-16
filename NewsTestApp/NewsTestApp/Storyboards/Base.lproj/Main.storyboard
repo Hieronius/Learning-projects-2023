@@ -227,7 +227,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Вход"/>
                                 <connections>
-                                    <action selector="logInButtonPressed:" destination="Tla-Gz-Jhh" eventType="touchUpInside" id="bx4-a8-zyS"/>
+                                    <action selector="registrationLogInButtonPressed:" destination="Tla-Gz-Jhh" eventType="touchUpInside" id="PO0-Zi-PL9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,7 +244,7 @@
                     <navigationItem key="navigationItem" title="Регистрация" largeTitleDisplayMode="never" id="6nc-Hc-eqt"/>
                     <connections>
                         <outlet property="registrationEmailTextField" destination="3OM-VX-BEc" id="JsC-sR-VAj"/>
-                        <outlet property="registrationLogInButton" destination="yuB-Km-rg2" id="vir-BB-EVG"/>
+                        <outlet property="registrationLogInButton" destination="yuB-Km-rg2" id="8QI-HF-oht"/>
                         <outlet property="registrationNameTextField" destination="ctj-nC-5kK" id="90I-sl-bOC"/>
                         <outlet property="registrationPasswordTextField" destination="jdl-7c-qpa" id="JAG-3F-Hin"/>
                         <segue destination="WeB-LM-VMn" kind="showDetail" identifier="RegistrationToTabBarSegue" id="FZd-nQ-uJF"/>
@@ -596,7 +596,7 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="like" title=" "/>
                                                             <connections>
-                                                                <action selector="likeButtonPressed:" destination="kB8-37-q10" eventType="touchUpInside" id="1r2-kH-6r9"/>
+                                                                <action selector="feedArticleLikeButtonPressed:" destination="kB8-37-q10" eventType="touchUpInside" id="nb3-aA-jKN"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-gc-oBA">
@@ -678,7 +678,7 @@
         <!--Статья-->
         <scene sceneID="5oM-q6-ZTq">
             <objects>
-                <viewController id="GlJ-RN-gP9" customClass="SpecificViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GlJ-RN-gP9" customClass="DetailViewController" customModule="NewsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvd-rI-1wH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -715,7 +715,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="like" title=" "/>
                                 <connections>
-                                    <action selector="specificLikeButtonPressed:" destination="GlJ-RN-gP9" eventType="touchUpInside" id="07Q-SF-HHC"/>
+                                    <action selector="detailArticleLikeButtonPressed:" destination="GlJ-RN-gP9" eventType="touchUpInside" id="K3z-Bo-6Ll"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-gU-xT7">
@@ -753,12 +753,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Статья" largeTitleDisplayMode="never" id="2JC-m1-9ed"/>
                     <connections>
-                        <outlet property="specificArticleLabel" destination="ZfY-gU-xT7" id="BjQ-B7-ldG"/>
-                        <outlet property="specificArticleText" destination="W7H-Lg-2Jq" id="jRD-gt-3Zn"/>
-                        <outlet property="specificDateLabel" destination="A1k-UK-vXo" id="opj-Z1-nmC"/>
-                        <outlet property="specificImageView" destination="eQL-zF-5rj" id="nzf-gL-zA9"/>
-                        <outlet property="specificLikeButton" destination="jYh-YM-wpO" id="ElT-HL-Tba"/>
-                        <outlet property="specificView" destination="zt5-Qb-qza" id="xJ0-VK-gVw"/>
+                        <outlet property="detailArticleDateLabel" destination="A1k-UK-vXo" id="opj-Z1-nmC"/>
+                        <outlet property="detailArticleImageView" destination="eQL-zF-5rj" id="nzf-gL-zA9"/>
+                        <outlet property="detailArticleLabel" destination="ZfY-gU-xT7" id="BjQ-B7-ldG"/>
+                        <outlet property="detailArticleLikeButton" destination="jYh-YM-wpO" id="ElT-HL-Tba"/>
+                        <outlet property="detailArticleText" destination="W7H-Lg-2Jq" id="jRD-gt-3Zn"/>
+                        <outlet property="detailArticleView" destination="zt5-Qb-qza" id="xJ0-VK-gVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlO-wW-dqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -787,7 +787,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5mT-hG-Sdv"/>
-        <segue reference="6aW-PU-FYD"/>
+        <segue reference="FZd-nQ-uJF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Vector-2" width="28" height="22"/>
