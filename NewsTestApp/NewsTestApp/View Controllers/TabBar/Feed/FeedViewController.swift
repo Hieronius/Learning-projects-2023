@@ -15,6 +15,9 @@ protocol FeedViewControllerDelegate: AnyObject {
 class FeedViewController: UIViewController {
     @IBOutlet weak var feedTable: UITableView!
     
+    private let numbersOfCellsInUITableViewSection = 1
+    private let heightForHeaderOfTableViewSection: CGFloat = 3
+    
     var savedArticles = [Article]()
     var articlesDownloadedFromAPI = [Article]()
     
@@ -36,7 +39,7 @@ class FeedViewController: UIViewController {
         checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton()
     }
     
-    /// When user wan't to go back from SpecificArticleViewController or FavouriteViewController  to the FeedViewController  this method should check is article has been liked or disliked and change it's actual like button image.
+    /// When user wan't to go back from FavouriteViewController  to the FeedViewController this method should check is article has been liked or disliked and change it's actual like button image.
     func checkSavedArticlesForRemovedOnesAndUpdateItsLikeButton() {
         var arrayOfArticlesToChange = [Int]()
         for article in articlesDownloadedFromAPI {
@@ -98,12 +101,12 @@ extension FeedViewController: UITableViewDelegate {
      }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return 1
+         return numbersOfCellsInUITableViewSection
      }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        10
-    }
+     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return heightForHeaderOfTableViewSection
+     }
 }
 
 extension FeedViewController: UITableViewDataSource {

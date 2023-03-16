@@ -15,7 +15,6 @@ class SpecificViewController: UIViewController {
     @IBOutlet weak var specificArticleText: UILabel!
     @IBOutlet weak var specificView: UIView!
     
-    // rename here
     weak var feedViewControllerDelegate: FeedViewControllerDelegate?
     weak var favouriteViewControllerDelegate: FavouriteViewControllerDelegate?
     
@@ -29,7 +28,7 @@ class SpecificViewController: UIViewController {
         setupSpecificArticleView()
     }
     
-        func setupSpecificArticleView() {
+    private func setupSpecificArticleView() {
             specificImageView.layer.cornerRadius = 40
             specificImageView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
             specificDateLabel.text = specificArticle.publishedAt.formateArticleDate()
@@ -39,15 +38,15 @@ class SpecificViewController: UIViewController {
             specificLikeButton.setImage(specificLikeButtonImage, for: .normal)
         }
         
-        @IBAction func specificLikeButtonPressed(_ sender: UIButton) {
-            if sender.imageView?.image == UIImage(named: "like") {
-                sender.setImage(UIImage(named: "likePressed"), for: .normal)
-                feedViewControllerDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
-                favouriteViewControllerDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
-            } else {
-                sender.setImage(UIImage(named: "like"), for: .normal)
-                feedViewControllerDelegate?.removeDislikedArticleFromSaved(index: specificArticleIndex!)
-                favouriteViewControllerDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
-            }
+    @IBAction func specificLikeButtonPressed(_ sender: UIButton) {
+        if sender.imageView?.image == UIImage(named: "like") {
+            sender.setImage(UIImage(named: "likePressed"), for: .normal)
+            feedViewControllerDelegate?.addToSavedLikedArticle(index: specificArticleIndex!)
+            favouriteViewControllerDelegate?.likeArticleAndAddToFavourite(indexOfLikedArticle: specificArticleIndex!, likedArticle: self.specificArticle)
+        } else {
+            sender.setImage(UIImage(named: "like"), for: .normal)
+            feedViewControllerDelegate?.removeDislikedArticleFromSaved(index: specificArticleIndex!)
+            favouriteViewControllerDelegate?.dislikeArticleAndRemoveFromFavourite(indexOfDislikedArticle: specificArticleIndex!)
         }
     }
+}

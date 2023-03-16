@@ -12,7 +12,7 @@ class AuthorisationViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     
-    var isLogAndPasswordTextFieldsIsEmpty: Bool {
+    private var isLogAndPasswordTextFieldsIsEmpty: Bool {
         emailTextField.text?.isEmpty == true ||
         passwordTextField.text?.isEmpty == true
     }
@@ -25,21 +25,21 @@ class AuthorisationViewController: UIViewController {
         setupLogInButton()
     }
     
-    func setupEmailTextField() {
+    private func setupEmailTextField() {
         emailTextField.layer.cornerRadius = 20
         emailTextField.layer.borderWidth = 0.5
         emailTextField.layer.borderColor = UIColor.white.cgColor
         emailTextField.layer.masksToBounds = true
     }
     
-    func setupPasswordTextField() {
+    private func setupPasswordTextField() {
         passwordTextField.layer.cornerRadius = 20
         passwordTextField.layer.borderWidth = 0.5
         passwordTextField.layer.borderColor = UIColor.white.cgColor
         passwordTextField.layer.masksToBounds = true
     }
     
-    func setupLogInButton() {
+    private func setupLogInButton() {
         logInButton.layer.cornerRadius = 20
     }
     
@@ -62,7 +62,7 @@ class AuthorisationViewController: UIViewController {
 //            ac.addAction(UIAlertAction(title: "Ok", style: .default))
 //            present(ac, animated: true)
 //        }
-        performSegue(withIdentifier: "TabBarSegue", sender: sender)
+         performSegue(withIdentifier: "TabBarSegue", sender: sender)
     }
     
     @IBAction func registrationButtonPressed(_ sender: Any) {

@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileNameField: UITextField!
     @IBOutlet weak var profileEmailFeild: UITextField!
     
-    let backgroundColorForViewControllersFromFigma = UIColor(displayP3Red: 242, green: 242, blue: 246, alpha: 1)
+    private let backgroundColorForViewControllersFromFigma = UIColor(displayP3Red: 242, green: 242, blue: 246, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +22,12 @@ class ProfileViewController: UIViewController {
         setupProfileEmailField()
     }
     
-    func setupProfileImageView() {
+    private func setupProfileImageView() {
         profileImageView.image = testUser.userTestPhoto
         profileImageView.layer.cornerRadius = 50
     }
     
-    func setupProfileNameField() {
+    private func setupProfileNameField() {
         profileNameField.text = " \(testUser.userName)"
         profileNameField.layer.cornerRadius = 20
         profileNameField.layer.borderWidth = 0.5
@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController {
         profileNameField.layer.masksToBounds = true
     }
     
-    func setupProfileEmailField() {
+    private func setupProfileEmailField() {
         profileEmailFeild.text = " \(testUser.userLogin)"
         profileEmailFeild.layer.cornerRadius = 20
         profileEmailFeild.layer.borderWidth = 0.5

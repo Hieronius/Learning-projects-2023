@@ -9,45 +9,46 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
-    let mapView: MKMapView = {
+class MapViewController: UIViewController {
+    private let mapView: MKMapView = {
         let mapView = MKMapView()
         mapView.translatesAutoresizingMaskIntoConstraints = false
         return mapView
     }()
     
-    let nevaTowerPoint: MKPointAnnotation = {
+    
+    private let nevaTowerPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: nevaTower.latitude, longitude: nevaTower.longtitude)
         return annotation
     }()
     
-    let eyeTowerPoint: MKPointAnnotation = {
+    private let eyeTowerPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: eyeTower.latitude, longitude: eyeTower.longtitude)
         return annotation
     }()
     
-    let eyeTowerSecondPoint: MKPointAnnotation = {
+    private let eyeTowerSecondPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: eyeTowerSecond.latitude, longitude: eyeTowerSecond.longtitude)
         return annotation
     }()
     
-    let towerUnderWaterPoint: MKPointAnnotation = {
+    private let towerUnderWaterPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: towerUnderWater.latitude, longitude: towerUnderWater.longtitude)
         return annotation
     }()
     
-    let eurasiaPoint: MKPointAnnotation = {
+    private let eurasiaPoint: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: eurasia.latitude, longitude: eurasia.longtitude)
         return annotation
     }()
     
-    var mapViewPinDefaultImage = UIImage(named: "Vector-8")
-    var pointsArray: [MKPointAnnotation] {
+    private var mapViewPinDefaultImage = UIImage(named: "Vector-8")
+    private var pointsArray: [MKPointAnnotation] {
         [eyeTowerPoint, eyeTowerSecondPoint, nevaTowerPoint, eurasiaPoint, towerUnderWaterPoint]
     }
     
@@ -62,7 +63,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
-    func setupMapViewConstraints() {
+    private func setupMapViewConstraints() {
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
@@ -71,7 +72,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         ])
     }
     
-    func setMapViewRegion() {
+    private func setMapViewRegion() {
         mapView.setRegion(MKCoordinateRegion(
             center: CLLocationCoordinate2D(
                 latitude: eurasia.latitude,
@@ -81,7 +82,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 longitudeDelta: 0.01)),
         animated: false)
     }
-    
+}
+
+extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else { return nil }
         
