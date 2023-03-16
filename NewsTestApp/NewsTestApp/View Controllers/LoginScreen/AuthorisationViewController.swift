@@ -37,6 +37,7 @@ class AuthorisationViewController: UIViewController {
         authorisationPasswordTextField.layer.borderWidth = 0.5
         authorisationPasswordTextField.layer.borderColor = UIColor.white.cgColor
         authorisationPasswordTextField.layer.masksToBounds = true
+        authorisationPasswordTextField.textContentType = .oneTimeCode
     }
     
     private func setupAuthorisationLogInButton() {
